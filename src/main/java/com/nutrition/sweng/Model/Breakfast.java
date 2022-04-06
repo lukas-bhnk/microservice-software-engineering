@@ -67,7 +67,7 @@ public class Breakfast implements Meal {
     }
 
     @Override
-    public double setFats(double fats) {
+    public void setFats(double fats) {
         this.fats = fats;
     }
 

@@ -10,7 +10,7 @@ public interface Meal {
     public Integer getCalories();
     public void setCalories(Integer calories);
     public double getFats();
-    public double setFats(double fats);
+    public void setFats(double fats);
     public double getCarbs();
     public void setCarbs(double carbs);
     public double getProteins();
