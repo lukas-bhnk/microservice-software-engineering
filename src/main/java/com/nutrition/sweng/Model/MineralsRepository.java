@@ -5,8 +5,7 @@ import java.util.Optional;
 
 public interface MineralsRepository {
 
-    Optional<Minerals> findById(long id);
-    List<Minerals> findByFoodId(long id);
+    List<Minerals> findById(long id);
     Minerals save(Minerals m);
     void delete(Minerals m);
 

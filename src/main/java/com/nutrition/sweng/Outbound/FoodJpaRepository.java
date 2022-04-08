@@ -10,4 +10,5 @@ import java.util.List;
 public interface FoodJpaRepository extends CrudRepository<Food, Integer>, FoodRepository {
 
     List<Food> findByName(String name);
+
 }
