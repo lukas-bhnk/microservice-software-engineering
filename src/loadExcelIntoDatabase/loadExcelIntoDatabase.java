@@ -18,7 +18,7 @@ public class ExcelIntoDatabase {
             connection = DriverManager.getConnection(jdbcURL, username, password);
             connection.setAutoCommit(false);
 
-            String sql = "INSERT INTO students (bezeichnung, fats, proteins, carbs) VALUES (?, ?, ?)";
+            String sql = "INSERT INTO  (bezeichnung, fats, proteins, carbs) VALUES (?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(sql);
 
             rowIterator.next(); // skip the header row

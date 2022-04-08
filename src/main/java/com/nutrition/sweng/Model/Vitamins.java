@@ -1,9 +1,6 @@
 package com.nutrition.sweng.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Vitamins {
@@ -17,6 +14,11 @@ public class Vitamins {
     private double b1;
     private double b2;
     private double b11;
+
+    @JoinColumn(name="FOOD_ID")
+    @OneToOne
+    @MapsId
+    private Food food;
 
     public long getId() {
         return id;

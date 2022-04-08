@@ -1,9 +1,6 @@
 package com.nutrition.sweng.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Minerals {
@@ -17,7 +14,12 @@ public class Minerals {
     private double potassium;
     private double selenium;
     private double sodium;
-    private double zink;
+    private double zinc;
+
+    @JoinColumn(name="FOOD_ID")
+    @OneToOne
+    @MapsId
+    private Food food;
 
     public long getId() {
         return id;
@@ -83,11 +85,11 @@ public class Minerals {
         this.sodium = sodium;
     }
 
-    public double getZink() {
-        return zink;
+    public double getZinc() {
+        return zinc;
     }
 
-    public void setZink(double zink) {
-        this.zink = zink;
+    public void setZinc(double zinc) {
+        this.zinc = zinc;
     }
 }

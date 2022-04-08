@@ -1,9 +1,6 @@
 package com.nutrition.sweng.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Food {
@@ -13,6 +10,21 @@ public class Food {
     private long id;
     private String name;
     private FoodUnitSize unitSize;
+
+    @OneToOne(cascade=CascadeType.ALL,
+            optional=false,
+            mappedBy="food")
+    private NutritionalValues nutritionalValues;
+
+    @OneToOne(cascade=CascadeType.ALL,
+            optional=false,
+            mappedBy="food")
+    private Minerals minerals;
+
+    @OneToOne(cascade=CascadeType.ALL,
+            optional=false,
+            mappedBy="food")
+    private Vitamins vitamins;
 
     public long getId() {
         return id;

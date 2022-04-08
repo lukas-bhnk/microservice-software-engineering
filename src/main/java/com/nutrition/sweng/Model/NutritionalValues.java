@@ -13,6 +13,10 @@ public class NutritionalValues {
     private double sugar;
     private double fats;
 
+    @JoinColumn(name="FOOD_ID")
+    @OneToOne
+    @MapsId
+    private Food food;
 
 
     public NutritionalValues(String n, double cb, double pts, double fts, double cl){
