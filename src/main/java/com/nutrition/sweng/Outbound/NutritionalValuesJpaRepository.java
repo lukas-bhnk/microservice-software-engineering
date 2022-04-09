@@ -1,14 +1,13 @@
 package com.nutrition.sweng.Outbound;
 
-import com.nutrition.sweng.Model.FoodRepository;
 import com.nutrition.sweng.Model.Minerals;
 import com.nutrition.sweng.Model.MineralsRepository;
+import com.nutrition.sweng.Model.NutritionalValues;
+import com.nutrition.sweng.Model.NutritionalValuesRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
-public interface MineralsJpaRepository extends CrudRepository<Minerals, Long>, MineralsRepository {
+public interface NutritionalValuesJpaRepository extends CrudRepository<NutritionalValues, Long>, NutritionalValuesRepository {
 
 }

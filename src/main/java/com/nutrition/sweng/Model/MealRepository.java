@@ -1,10 +1,11 @@
 package com.nutrition.sweng.Model;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface MealRepository {
 
-    List<Meal> findById(long id);
-    Vitamins save(Meal m);
+    Optional<Meal> findById(int id);
+    Meal save(Meal m);
     void delete(Meal m);
 }

@@ -1,7 +1,7 @@
 package com.nutrition.sweng.Model;
 import javax.persistence.*;
 
-
+@Entity
 public class NutritionalValues {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
