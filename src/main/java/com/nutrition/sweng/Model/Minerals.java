@@ -7,13 +7,21 @@ public class Minerals {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(nullable = true)
     private double chloride;
+    @Column(nullable = true)
     private double magnesium;
+    @Column(nullable = true)
     private double phosphorus;
+    @Column(nullable = true)
     private double iron;
+    @Column(nullable = true)
     private double potassium;
+    @Column(nullable = true)
     private double selenium;
+    @Column(nullable = true)
     private double sodium;
+    @Column(nullable = true)
     private double zinc;
 
     @JoinColumn(name="FOOD_ID")

@@ -8,11 +8,17 @@ public class Vitamins {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(nullable = true)
     private double c;
+    @Column(nullable = true)
     private double fol;
+    @Column(nullable = true)
     private double a;
+    @Column(nullable = true)
     private double b1;
+    @Column(nullable = true)
     private double b2;
+    @Column(nullable = true)
     private double b11;
 
     @JoinColumn(name="FOOD_ID")

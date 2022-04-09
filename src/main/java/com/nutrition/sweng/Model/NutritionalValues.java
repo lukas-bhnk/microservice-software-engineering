@@ -6,12 +6,23 @@ public class NutritionalValues {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String name;
+    @Column(nullable = true)
     private double carbs;
+    @Column(nullable = true)
     private double proteins;
+    @Column(nullable = true)
     private double calories;
+    @Column(nullable = true)
     private double sugar;
+    @Column(nullable = true)
     private double fats;
+    @Column(nullable = true)
+    private double fatsSaturated;
+    @Column(nullable = true)
+    private double alcohol;
+    @Column(nullable = true)
+    private double salt;
+
 
     @JoinColumn(name="FOOD_ID")
     @OneToOne
@@ -19,21 +30,15 @@ public class NutritionalValues {
     private Food food;
 
 
-    public NutritionalValues(String n, double cb, double pts, double fts, double cl){
-        this.name = n;
+    public NutritionalValues(double cb, double pts, double fts, double cl, double ftsS, double alc){
         this.carbs = cb;
         this.proteins = pts;
         this.calories = cl;
         this.fats = fts;
+        this.fatsSaturated = ftsS;
+        this.alcohol = alc;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public long getId() {
         return id;
@@ -81,5 +86,30 @@ public class NutritionalValues {
 
     public void setFats(double fats) {
         this.fats = fats;
+    }
+
+
+    public double getFatsSaturated() {
+        return fatsSaturated;
+    }
+
+    public void setFatsSaturated(double fatsSaturated) {
+        this.fatsSaturated = fatsSaturated;
+    }
+
+    public double getAlcohol() {
+        return alcohol;
+    }
+
+    public void setAlcohol(double alcohol) {
+        this.alcohol = alcohol;
+    }
+
+    public double getSalt() {
+        return salt;
+    }
+
+    public void setSalt(double salt) {
+        this.salt = salt;
     }
 }
