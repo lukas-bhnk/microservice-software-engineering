@@ -1,10 +1,11 @@
 package com.nutrition.sweng.Inbound;
 
 
+import com.nutrition.sweng.Model.Food;
 import com.nutrition.sweng.Model.Meal;
-import com.nutrition.sweng.Model.MealCategory;
 
 import java.util.Date;
+import java.util.Set;
 
 public class MealDto {
     private int id;
@@ -14,23 +15,29 @@ public class MealDto {
     private double fats;
     private int calories;
     private String mealCategory;
+    private Set<Food> foodList;
 
 
     public MealDto(){
     }
 
     public MealDto(Meal m){
-        this(m.getId(), m.getDate(),m.getMealCategory(),m.getProteins(), m.getCarbs(), m.getFats(), m.getCalories());
+        this.id = m.getId();
+        this.date = m.getDate();
+        this.mealCategory = m.getMealCategory().name();
+        this.proteins = m.getProteins();
+        this.carbs = m.getCarbs();
+        this.fats = m.getFats();
+        this.calories = m.getCalories();
+        this.foodList = m.getFoodList();
     }
 
-    public MealDto(Integer id, Date date, MealCategory mealCategory, double proteins, double carbs, double fats, int calories) {
-        this.id = id;
-        this.date = date;
-        this.mealCategory = mealCategory.name();
-        this.proteins = proteins;
-        this.carbs = carbs;
-        this.fats = fats;
-        this.calories = calories;
+    public Set<Food> getFoodList() {
+        return foodList;
+    }
+
+    public void setFoodList(Set<Food> foodList) {
+        this.foodList = foodList;
     }
 
     public int getId() {

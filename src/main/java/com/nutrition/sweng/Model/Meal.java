@@ -2,6 +2,7 @@ package com.nutrition.sweng.Model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 public class Meal {
@@ -15,6 +16,11 @@ public class Meal {
     private Double fats;
     private Double carbs;
     private Double proteins;
+
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "MEAL_FK")
+    private Set<Food> foodList;
 
     public Meal() {
 
@@ -84,4 +90,14 @@ public class Meal {
     public void setProteins(Double proteins) {
         this.proteins = proteins;
     }
+
+
+    public Set<Food> getFoodList() {
+        return foodList;
+    }
+
+    public void setFoodList(Set<Food> foodList) {
+        this.foodList = foodList;
+    }
+
 }

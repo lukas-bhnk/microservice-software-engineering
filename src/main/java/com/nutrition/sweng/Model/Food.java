@@ -27,9 +27,6 @@ public class Food {
             mappedBy="food")
     private Vitamins vitamins;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "FOOD_FK")
-    private Set<Meal> meals;
 
     public long getId() {
         return id;

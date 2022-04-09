@@ -5,7 +5,7 @@ import java.util.Optional;
 
 public interface FoodRepository {
 
-    Optional<Food> findById(Integer id);
+    Optional<Food> findById(Long id);
     List<Food> findByName(String name);
     Food save(Food f);
     void delete(Food f);
