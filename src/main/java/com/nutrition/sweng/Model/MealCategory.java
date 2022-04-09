@@ -1,6 +1,6 @@
 package com.nutrition.sweng.Model;
 
-public enum FoodCategory {
+public enum MealCategory {
     BREAKFAST,
     LUNCH,
     DINNER,
