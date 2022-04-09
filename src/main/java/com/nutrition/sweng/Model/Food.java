@@ -1,6 +1,7 @@
 package com.nutrition.sweng.Model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Food {
@@ -25,6 +26,10 @@ public class Food {
             optional=false,
             mappedBy="food")
     private Vitamins vitamins;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "FOOD_FK")
+    private Set<Meal> meals;
 
     public long getId() {
         return id;
