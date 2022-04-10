@@ -1,6 +1,5 @@
 package com.nutrition.sweng.Inbound;
 
-import com.nutrition.sweng.Model.Meal;
 import com.nutrition.sweng.Model.Minerals;
 
 public class MineralsDto {

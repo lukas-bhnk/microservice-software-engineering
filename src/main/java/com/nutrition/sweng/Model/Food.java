@@ -27,6 +27,10 @@ public class Food {
             mappedBy="food")
     private Vitamins vitamins;
 
+    public Food(String name, FoodUnitSize unitSize) {
+        this.name = name;
+        this.unitSize = unitSize;
+    }
 
     public long getId() {
         return id;

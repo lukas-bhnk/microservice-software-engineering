@@ -7,6 +7,7 @@ public class Minerals {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    //have to set nullable true, because jpa sets it automatically to Not Null
     @Column(nullable = true)
     private double chloride;
     @Column(nullable = true)

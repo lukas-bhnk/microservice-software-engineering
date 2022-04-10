@@ -1,45 +1,44 @@
-package com.nutrition.sweng.Model;
+package com.nutrition.sweng.Inbound;
 
-import javax.persistence.*;
+import com.nutrition.sweng.Model.Vitamins;
 
-@Entity
-public class Vitamins {
+import javax.persistence.Column;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class VitaminsDto {
     private long id;
-    //have to set nullable true, because jpa sets it automatically to Not Null
-    @Column(nullable = true)
     private double c;
-    @Column(nullable = true)
     private double fol;
-    @Column(nullable = true)
     private double a;
-    @Column(nullable = true)
     private double b1;
-    @Column(nullable = true)
     private double b2;
-    @Column(nullable = true)
     private double b11;
-    @Column(nullable = true)
     private double b12;
-    @Column(nullable = true)
     private double d;
-    @Column(nullable = true)
     private double e;
-    @Column(nullable = true)
     private double k;
-    @Column(nullable = true)
     private double betacarotin;
-    @Column(nullable = true)
     private double niacin;
-    @Column(nullable = true)
     private double retinol;
 
-    @JoinColumn(name="FOOD_ID")
-    @OneToOne
-    @MapsId
-    private Food food;
+    public VitaminsDto(){
+    }
+
+    public VitaminsDto(Vitamins v){
+        this.id = v.getId();
+        this.a = v.getA();
+        this.b1 = v.getB1();
+        this.b2 = v.getB2();
+        this.b11 = v.getB11();
+        this.b12 = v.getB12();
+        this.c = v.getC();
+        this.d = v.getD();
+        this.e = v.getE();
+        this.k = v.getK();
+        this.fol = v.getFol();
+        this.niacin = v.getNiacin();
+        this.betacarotin = v.getBetacarotin();
+        this.retinol = v.getRetinol();
+    }
 
     public long getId() {
         return id;
@@ -152,5 +151,4 @@ public class Vitamins {
     public void setRetinol(double retinol) {
         this.retinol = retinol;
     }
-
 }
