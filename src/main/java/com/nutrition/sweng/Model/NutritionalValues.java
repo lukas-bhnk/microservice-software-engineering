@@ -21,7 +21,6 @@ public class NutritionalValues {
     private double fatsSaturated;
     @Column(nullable = true)
     private double alcohol;
-    @Column(nullable = true)
     private double salt;
 
 
@@ -30,6 +29,20 @@ public class NutritionalValues {
     @MapsId
     private Food food;
 
+    public NutritionalValues(){}
+
+    public NutritionalValues(long id, double carbs, double proteins, double calories, double sugar, double fats, double fatsSaturated, double alcohol, double salt, Food food) {
+        this.id = id;
+        this.carbs = carbs;
+        this.proteins = proteins;
+        this.calories = calories;
+        this.sugar = sugar;
+        this.fats = fats;
+        this.fatsSaturated = fatsSaturated;
+        this.alcohol = alcohol;
+        this.salt = salt;
+        this.food = food;
+    }
 
     public NutritionalValues(double cb, double pts, double fts, double cl, double ftsS, double alc){
         this.carbs = cb;

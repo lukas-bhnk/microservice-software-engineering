@@ -41,6 +41,26 @@ public class Vitamins {
     @MapsId
     private Food food;
 
+    public Vitamins(){}
+
+    public Vitamins(long id, double c, double fol, double a, double b1, double b2, double b11, double b12, double d, double e, double k, double betacarotin, double niacin, double retinol, Food food) {
+        this.id = id;
+        this.c = c;
+        this.fol = fol;
+        this.a = a;
+        this.b1 = b1;
+        this.b2 = b2;
+        this.b11 = b11;
+        this.b12 = b12;
+        this.d = d;
+        this.e = e;
+        this.k = k;
+        this.betacarotin = betacarotin;
+        this.niacin = niacin;
+        this.retinol = retinol;
+        this.food = food;
+    }
+
     public long getId() {
         return id;
     }

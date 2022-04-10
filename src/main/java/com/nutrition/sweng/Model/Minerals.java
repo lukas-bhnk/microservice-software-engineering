@@ -7,28 +7,34 @@ public class Minerals {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    //have to set nullable true, because jpa sets it automatically to Not Null
-    @Column(nullable = true)
     private double chloride;
-    @Column(nullable = true)
     private double magnesium;
-    @Column(nullable = true)
     private double phosphorus;
-    @Column(nullable = true)
     private double iron;
-    @Column(nullable = true)
     private double potassium;
-    @Column(nullable = true)
     private double selenium;
-    @Column(nullable = true)
     private double sodium;
-    @Column(nullable = true)
     private double zinc;
 
     @JoinColumn(name="FOOD_ID")
     @OneToOne
     @MapsId
     private Food food;
+
+    public Minerals(){}
+
+    public Minerals(long id, double chloride, double magnesium, double phosphorus, double iron, double potassium, double selenium, double sodium, double zinc, Food food) {
+        this.id = id;
+        this.chloride = chloride;
+        this.magnesium = magnesium;
+        this.phosphorus = phosphorus;
+        this.iron = iron;
+        this.potassium = potassium;
+        this.selenium = selenium;
+        this.sodium = sodium;
+        this.zinc = zinc;
+        this.food = food;
+    }
 
     public long getId() {
         return id;

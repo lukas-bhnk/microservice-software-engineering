@@ -27,6 +27,8 @@ public class Food {
             mappedBy="food")
     private Vitamins vitamins;
 
+    public Food(){}
+
     public Food(String name, FoodUnitSize unitSize) {
         this.name = name;
         this.unitSize = unitSize;
@@ -55,4 +57,14 @@ public class Food {
     public void setUnitSize(FoodUnitSize unitSize) {
         this.unitSize = unitSize;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", unitSize='" + unitSize.name() + '\'' +
+                '}';
+    }
+
 }
