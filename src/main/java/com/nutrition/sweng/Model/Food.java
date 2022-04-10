@@ -1,7 +1,6 @@
 package com.nutrition.sweng.Model;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 public class Food {
@@ -58,9 +57,33 @@ public class Food {
         this.unitSize = unitSize;
     }
 
+    public NutritionalValues getNutritionalValues() {
+        return nutritionalValues;
+    }
+
+    public void setNutritionalValues(NutritionalValues nutritionalValues) {
+        this.nutritionalValues = nutritionalValues;
+    }
+
+    public Minerals getMinerals() {
+        return minerals;
+    }
+
+    public void setMinerals(Minerals minerals) {
+        this.minerals = minerals;
+    }
+
+    public Vitamins getVitamins() {
+        return vitamins;
+    }
+
+    public void setVitamins(Vitamins vitamins) {
+        this.vitamins = vitamins;
+    }
+
     @Override
     public String toString() {
-        return "Product{" +
+        return "Food{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", unitSize='" + unitSize.name() + '\'' +

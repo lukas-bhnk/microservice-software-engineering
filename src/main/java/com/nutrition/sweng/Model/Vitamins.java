@@ -8,32 +8,19 @@ public class Vitamins {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    //have to set nullable true, because jpa sets it automatically to Not Null
-    @Column(nullable = true)
+
     private double c;
-    @Column(nullable = true)
     private double fol;
-    @Column(nullable = true)
     private double a;
-    @Column(nullable = true)
     private double b1;
-    @Column(nullable = true)
     private double b2;
-    @Column(nullable = true)
     private double b11;
-    @Column(nullable = true)
     private double b12;
-    @Column(nullable = true)
     private double d;
-    @Column(nullable = true)
     private double e;
-    @Column(nullable = true)
     private double k;
-    @Column(nullable = true)
     private double betacarotin;
-    @Column(nullable = true)
     private double niacin;
-    @Column(nullable = true)
     private double retinol;
 
     @JoinColumn(name="FOOD_ID")
@@ -171,6 +158,14 @@ public class Vitamins {
 
     public void setRetinol(double retinol) {
         this.retinol = retinol;
+    }
+
+    public Food getFood() {
+        return food;
+    }
+
+    public void setFood(Food food) {
+        this.food = food;
     }
 
 }

@@ -107,4 +107,13 @@ public class Minerals {
     public void setZinc(double zinc) {
         this.zinc = zinc;
     }
+
+    public Food getFood() {
+        return food;
+    }
+
+    public void setFood(Food food) {
+        this.food = food;
+    }
+
 }

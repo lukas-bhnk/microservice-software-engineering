@@ -6,20 +6,12 @@ public class NutritionalValues {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    //have to set nullable true, because jpa sets it automatically to Not Null
-    @Column(nullable = true)
     private double carbs;
-    @Column(nullable = true)
     private double proteins;
-    @Column(nullable = true)
     private double calories;
-    @Column(nullable = true)
     private double sugar;
-    @Column(nullable = true)
     private double fats;
-    @Column(nullable = true)
     private double fatsSaturated;
-    @Column(nullable = true)
     private double alcohol;
     private double salt;
 
@@ -125,5 +117,13 @@ public class NutritionalValues {
 
     public void setSalt(double salt) {
         this.salt = salt;
+    }
+
+    public Food getFood() {
+        return food;
+    }
+
+    public void setFood(Food food) {
+        this.food = food;
     }
 }
