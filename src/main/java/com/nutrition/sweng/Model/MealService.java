@@ -8,18 +8,17 @@ import java.util.Optional;
 @Service
 public class MealService {
     private MealRepository mealRepository;
-    private FoodRepository foodRepository;
 
     @Autowired
-    public MealService(MealRepository mealRepository,FoodRepository foodRepository){
+    public MealService(MealRepository mealRepository){
         this.mealRepository = mealRepository;
-        this.foodRepository = foodRepository;
     }
 
-    public Meal getMeal(int id){
+    public Meal getMeal(Integer id){
         Optional<Meal> mealOptional = mealRepository.findById(id);
         if(mealOptional.isPresent()){
             Meal meal = mealOptional.get();
+            System.out.println(meal);
             return meal;
         }
         else{

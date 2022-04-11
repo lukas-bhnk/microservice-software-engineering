@@ -26,13 +26,15 @@ public class Meal {
 
     }
 
-    public Meal(Date d, Integer cal, double f, double c, double p, MealCategory mc){
-        this.date = d;
-        this.calories = cal;
-        this.fats = f;
-        this.carbs = c;
-        this.proteins = p;
-        this.mealCategory = mc;
+    public Meal(Integer id, Date date, Integer calories, MealCategory mealCategory, Double fats, Double carbs, Double proteins, Set<Food> foodList) {
+        this.id = id;
+        this.date = date;
+        this.calories = calories;
+        this.mealCategory = mealCategory;
+        this.fats = fats;
+        this.carbs = carbs;
+        this.proteins = proteins;
+        this.foodList = foodList;
     }
 
     public Integer getId() {
