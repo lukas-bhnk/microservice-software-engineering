@@ -1,7 +1,7 @@
 package com.nutrition.sweng.Outbound;
 
 import com.nutrition.sweng.Model.Vitamins;
-import com.nutrition.sweng.Model.VitaminsRepository;
+import com.nutrition.sweng.Repository.VitaminsRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

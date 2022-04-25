@@ -1,9 +1,7 @@
 package com.nutrition.sweng.Inbound;
 
-import com.nutrition.sweng.Model.Minerals;
-import com.nutrition.sweng.Model.MineralsService;
 import com.nutrition.sweng.Model.Vitamins;
-import com.nutrition.sweng.Model.VitaminsService;
+import com.nutrition.sweng.Service.VitaminsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,6 +1,6 @@
 package com.nutrition.sweng.Outbound;
 import com.nutrition.sweng.Model.Food;
-import com.nutrition.sweng.Model.FoodRepository;
+import com.nutrition.sweng.Repository.FoodRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

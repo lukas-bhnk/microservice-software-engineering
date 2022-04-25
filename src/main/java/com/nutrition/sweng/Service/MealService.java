@@ -1,5 +1,8 @@
-package com.nutrition.sweng.Model;
+package com.nutrition.sweng.Service;
 
+import com.nutrition.sweng.Model.Meal;
+import com.nutrition.sweng.Model.ResourceNotFoundException;
+import com.nutrition.sweng.Repository.MealRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,6 @@
-package com.nutrition.sweng.Model;
+package com.nutrition.sweng.Repository;
+
+import com.nutrition.sweng.Model.NutritionalValues;
 
 import java.util.List;
 import java.util.Optional;
