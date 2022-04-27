@@ -1,0 +1,19 @@
+#RabbitMQ Configuration
+spring:
+  cloud:
+    stream:
+      bindings:
+        eventConsumer-in-0:
+          destination: sweng.events
+          binder: cloud_rabbit
+      binders:
+        cloud_rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: cow.rmq2.cloudamqp.com
+                port: 5672
+                username: ghkcurap
+                password: 6a2CWs9YHE0cRhinwBdu2QRJaBXFiwmS
+                virtual-host: ghkcurap
