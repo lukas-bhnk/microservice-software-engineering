@@ -20,7 +20,7 @@ public class MealController {
     }
 
     @GetMapping("/{id}")
-    public MealDto getMeal(@PathVariable Integer id){
+    public MealDto getMeal(@PathVariable Long id){
         Meal meal = this.mealService.getMeal(id);
         return new MealDto(meal);
     }

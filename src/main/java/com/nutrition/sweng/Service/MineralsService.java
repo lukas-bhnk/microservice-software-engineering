@@ -1,7 +1,7 @@
 package com.nutrition.sweng.Service;
 
 import com.nutrition.sweng.Model.Minerals;
-import com.nutrition.sweng.Model.MineralsRepository;
+import com.nutrition.sweng.Repository.MineralsRepository;
 import com.nutrition.sweng.Model.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

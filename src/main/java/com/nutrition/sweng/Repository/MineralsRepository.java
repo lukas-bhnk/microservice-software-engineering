@@ -1,4 +1,6 @@
-package com.nutrition.sweng.Model;
+package com.nutrition.sweng.Repository;
+
+import com.nutrition.sweng.Model.Minerals;
 
 import java.util.Optional;
 

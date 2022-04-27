@@ -14,6 +14,6 @@ spring:
               rabbitmq:
                 host: cow.rmq2.cloudamqp.com
                 port: 5672
-                username: ghkcurap
-                password: 6a2CWs9YHE0cRhinwBdu2QRJaBXFiwmS
+                username: admin
+                password: password
                 virtual-host: ghkcurap

@@ -6,6 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MealJpaRepository extends CrudRepository<Meal, Integer>, MealRepository {
+public interface MealJpaRepository extends CrudRepository<Meal, Long>, MealRepository {
 
 }

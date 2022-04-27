@@ -9,13 +9,14 @@ public class Meal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private long id;
     private Date date;
     private Integer calories;
     private MealCategory mealCategory;
     private Double fats;
     private Double carbs;
     private Double proteins;
+    private long userFk;
 
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -26,7 +27,7 @@ public class Meal {
 
     }
 
-    public Meal(Integer id, Date date, Integer calories, MealCategory mealCategory, Double fats, Double carbs, Double proteins, Set<Food> foodList) {
+    public Meal(Long id, Date date, Integer calories, MealCategory mealCategory, Double fats, Double carbs, Double proteins, Long userFk, Set<Food> foodList) {
         this.id = id;
         this.date = date;
         this.calories = calories;
@@ -34,11 +35,24 @@ public class Meal {
         this.fats = fats;
         this.carbs = carbs;
         this.proteins = proteins;
+        this.userFk = userFk;
         this.foodList = foodList;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getUserFk() {
+        return userFk;
+    }
+
+    public void setUserFk(long userFk) {
+        this.userFk = userFk;
     }
 
     public void setId(Integer id) {
