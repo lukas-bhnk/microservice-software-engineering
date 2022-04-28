@@ -1,27 +1,77 @@
 {
 	"info": {
 		"_postman_id": "4340aa4d-ccb2-4022-b5e7-5bfffa78353c",
-		"name": "postman_collection",
+		"name": "Nutri_App_test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "DummyTest",
+			"name": "http://localhost:8080/rest/meal/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "www.fh-muenster.de",
+					"raw": "http://localhost:8080/rest/meal/1",
+					"protocol": "http",
 					"host": [
-						"www",
-						"fh-muenster",
-						"de"
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"meal",
+						"1"
 					]
-				},
-				"description": "Replace this test by your own test requests"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/rest/meal/20",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/rest/meal/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"meal",
+						"20"
+					]
+				}
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
