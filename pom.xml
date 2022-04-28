@@ -58,7 +58,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
-		<dependency>
+<!--		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
 		</dependency>
@@ -69,7 +69,7 @@
 			<type>test-jar</type>
 			<scope>test</scope>
 			<classifier>test-binder</classifier>
-		</dependency>
+		</dependency>-->
 		<!--
                 <dependency>
                     <groupId>com.h2database</groupId>
