@@ -116,4 +116,19 @@ public class Meal {
         this.foodList = foodList;
     }
 
+    @Override
+    public String toString() {
+        return "Meal{" +
+                "id=" + id +
+                ", date=" + date + '\'' +
+                ", calories='" + calories + '\'' +
+                ", mealCategory='" + mealCategory.name() + '\'' +
+                ", fats='" + fats + '\'' +
+                ", carbs='" + carbs + '\'' +
+                ", proteins='" + proteins + '\'' +
+                ", user='" + userFk + '\'' +
+                ", food='" + foodList + '\'' +
+        '}';
+    }
+
 }

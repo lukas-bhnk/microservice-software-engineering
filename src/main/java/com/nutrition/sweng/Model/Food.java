@@ -1,5 +1,7 @@
 package com.nutrition.sweng.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,16 +13,19 @@ public class Food {
     private String name;
     private FoodUnitSize unitSize;
 
+    @JsonIgnore
     @OneToOne(cascade=CascadeType.ALL,
             optional=false,
             mappedBy="food")
     private NutritionalValues nutritionalValues;
 
+    @JsonIgnore
     @OneToOne(cascade=CascadeType.ALL,
             optional=false,
             mappedBy="food")
     private Minerals minerals;
 
+    @JsonIgnore
     @OneToOne(cascade=CascadeType.ALL,
             optional=false,
             mappedBy="food")
