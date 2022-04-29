@@ -1,4 +1,4 @@
-package com.nutrition.sweng.Inbound;
+package com.nutrition.sweng.DTO;
 
 import com.nutrition.sweng.Model.Minerals;
 

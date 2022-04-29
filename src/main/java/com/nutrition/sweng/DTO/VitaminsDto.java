@@ -1,8 +1,6 @@
-package com.nutrition.sweng.Inbound;
+package com.nutrition.sweng.DTO;
 
 import com.nutrition.sweng.Model.Vitamins;
-
-import javax.persistence.Column;
 
 public class VitaminsDto {
     private long id;

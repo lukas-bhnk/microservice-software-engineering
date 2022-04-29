@@ -1,5 +1,6 @@
-package com.nutrition.sweng.Inbound;
+package com.nutrition.sweng.Controller;
 
+import com.nutrition.sweng.DTO.MealDto;
 import com.nutrition.sweng.Model.Meal;
 import com.nutrition.sweng.Service.MealService;
 import org.springframework.beans.factory.annotation.Autowired;

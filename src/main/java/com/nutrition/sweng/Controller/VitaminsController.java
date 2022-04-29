@@ -1,5 +1,6 @@
-package com.nutrition.sweng.Inbound;
+package com.nutrition.sweng.Controller;
 
+import com.nutrition.sweng.DTO.VitaminsDto;
 import com.nutrition.sweng.Model.Vitamins;
 import com.nutrition.sweng.Service.VitaminsService;
 import org.springframework.beans.factory.annotation.Autowired;
