@@ -211,8 +211,6 @@
 							"   pm.expect(jsonData).have.property('carbs', 33);\r",
 							"   pm.expect(jsonData).have.property('calories', 11);\r",
 							"   pm.expect(jsonData).have.property('mealCategory', 'SNACK');\r",
-							"   pm.expect(jsonData.foodList).have.property(id,1);\r",
-							"   \r",
 							"\r",
 							"});\r",
 							"\r",
