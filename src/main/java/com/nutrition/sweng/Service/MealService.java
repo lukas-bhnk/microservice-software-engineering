@@ -27,15 +27,15 @@ public class MealService {
      */
 
     public Meal getMeal(Long id){
-        LOG.info("Execute getShoppingList({}).", id);
+        LOG.info("Execute getMeal({}).", id);
         Optional<Meal> mealOptional = mealRepository.findById(id);
         if (mealOptional.isPresent()) {
-            Meal shoppingList = mealOptional.get();
-            LOG.info("Getting ShoppingList successful with ID {}", shoppingList.getId());
-            return shoppingList;
+            Meal meal = mealOptional.get();
+            LOG.info("Getting Meal successful with ID {}", meal.getId());
+            return meal;
         } else {
-            LOG.error("Getting shoppingList failed. ShoppingList doesnt exist");
-            throw new ResourceNotFoundException("Requested ShoppingList is not in DB");
+            LOG.error("Getting Meal failed. Meal doesnt exist");
+            throw new ResourceNotFoundException("Requested Meal is not in DB");
         }
 
     }
