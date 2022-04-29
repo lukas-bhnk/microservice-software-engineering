@@ -21,15 +21,8 @@
 							"pm.test(\"Data matches\", function () {\r",
 							"   var jsonData = pm.response.json();\r",
 							"   pm.expect(jsonData).have.property('id', 2);\r",
-							"   pm.expect(jsonData).have.property('date', '2020-03-19T23:00:00.000+00:00');\r",
-							"   pm.expect(jsonData).have.property('fats', 20);\r",
-							"   pm.expect(jsonData).have.property('proteins', 43);\r",
-							"   pm.expect(jsonData).have.property('carbs', 33);\r",
-							"   pm.expect(jsonData).have.property('calories', 11);\r",
-							"   pm.expect(jsonData).have.property('mealCategory', 'SNACK');\r",
-							"   pm.expect(jsonData.foodList).have.property(id,1);\r",
-							"   \r",
-							"\r",
+							"   pm.expect(jsonData).have.property('name', 'Cola');\r",
+							"   pm.expect(jsonData).have.property('unitSize', 'pro 100 ml');\r",
 							"});\r",
 							"\r",
 							"\r",
@@ -44,14 +37,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/rest/meal/2",
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/food/2",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
 					],
-					"port": "8080",
 					"path": [
 						"rest",
-						"meal",
+						"food",
 						"2"
 					]
 				}
@@ -66,28 +62,10 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Status test\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.have.status(404);\r",
 							"    pm.response.to.be.withBody;\r",
 							"    pm.response.to.be.json;\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Data matches\", function () {\r",
-							"   var jsonData = pm.response.json();\r",
-							"   pm.expect(jsonData).have.property('id', 2);\r",
-							"   pm.expect(jsonData).have.property('date', '2020-03-19T23:00:00.000+00:00');\r",
-							"   pm.expect(jsonData).have.property('fats', 20);\r",
-							"   pm.expect(jsonData).have.property('proteins', 43);\r",
-							"   pm.expect(jsonData).have.property('carbs', 33);\r",
-							"   pm.expect(jsonData).have.property('calories', 11);\r",
-							"   pm.expect(jsonData).have.property('mealCategory', 'SNACK');\r",
-							"   pm.expect(jsonData.foodList).have.property(id,1);\r",
-							"   \r",
-							"\r",
-							"});\r",
-							"\r",
-							"\r",
-							"\r",
-							""
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -97,15 +75,18 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/rest/meal/2",
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/food/20",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
 					],
-					"port": "8080",
 					"path": [
 						"rest",
-						"meal",
-						"2"
+						"food",
+						"20"
 					]
 				}
 			},
@@ -153,11 +134,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/rest/vitamins/2",
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/vitamins/2",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
 					],
-					"port": "8080",
 					"path": [
 						"rest",
 						"vitamins",
@@ -188,11 +172,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/rest/meal/20",
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/meal/20",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
 					],
-					"port": "8080",
 					"path": [
 						"rest",
 						"meal",
@@ -241,11 +228,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/rest/meal/2",
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/meal/2",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
 					],
-					"port": "8080",
 					"path": [
 						"rest",
 						"meal",
@@ -276,11 +266,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/rest/meal/20",
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/meal/20",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
 					],
-					"port": "8080",
 					"path": [
 						"rest",
 						"meal",
@@ -306,13 +299,14 @@
 							"pm.test(\"Data matches\", function () {\r",
 							"   var jsonData = pm.response.json();\r",
 							"   pm.expect(jsonData).have.property('id', 2);\r",
-							"   pm.expect(jsonData).have.property('carbs', 20);\r",
-							"   pm.expect(jsonData).have.property('proteins', 23);\r",
-							"   pm.expect(jsonData).have.property('calories', 39);\r",
-							"   pm.expect(jsonData).have.property('fats', 40); \r",
-							"   pm.expect(jsonData).have.property('fatsSaturated', 12); \r",
-							"   pm.expect(jsonData).have.property('alcohol', 9); \r",
-							"   pm.expect(jsonData).have.property('salt', -1);\r",
+							"   pm.expect(jsonData).have.property('chloride', -1);\r",
+							"   pm.expect(jsonData).have.property('magnesium', 9);\r",
+							"   pm.expect(jsonData).have.property('phosphorus', 15);\r",
+							"   pm.expect(jsonData).have.property('iron', -1);\r",
+							"   pm.expect(jsonData).have.property('potassium', 29); \r",
+							"   pm.expect(jsonData).have.property('selenium', 310); \r",
+							"   pm.expect(jsonData).have.property('sodium', 212); \r",
+							"   pm.expect(jsonData).have.property('zinc', 33);\r",
 							"});\r",
 							"\r",
 							"\r",
@@ -327,14 +321,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/rest/nutritionalValues/2",
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/minerals/2",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
 					],
-					"port": "8080",
 					"path": [
 						"rest",
-						"nutritionalValues",
+						"minerals",
 						"2"
 					]
 				}
@@ -362,11 +359,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/rest/minerals/20",
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/minerals/20",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
 					],
-					"port": "8080",
 					"path": [
 						"rest",
 						"minerals",
@@ -397,11 +397,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/rest/nutritionalValues/20",
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/nutritionalValues/20",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
 					],
-					"port": "8080",
 					"path": [
 						"rest",
 						"nutritionalValues",
@@ -448,11 +451,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/rest/nutritionalValues/2",
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/nutritionalValues/2",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
 					],
-					"port": "8080",
 					"path": [
 						"rest",
 						"nutritionalValues",
