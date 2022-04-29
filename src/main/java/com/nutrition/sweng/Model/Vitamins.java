@@ -8,7 +8,6 @@ public class Vitamins {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     private double c;
     private double fol;
     private double a;
