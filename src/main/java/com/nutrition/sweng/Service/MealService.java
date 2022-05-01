@@ -47,8 +47,14 @@ public class MealService {
             throw new ResourceNotFoundException("Requested Meal is not in DB");
         }
     }
-
-    public Food addFood(Long mealId, Long foodId, Integer quantityInMGorML) {
+    /**
+     * Find a certain Meal in the database.
+     * @param mealId Id of the Meal, which should be added by the food
+     * @param foodId Id of the Food that should be added into the meal
+     * @param quantityInMGorML Quantity of the food, that schould be added into the meal
+     * @return a Meal
+     */
+    public Meal addFood(Long mealId, Long foodId, Integer quantityInMGorML) {
         //food Multiplicator to multiply the Food values with the quantity (the Food is saved with values per 100g or 100ml)
         double foodMultiplicator = quantityInMGorML / 100;
         LOG.info("Execute addFood(MealId: {}, FoodId: {}, Quantity: {}).", mealId, foodId, quantityInMGorML);
@@ -72,7 +78,7 @@ public class MealService {
                 Double proteins = meal.getProteins() + nutritionalValues.getProteins() * foodMultiplicator;
                 foodSet.add(food);
                 LOG.info("Adding food to meal successful. New food added with name: {}", food.getName());
-                return food;
+                return meal;
             }
             else {
                 throw new ResourceNotFoundException("Requested Food is not in DB");
@@ -87,7 +93,7 @@ public class MealService {
             maxAttempts = 3, //first attempt and 2 retries
             backoff=@Backoff(delay=100, maxDelay=500))
     public NutritionalValues getNutritionalValues(Long id) {
-        LOG.info("Execute get Nutrinal Values({}).", ("Food: " + id));
+        LOG.info("Execute get Nutritional Values({}).", ("Food: " + id));
         return this.foodInfoServiceClient.getNutritionalValues(String.valueOf(id));
     }
 
