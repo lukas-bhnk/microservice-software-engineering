@@ -50,9 +50,9 @@ public class FoodService {
             backoff=@Backoff(delay=100, maxDelay=500))
     public String getAllFoodInfos(Long id) {
         LOG.info("Execute get all Food Infos({}).", ("Food: " + id));
-        String info = foodInfoServiceClient.getFood(String.valueOf(id)).toString() +
-                foodInfoServiceClient.getMinerals(String.valueOf(id)).toString() +
-                foodInfoServiceClient.getNutritionalValues(String.valueOf(id)).toString() +
+        String info = foodInfoServiceClient.getFood(String.valueOf(id)).toString() + "\r\n" +
+                foodInfoServiceClient.getMinerals(String.valueOf(id)).toString() + "\r\n" +
+                foodInfoServiceClient.getNutritionalValues(String.valueOf(id)).toString() + "\r\n" +
                 foodInfoServiceClient.getVitamins(String.valueOf(id)).toString();
         return info;
     }

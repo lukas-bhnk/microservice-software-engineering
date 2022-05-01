@@ -169,7 +169,7 @@ public class Vitamins {
 
     @Override
     public String toString() {
-        return "NutritionalValues{" +
+        return "Vitamins{" +
                 "id=" + id +
                 ", c='" + c + '\'' +
                 ", fol='" + fol + '\'' +
