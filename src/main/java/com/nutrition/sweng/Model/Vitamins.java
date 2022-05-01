@@ -167,4 +167,24 @@ public class Vitamins {
         this.food = food;
     }
 
+    @Override
+    public String toString() {
+        return "NutritionalValues{" +
+                "id=" + id +
+                ", c='" + c + '\'' +
+                ", fol='" + fol + '\'' +
+                ", a='" + a + '\'' +
+                ", b1='" + b1 + '\'' +
+                ", b2='" + b2 + '\'' +
+                ", b11='" + b11 + '\'' +
+                ", b12='" + b12 + '\'' +
+                ", d='" + d + '\'' +
+                ", e='" + e + '\'' +
+                ", k='" + k + '\'' +
+                ", betacarotin='" + betacarotin + '\'' +
+                ", niacin='" + niacin + '\'' +
+                ", retinol='" + retinol + '\'' +
+                '}';
+    }
+
 }

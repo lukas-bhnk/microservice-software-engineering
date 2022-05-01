@@ -126,4 +126,17 @@ public class NutritionalValues {
     public void setFood(Food food) {
         this.food = food;
     }
+
+    @Override
+    public String toString() {
+        return "NutritionalValues{" +
+                "id=" + id +
+                ", carbs='" + carbs + '\'' +
+                ", proteins='" + proteins + '\'' +
+                ", fats='" + fats + '\'' +
+                ", fatsSaturated='" + fatsSaturated + '\'' +
+                ", alcohol='" + alcohol + '\'' +
+                ", salt='" + salt + '\'' +
+                '}';
+    }
 }

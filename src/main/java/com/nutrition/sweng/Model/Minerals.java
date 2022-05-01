@@ -116,4 +116,19 @@ public class Minerals {
         this.food = food;
     }
 
+    @Override
+    public String toString(){
+        return
+        "Minerals{" +
+                "id=" + id +
+                ", chloride='" + chloride + '\'' +
+                ", magnesium='" + magnesium + '\'' +
+                ", phosphorus='" + phosphorus + '\'' +
+                ", iron='" + iron + '\'' +
+                ", potassium='" + potassium + '\'' +
+                ", selenium='" + selenium + '\'' +
+                ", sodium='" + sodium + '\'' +
+                ", zinc='" + zinc + '\'' +
+                '}';
+    }
 }
