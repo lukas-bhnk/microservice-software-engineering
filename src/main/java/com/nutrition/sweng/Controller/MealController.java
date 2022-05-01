@@ -25,5 +25,4 @@ public class MealController {
         Meal meal = this.mealService.getMeal(id);
         return new MealDto(meal);
     }
-
 }

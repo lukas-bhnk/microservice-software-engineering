@@ -3,18 +3,29 @@ package com.nutrition.sweng.Service;
 import com.nutrition.sweng.Model.Food;
 import com.nutrition.sweng.Model.ResourceNotFoundException;
 import com.nutrition.sweng.Repository.FoodRepository;
+import feign.RetryableException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.retry.annotation.Backoff;
+import org.springframework.retry.annotation.Recover;
+import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Optional;
 
 @Service
 public class FoodService {
     private FoodRepository foodRepository;
+    private FoodInfoServiceClient foodInfoServiceClient;
+    public static final String NO_FOOD_INFO = "No Food Info Available.";
+    private final Logger LOG = LoggerFactory.getLogger(getClass());
 
     @Autowired
-    public FoodService(FoodRepository foodRepository){
+    public FoodService(FoodRepository foodRepository, FoodInfoServiceClient foodInfoServiceClient){
         this.foodRepository = foodRepository;
+        this.foodInfoServiceClient = foodInfoServiceClient;
     }
 
     public Food getFood(long id){
@@ -26,5 +37,29 @@ public class FoodService {
         else{
             throw new ResourceNotFoundException("This food ist not in the Database");
         }
+    }
+
+    public String getInfo(long id){
+        String info = this.getAllFoodInfos(id);
+        return info;
+    }
+
+
+    @Retryable(include = RetryableException.class,
+            maxAttempts = 3, //first attempt and 2 retries
+            backoff=@Backoff(delay=100, maxDelay=500))
+    public String getAllFoodInfos(Long id) {
+        LOG.info("Execute get all Food Infos({}).", ("Food: " + id));
+        String info = foodInfoServiceClient.getFood(String.valueOf(id)).toString() +
+                foodInfoServiceClient.getMinerals(String.valueOf(id)).toString() +
+                foodInfoServiceClient.getNutritionalValues(String.valueOf(id)).toString() +
+                foodInfoServiceClient.getVitamins(String.valueOf(id)).toString();
+        return info;
+    }
+
+    @Recover
+    public String fallBackPrice(RetryableException e) {
+        LOG.error("Problem occured when calling food information service. Use fallback! ", e);
+        return NO_FOOD_INFO;
     }
 }
