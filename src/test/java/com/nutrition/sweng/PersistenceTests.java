@@ -1,4 +1,4 @@
-package com.nutrition.sweng.Persistence;
+package com.nutrition.sweng;
 
 import com.nutrition.sweng.Model.*;
 import com.nutrition.sweng.Repository.FoodRepository;

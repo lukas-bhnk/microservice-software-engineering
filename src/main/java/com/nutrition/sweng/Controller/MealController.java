@@ -23,9 +23,10 @@ public class MealController {
         return new MealDto(meal);
     }
 
-    @PostMapping("/?mealId={mealId}/?foodId={foodId}?quantity={quantity}")
-    public Meal addFood(@PathVariable Long mealId, @PathVariable Long foodId, @PathVariable Integer quantity){
+    //@PostMapping("/?mealId={mealId}/?foodId={foodId}?quantity={quantity}")
+    @PostMapping("/{mealId}/{foodId}/{quantity}")
+    public MealDto addFood(@PathVariable Long mealId, @PathVariable Long foodId, @PathVariable Integer quantity){
         Meal meal = this.mealService.addFood(mealId, foodId, quantity);
-        return meal;
+        return new MealDto(meal);
     }
 }

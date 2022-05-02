@@ -20,7 +20,6 @@ public class MealService {
     private FoodRepository foodRepository;
     private MealRepository mealRepository;
     private FoodInfoServiceClient foodInfoServiceClient;
-    public static final String NO_FOOD_INFO = "No Food Info Available.";
     private final Logger LOG =  LoggerFactory.getLogger(getClass());
 
     @Autowired
@@ -76,7 +75,12 @@ public class MealService {
                 Double carbs = meal.getCarbs() + nutritionalValues.getCarbs() * foodMultiplicator;
                 Double fats = meal.getFats() + nutritionalValues.getFats() * foodMultiplicator;
                 Double proteins = meal.getProteins() + nutritionalValues.getProteins() * foodMultiplicator;
+                meal.setCalories(calories);
+                meal.setCarbs(carbs);
+                meal.setProteins(proteins);
+                meal.setFats(fats);
                 foodSet.add(food);
+                mealRepository.save(meal);
                 LOG.info("Adding food to meal successful. New food added with name: {}", food.getName());
                 return meal;
             }
@@ -98,8 +102,8 @@ public class MealService {
     }
 
     @Recover
-    public String fallBackPrice(RetryableException e) {
+    public void fallBackNutritionalValues(RetryableException e) {
         LOG.error("Problem occured when calling food information service. Use fallback! ", e);
-        return NO_FOOD_INFO;
+        throw new ResourceNotFoundException("These Nutritional Values are not in the DB");
     }
 }
