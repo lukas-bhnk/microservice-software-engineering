@@ -8,7 +8,7 @@ public class NutritionalValues {
     private long id;
     private double carbs;
     private double proteins;
-    private double calories;
+    private int calories;
     private double sugar;
     private double fats;
     private double fatsSaturated;
@@ -23,7 +23,7 @@ public class NutritionalValues {
 
     public NutritionalValues(){}
 
-    public NutritionalValues(long id, double carbs, double proteins, double calories, double sugar, double fats, double fatsSaturated, double alcohol, double salt, Food food) {
+    public NutritionalValues(long id, double carbs, double proteins, int calories, double sugar, double fats, double fatsSaturated, double alcohol, double salt, Food food) {
         this.id = id;
         this.carbs = carbs;
         this.proteins = proteins;
@@ -34,15 +34,6 @@ public class NutritionalValues {
         this.alcohol = alcohol;
         this.salt = salt;
         this.food = food;
-    }
-
-    public NutritionalValues(double cb, double pts, double fts, double cl, double ftsS, double alc){
-        this.carbs = cb;
-        this.proteins = pts;
-        this.calories = cl;
-        this.fats = fts;
-        this.fatsSaturated = ftsS;
-        this.alcohol = alc;
     }
 
 
@@ -70,11 +61,11 @@ public class NutritionalValues {
         this.proteins = proteins;
     }
 
-    public double getCalories() {
+    public int getCalories() {
         return calories;
     }
 
-    public void setCalories(double calories) {
+    public void setCalories(int calories) {
         this.calories = calories;
     }
 

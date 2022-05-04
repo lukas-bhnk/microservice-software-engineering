@@ -3,6 +3,8 @@ package com.nutrition.sweng.Model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Food {
@@ -12,6 +14,11 @@ public class Food {
     private long id;
     private String name;
     private FoodUnitSize unitSize;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "meal")
+    private Set<FoodEntry> foodEntries;
+
 
     @JsonIgnore
     @OneToOne(cascade=CascadeType.ALL,
@@ -33,9 +40,10 @@ public class Food {
 
     public Food(){}
 
-    public Food(String name, FoodUnitSize unitSize) {
+    public Food(long id, String name, FoodUnitSize unitSize, Set<FoodEntry> foodEntries) {
         this.name = name;
         this.unitSize = unitSize;
+        this.foodEntries = foodEntries;
     }
 
     public long getId() {
@@ -62,6 +70,14 @@ public class Food {
         this.unitSize = unitSize;
     }
 
+    public Set<FoodEntry> getFoodEntries() {
+        return foodEntries;
+    }
+
+    public void setFoodEntries(Set<FoodEntry> foodEntries) {
+        this.foodEntries = foodEntries;
+    }
+
     public NutritionalValues getNutritionalValues() {
         return nutritionalValues;
     }
@@ -85,6 +101,7 @@ public class Food {
     public void setVitamins(Vitamins vitamins) {
         this.vitamins = vitamins;
     }
+
 
     @Override
     public String toString() {

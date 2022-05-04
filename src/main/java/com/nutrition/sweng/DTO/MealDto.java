@@ -2,6 +2,7 @@ package com.nutrition.sweng.DTO;
 
 
 import com.nutrition.sweng.Model.Food;
+import com.nutrition.sweng.Model.FoodEntry;
 import com.nutrition.sweng.Model.Meal;
 
 import java.util.Date;
@@ -15,7 +16,7 @@ public class MealDto {
     private double fats;
     private int calories;
     private String mealCategory;
-    private Set<Food> foodList;
+    private Set<FoodEntry> foodEntries;
 
 
     public MealDto(){
@@ -29,15 +30,15 @@ public class MealDto {
         this.carbs = m.getCarbs();
         this.fats = m.getFats();
         this.calories = m.getCalories();
-        this.foodList = m.getFoodList();
+        this.foodEntries = m.getFoodEntries();
     }
 
-    public Set<Food> getFoodList() {
-        return foodList;
+    public Set<FoodEntry> getFoodEntries() {
+        return foodEntries;
     }
 
-    public void setFoodList(Set<Food> foodList) {
-        this.foodList = foodList;
+    public void setFoodList(Set<FoodEntry> foodEntries) {
+        this.foodEntries = foodEntries;
     }
 
     public long getId() {

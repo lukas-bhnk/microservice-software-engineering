@@ -82,5 +82,6 @@ public class FoodDto {
     public void setUnitSize(String unitSize) {
         this.unitSize = unitSize;
     }
+
 }
 

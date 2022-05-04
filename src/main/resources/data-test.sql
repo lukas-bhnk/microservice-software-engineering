@@ -2,9 +2,10 @@ INSERT INTO meal(id,calories,carbs,date,fats,meal_category,proteins, user_fk) VA
 INSERT INTO meal(id,calories,carbs,date,fats,meal_category,proteins, user_fk) VALUES (2,11,33,'2020-03-20',20,3,43,3);
 INSERT INTO meal(id,calories,carbs,date,fats,meal_category,proteins, user_fk) VALUES (3,409,40,'2019-04-10',34,2,12,4);
 
-INSERT INTO food(id, name, unit_size, meal_fk) VALUES (1,'Apfel', 0, 2);
-INSERT INTO food(id, name, unit_size, meal_fk) VALUES (2,'Cola', 1, 2);
+INSERT INTO food(id, name, unit_size) VALUES (1,'Apfel', 0);
+INSERT INTO food(id, name, unit_size) VALUES (2,'Cola', 1);
 INSERT INTO food(id, name, unit_size) VALUES (3,'Spaghetti', 1);
+
 
 INSERT INTO minerals(food_id, chloride, iron, magnesium, phosphorus, potassium, selenium, sodium, zinc) VALUES (1,2,3,6,5,9,10,12,33);
 INSERT INTO minerals(food_id, chloride, iron, magnesium, phosphorus, potassium, selenium, sodium, zinc) VALUES (2,-1,-1,9,15,29,310,212,33);

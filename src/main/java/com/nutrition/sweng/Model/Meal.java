@@ -1,7 +1,10 @@
 package com.nutrition.sweng.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Set;
 
 @Entity
@@ -18,16 +21,18 @@ public class Meal {
     private Double proteins;
     private long userFk;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "meal")
+    private Set<FoodEntry> foodEntries;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "MEAL_FK")
-    private Set<Food> foodList;
+
+
 
     public Meal() {
 
     }
 
-    public Meal(Long id, Date date, Integer calories, MealCategory mealCategory, Double fats, Double carbs, Double proteins, Long userFk, Set<Food> foodList) {
+    public Meal(Long id, Date date, Integer calories, MealCategory mealCategory, Double fats, Double carbs, Double proteins, Long userFk, Set<FoodEntry> foodEntries) {
         this.id = id;
         this.date = date;
         this.calories = calories;
@@ -36,7 +41,7 @@ public class Meal {
         this.carbs = carbs;
         this.proteins = proteins;
         this.userFk = userFk;
-        this.foodList = foodList;
+        this.foodEntries = foodEntries;
     }
 
     public Long getId() {
@@ -107,13 +112,12 @@ public class Meal {
         this.proteins = proteins;
     }
 
-
-    public Set<Food> getFoodList() {
-        return foodList;
+    public Set<FoodEntry> getFoodEntries() {
+        return foodEntries;
     }
 
-    public void setFoodList(Set<Food> foodList) {
-        this.foodList = foodList;
+    public void setFoodEntries(Set<FoodEntry> foodEntries) {
+        this.foodEntries = foodEntries;
     }
 
     @Override
@@ -127,7 +131,7 @@ public class Meal {
                 ", carbs='" + carbs + '\'' +
                 ", proteins='" + proteins + '\'' +
                 ", user='" + userFk + '\'' +
-                ", food='" + foodList + '\'' +
+                ", foodEntries='" + foodEntries + '\'' +
         '}';
     }
 

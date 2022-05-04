@@ -23,10 +23,15 @@ public class MealController {
         return new MealDto(meal);
     }
 
-    //@PostMapping("/?mealId={mealId}/?foodId={foodId}?quantity={quantity}")
     @PostMapping("/{mealId}/{foodId}/{quantity}")
     public MealDto addFood(@PathVariable Long mealId, @PathVariable Long foodId, @PathVariable Integer quantity){
         Meal meal = this.mealService.addFood(mealId, foodId, quantity);
+        return new MealDto(meal);
+    }
+
+    @DeleteMapping("/{mealId}/{foodId}")
+    public MealDto deleteFood(@PathVariable Long mealId, @PathVariable Long foodId){
+        Meal meal = this.mealService.deleteFood(mealId, foodId);
         return new MealDto(meal);
     }
 }
