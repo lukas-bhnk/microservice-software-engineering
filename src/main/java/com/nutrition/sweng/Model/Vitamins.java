@@ -13,7 +13,7 @@ public class Vitamins {
     private double a;
     private double b1;
     private double b2;
-    private double b11;
+    private double b6;
     private double b12;
     private double d;
     private double e;
@@ -29,14 +29,14 @@ public class Vitamins {
 
     public Vitamins(){}
 
-    public Vitamins(long id, double c, double fol, double a, double b1, double b2, double b11, double b12, double d, double e, double k, double betacarotin, double niacin, double retinol, Food food) {
+    public Vitamins(long id, double c, double fol, double a, double b1, double b2, double b6, double b12, double d, double e, double k, double betacarotin, double niacin, double retinol, Food food) {
         this.id = id;
         this.c = c;
         this.fol = fol;
         this.a = a;
         this.b1 = b1;
         this.b2 = b2;
-        this.b11 = b11;
+        this.b6 = b6;
         this.b12 = b12;
         this.d = d;
         this.e = e;
@@ -95,12 +95,12 @@ public class Vitamins {
         this.b2 = b2;
     }
 
-    public double getB11() {
-        return b11;
+    public double getB6() {
+        return b6;
     }
 
-    public void setB11(double b11) {
-        this.b11 = b11;
+    public void setB6(double b6) {
+        this.b6 = b6;
     }
 
     public double getB12() {
@@ -176,7 +176,7 @@ public class Vitamins {
                 ", a='" + a + '\'' +
                 ", b1='" + b1 + '\'' +
                 ", b2='" + b2 + '\'' +
-                ", b11='" + b11 + '\'' +
+                ", b11='" + b6 + '\'' +
                 ", b12='" + b12 + '\'' +
                 ", d='" + d + '\'' +
                 ", e='" + e + '\'' +

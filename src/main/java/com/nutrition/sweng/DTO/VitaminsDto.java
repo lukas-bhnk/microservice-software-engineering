@@ -9,7 +9,7 @@ public class VitaminsDto {
     private double a;
     private double b1;
     private double b2;
-    private double b11;
+    private double b6;
     private double b12;
     private double d;
     private double e;
@@ -26,7 +26,7 @@ public class VitaminsDto {
         this.a = v.getA();
         this.b1 = v.getB1();
         this.b2 = v.getB2();
-        this.b11 = v.getB11();
+        this.b6 = v.getB6();
         this.b12 = v.getB12();
         this.c = v.getC();
         this.d = v.getD();
@@ -86,12 +86,12 @@ public class VitaminsDto {
         this.b2 = b2;
     }
 
-    public double getB11() {
-        return b11;
+    public double getB6() {
+        return b6;
     }
 
-    public void setB11(double b11) {
-        this.b11 = b11;
+    public void setB6(double b6) {
+        this.b6 = b6;
     }
 
     public double getB12() {

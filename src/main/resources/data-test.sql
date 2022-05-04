@@ -15,9 +15,9 @@ INSERT INTO nutritional_values(food_id, alcohol, calories, carbs, fats, fats_sat
 INSERT INTO nutritional_values(food_id, alcohol, calories, carbs, fats, fats_saturated, proteins, salt, sugar) VALUES (2,9,39,20,40,12,23,-1,-1);
 INSERT INTO nutritional_values(food_id, alcohol, calories, carbs, fats, fats_saturated, proteins, salt, sugar) VALUES (3,0,329,120,4,121,231,1,10);
 
-INSERT INTO vitamins(food_id,a,b1,b11,b12,b2,betacarotin,c,d,e,fol,k,niacin,retinol) VALUES (1,12,123,12,14,12,13,1,5,6,7,45,45,23);
-INSERT INTO vitamins(food_id,a,b1,b11,b12,b2,betacarotin,c,d,e,fol,k,niacin,retinol) VALUES (2,112,25,13,12,-1,13,5,25,6,34,22,42,23);
-INSERT INTO vitamins(food_id,a,b1,b11,b12,b2,betacarotin,c,d,e,fol,k,niacin,retinol) VALUES (3,2,19,24,14,12,14,1,5,6,7,45,5,23);
+INSERT INTO vitamins(food_id,a,b1,b6,b12,b2,betacarotin,c,d,e,fol,k,niacin,retinol) VALUES (1,12,123,12,14,12,13,1,5,6,7,45,45,23);
+INSERT INTO vitamins(food_id,a,b1,b6,b12,b2,betacarotin,c,d,e,fol,k,niacin,retinol) VALUES (2,112,25,13,12,-1,13,5,25,6,34,22,42,23);
+INSERT INTO vitamins(food_id,a,b1,b6,b12,b2,betacarotin,c,d,e,fol,k,niacin,retinol) VALUES (3,2,19,24,14,12,14,1,5,6,7,45,5,23);
 
 
 

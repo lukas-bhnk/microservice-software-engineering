@@ -48,7 +48,7 @@ public class FoodInfoServiceTests {
         assert (vitamins.getA()==112);
         assert (vitamins.getB1()==25);
         assert (vitamins.getB2()==-1);
-        assert (vitamins.getB11()==13);
+        assert (vitamins.getB6()==13);
         assert (vitamins.getB12()==12);
         assert (vitamins.getC()==5);
         assert (vitamins.getD()==25);
