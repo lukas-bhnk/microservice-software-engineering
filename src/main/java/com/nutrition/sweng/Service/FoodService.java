@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -47,6 +48,11 @@ public class FoodService {
         else{
             throw new ResourceNotFoundException("This food ist not in the Database");
         }
+    }
+
+    public List<Food> getFood(String name){
+        List<Food> foodList = foodRepository.findByName(name);
+        return foodList;
     }
 
     public String getInfo(long id){

@@ -23,7 +23,10 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.persistence.Column;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("rest/food")
@@ -40,6 +43,14 @@ public class FoodController {
     public FoodDto getFood(@PathVariable Long id){
         Food food = this.foodService.getFood(id);
         return new FoodDto(food);
+    }
+
+    @GetMapping("/name={name}")
+    public List<FoodDto> getFood (@PathVariable String name){
+        List<Food> foodList = this.foodService.getFood(name);
+        List<FoodDto> foodDtoList = null;
+        for (Food f : foodList) foodDtoList.add(new FoodDto(f));
+        return foodDtoList;
     }
 
     @GetMapping("getInfo/{id}")

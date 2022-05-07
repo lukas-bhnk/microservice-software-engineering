@@ -1,10 +1,13 @@
 package com.nutrition.sweng.Service;
 
+import com.nutrition.sweng.Event.EventPublisher;
+import com.nutrition.sweng.Event.MealChangedEvent;
 import com.nutrition.sweng.Model.*;
 import com.nutrition.sweng.Repository.FoodEntryRepository;
 import com.nutrition.sweng.Repository.FoodRepository;
 import com.nutrition.sweng.Repository.MealRepository;
 import feign.RetryableException;
+import jdk.jfr.Event;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +16,8 @@ import org.springframework.retry.annotation.Recover;
 import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
@@ -22,14 +27,16 @@ public class MealService {
     private FoodRepository foodRepository;
     private FoodEntryRepository foodEntryRepository;
     private FoodInfoServiceClient foodInfoServiceClient;
+    private EventPublisher eventPublisher;
     private final Logger LOG =  LoggerFactory.getLogger(getClass());
 
     @Autowired
-    public MealService(MealRepository mealRepository, FoodInfoServiceClient foodInfoServiceClient,FoodRepository foodRepository, FoodEntryRepository foodEntryRepository ){
+    public MealService(MealRepository mealRepository, FoodInfoServiceClient foodInfoServiceClient,FoodRepository foodRepository, FoodEntryRepository foodEntryRepository, Event publisher ){
         this.mealRepository = mealRepository;
         this.foodRepository = foodRepository;
         this.foodInfoServiceClient = foodInfoServiceClient;
         this.foodEntryRepository = foodEntryRepository;
+        this.eventPublisher = eventPublisher;
     }
 
     /**
@@ -79,6 +86,34 @@ public class MealService {
             throw new ResourceNotFoundException("Meal not exists in DB");
         }
     }
+    /**
+     * Create a new Meal and save it do the database.
+     * @param date of the Meal
+     * @param mealCategory Brea
+     * @param userFk
+     * @return a Meal
+     */
+    public Meal createMeal(Date date, MealCategory mealCategory, long userFk){
+        Meal meal = new Meal();
+        meal.setDate(date);
+        meal.setProteins(0.0);
+        meal.setCarbs(0.0);
+        meal.setFats(0.0);
+        meal.setCalories(0);
+        meal.setUserFk(userFk);
+        meal.setFoodEntries(new HashSet<FoodEntry>());
+        meal.setMealCategory(mealCategory);
+        mealRepository.save(meal);
+        LOG.info("Creating meal successful. New food created with Date: {} and Category: {}", meal.getDate(), meal.getMealCategory().name());
+        var event = new MealChangedEvent(meal);
+        var published = this.eventPublisher.publishEvent(event);
+        if (!published) {
+            //TODO: we have to rollback the transaction
+        }
+
+        return meal;
+
+    }
 
     /**
      * Add a food and the quantity to a certain Meal in the database.
@@ -111,6 +146,11 @@ public class MealService {
                 foodEntries.add(foodEntry);
                 foodEntryRepository.save(foodEntry);
                 LOG.info("Adding Foodentry to meal successful. New food added with name: {}", food.getName());
+                var event = new MealChangedEvent(meal);
+                var published = this.eventPublisher.publishEvent(event);
+                if (!published) {
+                    //TODO: we have to rollback the transaction
+                }
                 return meal;
             }
             else {
@@ -138,6 +178,11 @@ public class MealService {
                 Food f = foodEntry.getFood();
                 if (f.getId() == foodId) {
                     foodEntry = this.calculateNutritionalValuesInFoodEntry(foodEntry, foodId,quantityInGorML);
+                    var event = new MealChangedEvent(meal);
+                    var published = this.eventPublisher.publishEvent(event);
+                    if (!published) {
+                        //TODO: we have to rollback the transaction
+                    }
                     return meal;
                 }
             }

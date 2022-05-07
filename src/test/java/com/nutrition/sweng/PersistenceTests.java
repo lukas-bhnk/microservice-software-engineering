@@ -94,13 +94,17 @@ public class PersistenceTests {
         assertFalse (vitaminsOptional2.isPresent());
     }
 
-/*    @Test
+
+    @Test
     public void saveAndDeleteMeal() {
         Meal meal = new Meal(10L,new Date(2000, 10, 21) , 40, MealCategory.BREAKFAST, 2.9, 3.0, 4.0, 10L, Collections.emptySet());
         Meal m = mealRepository.save(meal);
         Optional<Meal> mealOptional = mealRepository.findById(10L);
         assert  (mealOptional.isPresent());
-        mealRepository.delete();
-    }*/
+        Meal meal2 = mealOptional.get();
+        mealRepository.delete(meal2);
+        Optional<Meal> mealOptional2 = mealRepository.findById(10L);
+        assertFalse(mealOptional2.isPresent());
+    }
 
 }

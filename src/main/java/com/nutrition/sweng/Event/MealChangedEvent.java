@@ -1,71 +1,137 @@
-/*
 package com.nutrition.sweng.Event;
 
+import com.nutrition.sweng.Model.FoodEntry;
+import com.nutrition.sweng.Model.Meal;
+import com.nutrition.sweng.Model.MealCategory;
+
+import java.util.Date;
 import java.util.Objects;
+import java.util.Set;
 
 public class MealChangedEvent {
 
-    private Integer userId;
-    private String name;
-    private String email;
-    private String inviteCode;
+    private long id;
+    private Date date;
+    private String mealCategory;
+    private int calories;
+    private double proteins;
+    private double fats;
+    private double carbs;
+    private long userFk;
+
+    private Set<FoodEntry> foodEntries;
+
 
     public MealChangedEvent(){
     }
 
-    public MealChangedEvent(Integer id, String name, String email, String inviteCode) {
-        this.userId = id;
-        this.name = name;
-        this.email = email;
-        this.inviteCode = inviteCode;
+    public MealChangedEvent(Long id, Date date, MealCategory mealCategory, int calories, double fats, double carbs, double proteins, long userFk, Set<FoodEntry> foodEntries) {
+        this.id = id;
+        this.mealCategory = mealCategory.name();
+        this.calories = calories;
+        this.fats = fats;
+        this.carbs = carbs;
+        this.proteins = proteins;
+        this.userFk = userFk;
+        this.foodEntries = foodEntries;
     }
 
-    public mealChangedEvent(User registeredUser, String inviteCode) {
-        this.userId = registeredUser.getId();
-        this.name = registeredUser.getName();
-        this.email = registeredUser.getEmail();
-        this.inviteCode = inviteCode;
+    public MealChangedEvent(Meal m) {
+        this.id = m.getId();
+        this.date = m.getDate();
+        this.mealCategory = m.getMealCategory().name();
+        this.proteins = m.getProteins();
+        this.carbs = m.getCarbs();
+        this.fats = m.getFats();
+        this.calories = m.getCalories();
+        this.userFk = m.getUserFk();
+        this.foodEntries = m.getFoodEntries();
     }
 
-    public Integer getUserId() {
-        return userId;
+    public long getId() {
+        return id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Date getDate() {
+        return date;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public String getEmail() {
-        return email;
+    public String getMealCategory() {
+        return mealCategory;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setMealCategory(String mealCategory) {
+        this.mealCategory = mealCategory;
     }
 
-    public String getInviteCode() {
-        return inviteCode;
+    public int getCalories() {
+        return calories;
     }
 
-    public void setInviteCode(String inviteCode) {
-        this.inviteCode = inviteCode;
+    public void setCalories(int calories) {
+        this.calories = calories;
+    }
+
+    public double getProteins() {
+        return proteins;
+    }
+
+    public void setProteins(double proteins) {
+        this.proteins = proteins;
+    }
+
+    public double getFats() {
+        return fats;
+    }
+
+    public void setFats(double fats) {
+        this.fats = fats;
+    }
+
+    public double getCarbs() {
+        return carbs;
+    }
+
+    public void setCarbs(double carbs) {
+        this.carbs = carbs;
+    }
+
+    public long getUserFk() {
+        return userFk;
+    }
+
+    public void setUserFk(long userFk) {
+        this.userFk = userFk;
+    }
+
+    public Set<FoodEntry> getFoodEntries() {
+        return foodEntries;
+    }
+
+    public void setFoodEntries(Set<FoodEntry> foodEntries) {
+        this.foodEntries = foodEntries;
     }
 
     @Override
     public String toString() {
-        return "UserRegisteredEvent{" +
-                "userId=" + userId +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", inviteCode='" + inviteCode + '\'' +
+        return "Meal{" +
+                "id=" + id +
+                ", date=" + date + '\'' +
+                ", calories='" + calories + '\'' +
+                ", mealCategory='" + mealCategory + '\'' +
+                ", fats='" + fats + '\'' +
+                ", carbs='" + carbs + '\'' +
+                ", proteins='" + proteins + '\'' +
+                ", user='" + userFk + '\'' +
+                ", foodEntries='" + foodEntries + '\'' +
                 '}';
     }
 
@@ -73,14 +139,13 @@ public class MealChangedEvent {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        UserRegisteredEvent that = (UserRegisteredEvent) o;
-        return Objects.equals(userId, that.userId) && Objects.equals(name, that.name) && Objects.equals(email, that.email) && Objects.equals(inviteCode, that.inviteCode);
+        MealChangedEvent that = (MealChangedEvent) o;
+        return Objects.equals(id, that.id) && Objects.equals(date, that.date) && Objects.equals(mealCategory, that.mealCategory) && Objects.equals(calories, that.calories) && Objects.equals(userFk, that.userFk) && Objects.equals(foodEntries, that.foodEntries);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, name, email, inviteCode);
+        return Objects.hash(id, date, mealCategory, calories, proteins, carbs, fats, userFk, foodEntries);
     }
 
 }
-*/

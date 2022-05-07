@@ -1,5 +1,6 @@
-/*
 package com.nutrition.sweng.Event;
+
+import com.nutrition.sweng.Model.User;
 
 import java.util.Objects;
 
@@ -72,4 +73,3 @@ public class UserRegisteredEvent {
 }
 
 
-*/

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import javax.validation.constraints.Positive;
+import java.util.Set;
 
 @Entity
 public class FoodEntry {
@@ -25,10 +26,11 @@ public class FoodEntry {
     private double carbs;
     private double proteins;
 
+
     public FoodEntry(){
     }
 
-    public FoodEntry(long id, Meal meal, Food food, int quantity, int calories, double fats, double carbs, double proteins){
+    public FoodEntry(long id, Meal meal, Food food, int quantity, int calories, double fats, double carbs, double proteins, long userFk, Set<FoodEntry> foodEntries){
         this.id = id;
         this.meal = meal;
         this.food = food;
@@ -102,4 +104,6 @@ public class FoodEntry {
     public void setProteins(double proteins) {
         this.proteins = proteins;
     }
+
+
 }
