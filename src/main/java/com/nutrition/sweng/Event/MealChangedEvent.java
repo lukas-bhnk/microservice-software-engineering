@@ -3,6 +3,7 @@ package com.nutrition.sweng.Event;
 import com.nutrition.sweng.Model.FoodEntry;
 import com.nutrition.sweng.Model.Meal;
 import com.nutrition.sweng.Model.MealCategory;
+import com.nutrition.sweng.Model.User;
 
 import java.util.Date;
 import java.util.Objects;
@@ -17,7 +18,7 @@ public class MealChangedEvent {
     private double proteins;
     private double fats;
     private double carbs;
-    private long userFk;
+    private User userFk;
 
     private Set<FoodEntry> foodEntries;
 
@@ -25,7 +26,7 @@ public class MealChangedEvent {
     public MealChangedEvent(){
     }
 
-    public MealChangedEvent(Long id, Date date, MealCategory mealCategory, int calories, double fats, double carbs, double proteins, long userFk, Set<FoodEntry> foodEntries) {
+    public MealChangedEvent(Long id, Date date, MealCategory mealCategory, int calories, double fats, double carbs, double proteins, User userFk, Set<FoodEntry> foodEntries) {
         this.id = id;
         this.mealCategory = mealCategory.name();
         this.calories = calories;
@@ -104,11 +105,11 @@ public class MealChangedEvent {
         this.carbs = carbs;
     }
 
-    public long getUserFk() {
+    public User getUserFk() {
         return userFk;
     }
 
-    public void setUserFk(long userFk) {
+    public void setUserFk(User userFk) {
         this.userFk = userFk;
     }
 

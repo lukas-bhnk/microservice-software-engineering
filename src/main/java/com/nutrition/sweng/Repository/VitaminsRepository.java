@@ -8,6 +8,5 @@ public interface VitaminsRepository {
 
     Optional<Vitamins> findById(long id);
     Vitamins save(Vitamins v);
-    void delete(Vitamins v);
 
 }

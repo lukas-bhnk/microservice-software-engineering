@@ -46,11 +46,9 @@ public class FoodController {
     }
 
     @GetMapping("/name={name}")
-    public List<FoodDto> getFood (@PathVariable String name){
+    public List<Food> getFood (@PathVariable String name){
         List<Food> foodList = this.foodService.getFood(name);
-        List<FoodDto> foodDtoList = null;
-        for (Food f : foodList) foodDtoList.add(new FoodDto(f));
-        return foodDtoList;
+        return foodList;
     }
 
     @GetMapping("getInfo/{id}")

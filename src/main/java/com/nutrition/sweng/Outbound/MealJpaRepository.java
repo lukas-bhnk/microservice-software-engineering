@@ -12,6 +12,6 @@ import java.util.List;
 
 @Repository
 public interface MealJpaRepository extends CrudRepository<Meal, Long>, MealRepository {
-    @Query("SELECT m FROM Meal m WHERE m.date = :date AND m.userFk = m.userFk")
+    @Query("SELECT m FROM Meal m WHERE m.date = :date AND m.userFk = :userFk")
     List<Meal> findByDateAndUser(Date date, Long userFk);
 }

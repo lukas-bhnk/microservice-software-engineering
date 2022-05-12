@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Set;
 
 @Entity
@@ -19,20 +18,20 @@ public class Meal {
     private Double fats;
     private Double carbs;
     private Double proteins;
-    private long userFk;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_fk")
+    private User userFk;
 
     @JsonIgnore
     @OneToMany(mappedBy = "meal")
     private Set<FoodEntry> foodEntries;
 
-
-
-
     public Meal() {
 
     }
 
-    public Meal(Long id, Date date, Integer calories, MealCategory mealCategory, Double fats, Double carbs, Double proteins, Long userFk, Set<FoodEntry> foodEntries) {
+    public Meal(Long id, Date date, Integer calories, MealCategory mealCategory, Double fats, Double carbs, Double proteins, User userFk, Set<FoodEntry> foodEntries) {
         this.id = id;
         this.date = date;
         this.calories = calories;
@@ -52,11 +51,11 @@ public class Meal {
         this.id = id;
     }
 
-    public long getUserFk() {
+    public User getUserFk() {
         return userFk;
     }
 
-    public void setUserFk(long userFk) {
+    public void setUserFk(User userFk) {
         this.userFk = userFk;
     }
 

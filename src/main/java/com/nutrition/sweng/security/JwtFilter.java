@@ -1,3 +1,4 @@
+/*
 package com.nutrition.sweng.security;
 
 import org.springframework.security.core.Authentication;
@@ -10,20 +11,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class JwtTokenFilter extends OncePerRequestFilter {
+public class JwtFilter extends OncePerRequestFilter {
 
-    private JwtTokenProvider jwtTokenProvider;
+    private JwtValidator jwtValidator;
 
-    public JwtTokenFilter(JwtTokenProvider jwtTokenProvider) {
-        this.jwtTokenProvider = jwtTokenProvider;
+    public JwtFilter(JwtValidator jwtValidator) {
+        this.jwtValidator = jwtValidator;
     }
 
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
-        String token = jwtTokenProvider.resolveToken(httpServletRequest);
+        String token = jwtValidator.resolveToken(httpServletRequest);
         try {
-            if (token != null && jwtTokenProvider.isValidJWT(token)) {
-                Authentication auth = jwtTokenProvider.getAuthentication(token);
+            if (token != null && jwtValidator.isValidJWT(token)) {
+                Authentication auth = jwtValidator.getAuthentication(token);
                 SecurityContextHolder.getContext().setAuthentication(auth);
             }
         } catch (Exception e) {
@@ -37,3 +38,4 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
 }
 
+*/

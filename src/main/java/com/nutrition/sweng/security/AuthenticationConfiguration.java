@@ -1,3 +1,4 @@
+/*
 package com.nutrition.sweng.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,18 +9,16 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class AuthenticationConfiguration extends WebSecurityConfigurerAdapter {
 
-    private JwtTokenProvider jwtTokenProvider;
+    private JwtValidator jwtValidator;
 
     @Autowired
-    public AuthenticationConfiguration(JwtTokenProvider jwtTokenProvider) {
-        this.jwtTokenProvider = jwtTokenProvider;
+    public AuthenticationConfiguration(JwtValidator jwtValidator) {
+        this.jwtValidator = jwtValidator;
     }
 
     @Bean
@@ -31,20 +30,16 @@ public class AuthenticationConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/rest/users/login").permitAll()
-                .antMatchers("/rest/users/register").permitAll()
                 .antMatchers("/actuator/**").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
+                .antMatchers("/swagger-ui.html").permitAll()
+                .antMatchers("/swagger-ui/**").permitAll()
+                .antMatchers("/v3/api-docs/**").permitAll()
                 .anyRequest().authenticated()
                 .and().csrf().disable();
         http.headers().frameOptions().disable(); //h2-console uses i-frame
-        http.apply(new JwtTokenFilterConfigurer(jwtTokenProvider)); //JWT
+        http.apply(new JwtFilterConfigurer(jwtValidator)); //JWT
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
-
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
 }
+*/

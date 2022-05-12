@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface UserJpaRepository extends CrudRepository<User, Integer>, UserRepository {
@@ -15,5 +16,5 @@ public interface UserJpaRepository extends CrudRepository<User, Integer>, UserRe
     List<User> findByName(String name);
 
     @Query("SELECT u FROM User u WHERE u.email = :email")
-    User findByEmail(@Param("email") String email);
+    Optional<User> findByEmail(@Param("email") String email);
 }

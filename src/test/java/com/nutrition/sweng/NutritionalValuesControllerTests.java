@@ -33,13 +33,14 @@ public class NutritionalValuesControllerTests {
     public void setUp() throws Exception {
         this.nutritionalValues = nutritionalValuesService.getNutritionalValues(1L);
     }
+
     @Test
-    public void getMeal() throws Exception {
+    public void getNutritionalValues() throws Exception {
         given(this.nutritionalValuesService.getNutritionalValues(1L)).willReturn(this.nutritionalValues);
         this.mvc.perform(get("/rest/nutritionalValues/{}", 1))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(1))
-                .andExpect(content().json("{\"id\":2,\"date\":\"2020-03-19T23:00:00.000+00:00\",\"proteins\":43.0,\"carbs\":33.0,\"fats\":20.0,\"calories\":11,\"mealCategory\":\"SNACK\",\"foodList\":[{\"id\":1,\"name\":\"Apfel\",\"unitSize\":\"pro 100g essbarer Anteil\"},{\"id\":2,\"name\":\"Cola\",\"unitSize\":\"pro 100ml\"}]}"));
+                .andExpect(content().json("{\"id\":1,\"carbs\":-1.0,\"proteins\":23.0,\"calories\":39.0,\"sugar\":10.0,\"fats\":40.0,\"fatsSaturated\":12.0,\"alcohol\":9.0,\"salt\":1.0}"));
     }
 }

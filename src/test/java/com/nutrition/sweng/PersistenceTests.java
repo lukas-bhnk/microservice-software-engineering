@@ -1,12 +1,10 @@
 package com.nutrition.sweng;
 
 import com.nutrition.sweng.Model.*;
-import com.nutrition.sweng.Repository.FoodRepository;
-import com.nutrition.sweng.Repository.MealRepository;
+import com.nutrition.sweng.Repository.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.nutrition.sweng.Repository.NutritionalValuesRepository;
-import com.nutrition.sweng.Repository.VitaminsRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -24,15 +22,18 @@ public class PersistenceTests {
     private FoodRepository foodRepository;
 
     @Autowired
+    private FoodEntryRepository foodEntryRepository;
+
+    @Autowired
     private NutritionalValuesRepository nutritionalValuesRepository;
 
     @Autowired
     private VitaminsRepository vitaminsRepository;
 
-    /* Test database connection with MealRepository
-    search after the Meal Id in the Repository and checks if the Meal can find
-    search after a not existing Meal Id in the Repository and checks if the Meal is null
-    */
+    @Autowired
+    private MineralsRepository mineralsRepository;
+
+
     @Test
     public void findMealById() {
         Optional<Meal> mealOptional = mealRepository.findById(1L);
@@ -42,10 +43,11 @@ public class PersistenceTests {
         assertFalse (mealOptional2.isPresent());
     }
 
-    /* Test database connection with FoodRepository
+/*
+    Test database connection with FoodRepository
     search after the Food Id in the Repository and checks if the Food can find
     search after a not existing Food Id in the Repository and checks if the Food is null
-    */
+*/
     @Test
     public void findFoodById() {
         Optional<Food> foodOptional = foodRepository.findById(1L);
@@ -55,22 +57,25 @@ public class PersistenceTests {
         assertFalse (foodOptional2.isPresent());
     }
 
-    /* Test database connection with FoodRepository
-     search after the Food Name in the Repository and checks if the Food can find
-     search after a not existing Food Name in the Repository and checks if the Food is null
-     */
+/*
+    Test database connection with FoodRepository
+    search after the Food Name in the Repository and checks if the Food can find
+    search after a not existing Food Name in the Repository and checks if the Food is null
+*/
     @Test
     public void findFoodByName(){
-        List<Food> foodList = foodRepository.findByName("Apfel");
+        //test query for food Apfel
+        List<Food> foodList = foodRepository.findByName("pfe");
         Food foodOptional = foodList.get(0);
         assert (foodOptional.getId()==1L);
         List<Food> foodOptional2 = foodRepository.findByName("Software Engineering is cool :)");
         assertTrue (foodOptional2.isEmpty());
     }
 
-    /* Test database connection with NutritionalValuesRepository
-    search after the NutritionalValues Id in the Repository and checks if the NutritionalValues can find
-    search after a not existing NutritionalValues Id in the Repository and checks if the NutritionalValues is null
+    /*
+        Test database connection with NutritionalValuesRepository
+        search after the NutritionalValues Id in the Repository and checks if the NutritionalValues can find
+        search after a not existing NutritionalValues Id in the Repository and checks if the NutritionalValues is null
     */
     @Test
     public void findNutritionalValuesById() {
@@ -81,10 +86,11 @@ public class PersistenceTests {
         assertFalse (nutritionalValuesOptional2.isPresent());
     }
 
-    /* Test database connection with VitaminsRepository
+/*
+    Test database connection with VitaminsRepository
     search after the Vitamins Id in the Repository and checks if the Vitamins can find
     search after a not existing Vitamins Id in the Repository and checks if the Vitamins is null
-    */
+*/
     @Test
     public void findVitaminsById(){
         Optional<Vitamins> vitaminsOptional = vitaminsRepository.findById(1L);
@@ -97,7 +103,7 @@ public class PersistenceTests {
 
     @Test
     public void saveAndDeleteMeal() {
-        Meal meal = new Meal(10L,new Date(2000, 10, 21) , 40, MealCategory.BREAKFAST, 2.9, 3.0, 4.0, 10L, Collections.emptySet());
+        Meal meal = new Meal(10L,new Date(2000, 10, 21) , 40, MealCategory.BREAKFAST, 2.9, 3.0, 4.0, new AppUser(), Collections.emptySet());
         Meal m = mealRepository.save(meal);
         Optional<Meal> mealOptional = mealRepository.findById(10L);
         assert  (mealOptional.isPresent());
@@ -106,5 +112,29 @@ public class PersistenceTests {
         Optional<Meal> mealOptional2 = mealRepository.findById(10L);
         assertFalse(mealOptional2.isPresent());
     }
+
+    @Test
+    public void saveAndFindAllFoodValues() {
+        Food food = new Food(1000L,"test", FoodUnitSize.MILLILITRE, Collections.emptySet());
+        Minerals minerals = new Minerals(1000L, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, food);
+        Vitamins vitamins = new Vitamins(1000L, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, food);
+        NutritionalValues nutritionalValues = new NutritionalValues(1000L, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, food);
+        food.setMinerals(minerals);
+        food.setVitamins(vitamins);
+        food.setNutritionalValues(nutritionalValues);
+        Food f = foodRepository.save(food);
+        Minerals m = mineralsRepository.save(minerals);
+        Vitamins v = vitaminsRepository.save(vitamins);
+        NutritionalValues nv = nutritionalValuesRepository.save(nutritionalValues);
+        Optional<Food> foodOptional = foodRepository.findById(1000L);
+        assert  (foodOptional.isPresent());
+        Optional<Minerals> mineralsOptional = mineralsRepository.findById(1000L);
+        assert  (mineralsOptional.isPresent());
+        Optional<Vitamins> vitaminsOptional = vitaminsRepository.findById(1000L);
+        assert  (vitaminsOptional.isPresent());
+        Optional<NutritionalValues> nutritionalValuesOptional = nutritionalValuesRepository.findById(1000L);
+        assert  (nutritionalValuesOptional.isPresent());
+    }
+
 
 }

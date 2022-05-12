@@ -8,6 +8,5 @@ public interface MineralsRepository {
 
     Optional<Minerals> findById(long id);
     Minerals save(Minerals m);
-    void delete(Minerals m);
 
 }

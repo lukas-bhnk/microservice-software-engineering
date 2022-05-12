@@ -46,12 +46,13 @@ public class FoodService {
             return food;
         }
         else{
-            throw new ResourceNotFoundException("This food ist not in the Database");
+            throw new ResourceNotFoundException("This food is not in the Database");
         }
     }
 
     public List<Food> getFood(String name){
         List<Food> foodList = foodRepository.findByName(name);
+        if(foodList.isEmpty()) throw new ResourceNotFoundException("This name is not in the Database");
         return foodList;
     }
 

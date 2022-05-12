@@ -1,13 +1,14 @@
 package com.nutrition.sweng.Service;
 
 import com.nutrition.sweng.Event.EventPublisher;
+import com.nutrition.sweng.Event.MealAddedEvent;
 import com.nutrition.sweng.Event.MealChangedEvent;
 import com.nutrition.sweng.Model.*;
 import com.nutrition.sweng.Repository.FoodEntryRepository;
 import com.nutrition.sweng.Repository.FoodRepository;
 import com.nutrition.sweng.Repository.MealRepository;
+import com.nutrition.sweng.Repository.UserRepository;
 import feign.RetryableException;
-import jdk.jfr.Event;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +17,7 @@ import org.springframework.retry.annotation.Recover;
 import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class MealService {
@@ -27,15 +25,17 @@ public class MealService {
     private FoodRepository foodRepository;
     private FoodEntryRepository foodEntryRepository;
     private FoodInfoServiceClient foodInfoServiceClient;
+    private UserRepository userRepository;
     private EventPublisher eventPublisher;
     private final Logger LOG =  LoggerFactory.getLogger(getClass());
 
     @Autowired
-    public MealService(MealRepository mealRepository, FoodInfoServiceClient foodInfoServiceClient,FoodRepository foodRepository, FoodEntryRepository foodEntryRepository, Event publisher ){
+    public MealService(MealRepository mealRepository, FoodInfoServiceClient foodInfoServiceClient, FoodRepository foodRepository, FoodEntryRepository foodEntryRepository, UserRepository userRepository, EventPublisher eventPublisher){
         this.mealRepository = mealRepository;
         this.foodRepository = foodRepository;
         this.foodInfoServiceClient = foodInfoServiceClient;
         this.foodEntryRepository = foodEntryRepository;
+        this.userRepository = userRepository;
         this.eventPublisher = eventPublisher;
     }
 
@@ -57,6 +57,27 @@ public class MealService {
         }
     }
     /**
+     * Find all meals of a specific day and user in the database.
+     * @param date of the requested Meal
+     * @param email of the user to find the user
+     * @return meals list of all meals of the day and the user
+     */
+    public List<Meal> getDailyMeals(Date date, String email){
+        LOG.info("Execute getDailyMeals({}, {}).", date, email);
+        Optional<User> userOptional = userRepository.findByEmail(email);
+        if (!userOptional.isPresent()) {
+            LOG.error("User is not in DB");
+            throw new ResourceNotFoundException("User is not in DB");
+        }
+        User user = userOptional.get();
+        List<Meal> meals = mealRepository.findByDateAndUser(date, user.getId());
+        if(meals.isEmpty()){
+            LOG.error("Requested Meals({}, {})are not in the DB", date, email);
+            throw new ResourceNotFoundException("Requested Meals are not in the DB");
+        }
+        return meals;
+    }
+    /**
      * Delete a certain Food of a certain Meal in the database.
      * @param mealId Id of the Meal, which should delete the food
      * @param foodId Id of the Food that should be delete of the meal
@@ -75,6 +96,11 @@ public class MealService {
                     foodEntryRepository.delete(foodEntry);
                     meal = calculateNutritionalValuesInMeal(meal);
                     LOG.info("Deleting food from meal successful. Food deleted with name: {}", f.getName());
+                    var event = new MealChangedEvent(meal);
+                    var published = this.eventPublisher.publishEvent(event);
+                    if (!published) {
+                        //TODO: we have to rollback the transaction
+                    }
                     return meal;
                 }
             }
@@ -89,23 +115,29 @@ public class MealService {
     /**
      * Create a new Meal and save it do the database.
      * @param date of the Meal
-     * @param mealCategory Brea
-     * @param userFk
+     * @param mealCategory Breakfast, Lunch, Dinner, Snacks
+     * @param email find the user by his email and add it to the meal
      * @return a Meal
      */
-    public Meal createMeal(Date date, MealCategory mealCategory, long userFk){
+    public Meal createMeal(Date date, MealCategory mealCategory, String email){
+        Optional<User> userOptional = userRepository.findByEmail(email);
+        if (!userOptional.isPresent()) {
+            LOG.error("User is not in DB");
+            throw new ResourceNotFoundException("User is not in DB");
+        }
+        User user = userOptional.get();
         Meal meal = new Meal();
         meal.setDate(date);
         meal.setProteins(0.0);
         meal.setCarbs(0.0);
         meal.setFats(0.0);
         meal.setCalories(0);
-        meal.setUserFk(userFk);
+        meal.setUserFk(user);
         meal.setFoodEntries(new HashSet<FoodEntry>());
         meal.setMealCategory(mealCategory);
         mealRepository.save(meal);
         LOG.info("Creating meal successful. New food created with Date: {} and Category: {}", meal.getDate(), meal.getMealCategory().name());
-        var event = new MealChangedEvent(meal);
+        var event = new MealAddedEvent(meal);
         var published = this.eventPublisher.publishEvent(event);
         if (!published) {
             //TODO: we have to rollback the transaction

@@ -1,0 +1,186 @@
+1629 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1661 [main] INFO  c.n.s.NutritionAppSwengApplication - Starting NutritionAppSwengApplication using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 51880 (C:\Users\lukas\IdeaProjects\nutritionapp\target\classes started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1661 [main] INFO  c.n.s.NutritionAppSwengApplication - The following 1 profile is active: "test"
+4252 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+4533 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 260 ms. Found 7 JPA repository interfaces.
+5174 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+5206 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+5377 [main] INFO  o.s.c.context.scope.GenericScope - BeanFactory id=b20436cd-0cad-3d0b-9d55-ea1ce7425cd8
+6174 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+6206 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+7175 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+7191 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+7191 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+7191 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+7503 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+7503 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5753 ms
+10513 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+10653 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.8.Final
+11044 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11278 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11575 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11622 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+15131 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15139 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16326 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18167 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventConsumer-in-0' has 1 subscriber(s).
+19043 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4037a204, org.springframework.security.web.context.SecurityContextPersistenceFilter@cec9f23, org.springframework.security.web.header.HeaderWriterFilter@61b83fef, org.springframework.security.web.authentication.logout.LogoutFilter@49e69196, com.nutrition.sweng.security.JwtFilter@ed110d6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c63f1fe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c1a86e1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75922191, org.springframework.security.web.session.SessionManagementFilter@6b13f456, org.springframework.security.web.access.ExceptionTranslationFilter@2fcf1d27, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58ef1543]
+19605 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 21 endpoint(s) beneath base path '/actuator'
+19824 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+19824 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 1 subscriber(s).
+19824 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+19824 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Creating binder: cloud_rabbit
+19949 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Caching the binder: cloud_rabbit
+19949 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: cloud_rabbit
+20090 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+20262 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#41576e84:0/SimpleConnection@44d83a12 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54426]
+20262 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+20278 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Nothing to declare
+20309 [main] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)
+20324 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1680/0x00000008016d7d48 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@67d44ae9 Shared Rabbit Connection: SimpleConnection@44d83a12 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54426]
+20324 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'sweng.events'
+20356 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventPublisher-out-0' has 1 subscriber(s).
+20356 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: cloud_rabbit
+20422 [main] INFO  o.s.c.s.b.r.p.RabbitExchangeQueueProvisioner - declaring queue for inbound: eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA, bound to: eventConsumer-in-0
+20422 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1680/0x00000008016d7d48 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@67d44ae9 Shared Rabbit Connection: SimpleConnection@44d83a12 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54426]
+20422 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventConsumer-in-0'
+20438 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1690/0x00000008016fead0 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@67d44ae9 Shared Rabbit Connection: SimpleConnection@44d83a12 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54426]
+20438 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Queue 'eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA'
+20485 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1691/0x00000008016ffb40 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@67d44ae9 Shared Rabbit Connection: SimpleConnection@44d83a12 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54426]
+20485 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Binding destination [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA (QUEUE)] to exchange [eventConsumer-in-0] with routing key [#]
+20532 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Changing consumers from 1 to 1
+20532 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA.errors' has 1 subscriber(s).
+20547 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA.errors' has 2 subscriber(s).
+20547 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Starting Rabbit listener container.
+20563 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@16e3a461: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+20641 [pool-2-thread-3] DEBUG o.s.a.r.l.BlockingQueueConsumer - ConsumeOK: Consumer@16e3a461: tags=[[amq.ctag-xGk9zLi3YmPL21a0W3p1kA]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@67d44ae9 Shared Rabbit Connection: SimpleConnection@44d83a12 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54426], acknowledgeMode=AUTO local queue size=0
+20641 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Started on queue 'eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA' with tag amq.ctag-xGk9zLi3YmPL21a0W3p1kA: Consumer@16e3a461: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@67d44ae9 Shared Rabbit Connection: SimpleConnection@44d83a12 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54426], acknowledgeMode=AUTO local queue size=0
+20643 [main] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - started bean 'inbound.eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA'
+20643 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20643 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+20643 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+20643 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 0 subscriber(s).
+20643 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+20675 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20753 [pool-2-thread-4] DEBUG o.s.a.r.l.BlockingQueueConsumer - Received shutdown signal for consumer tag=amq.ctag-xGk9zLi3YmPL21a0W3p1kA: clean connection shutdown; protocol method: #method<connection.close>(reply-code=200, reply-text=OK, class-id=0, method-id=0)
+20759 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20775 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20837 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+20868 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+21650 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-1] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer received Shutdown Signal, processing stopped: clean connection shutdown; protocol method: #method<connection.close>(reply-code=200, reply-text=OK, class-id=0, method-id=0)
+21650 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@16e3a461: tags=[[amq.ctag-xGk9zLi3YmPL21a0W3p1kA]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@67d44ae9 Shared Rabbit Connection: null, acknowledgeMode=AUTO local queue size=0
+21650 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@67d44ae9 Shared Rabbit Connection: null
+21650 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-1] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)
+21650 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-2] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@640b880f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+21650 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-2] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+26812 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-2] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpApplicationContextClosedException: The ApplicationContext is closed and the ConnectionFactory can no longer create connections.
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:719)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+26828 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@640b880f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+26828 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-2] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+26843 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-3] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@4256e3c9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+26843 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-3] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+32063 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-3] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpApplicationContextClosedException: The ApplicationContext is closed and the ConnectionFactory can no longer create connections.
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:719)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+32110 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-3] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@4256e3c9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+32110 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-3] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+32110 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-4] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@59b0d41f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+32110 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-4] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+37216 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-4] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpApplicationContextClosedException: The ApplicationContext is closed and the ConnectionFactory can no longer create connections.
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:719)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+37216 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-4] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@59b0d41f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+37216 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-4] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+37216 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-5] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@7c573a9f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+37216 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-5] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42392 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-5] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpApplicationContextClosedException: The ApplicationContext is closed and the ConnectionFactory can no longer create connections.
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:719)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+42392 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-5] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@7c573a9f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42392 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-5] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42392 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-6] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@3ccef75f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42392 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-6] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+47541 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-6] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpApplicationContextClosedException: The ApplicationContext is closed and the ConnectionFactory can no longer create connections.
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:719)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+47541 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-6] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3ccef75f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+47541 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-6] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+47541 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-7] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@5504d29a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+47541 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-7] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+52610 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-7] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpApplicationContextClosedException: The ApplicationContext is closed and the ConnectionFactory can no longer create connections.
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:719)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+52642 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-7] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5504d29a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+52704 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-7] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+52720 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-8] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@27ca930: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+52720 [eventConsumer-in-0.anonymous.E9So6rPWSW2ZCezrpxFDMA-8] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.

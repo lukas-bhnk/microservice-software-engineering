@@ -37,8 +37,8 @@ public class FoodInfoServiceTests {
         assert (nutritionalValues.getCalories()==39);
         assert (nutritionalValues.getAlcohol()==9);
         assert (nutritionalValues.getFatsSaturated()==12);
-        assert (nutritionalValues.getSalt()==-1);
-        assert (nutritionalValues.getSugar()==-1);
+        assert (nutritionalValues.getSalt()==1);
+        assert (nutritionalValues.getSugar()==1);
     }
 
     @Test
@@ -47,7 +47,7 @@ public class FoodInfoServiceTests {
         assert (vitamins.getId()==2);
         assert (vitamins.getA()==112);
         assert (vitamins.getB1()==25);
-        assert (vitamins.getB2()==-1);
+        assert (vitamins.getB2()==1);
         assert (vitamins.getB6()==13);
         assert (vitamins.getB12()==12);
         assert (vitamins.getC()==5);

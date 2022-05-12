@@ -28,17 +28,17 @@ public class EventConsumer implements Consumer<UserRegisteredEvent>{
         this.mealService.createMeal(
                 new Date(),
                 MealCategory.BREAKFAST,
-                Long.valueOf(userRegisteredEvent.getUserId())
+                userRegisteredEvent.getEmail()
         );
         this.mealService.createMeal(
                 new Date(),
                 MealCategory.LUNCH,
-                Long.valueOf(userRegisteredEvent.getUserId())
+                userRegisteredEvent.getEmail()
         );
         this.mealService.createMeal(
                 new Date(),
                 MealCategory.DINNER,
-                Long.valueOf(userRegisteredEvent.getUserId())
+                userRegisteredEvent.getEmail()
         );
     }
 

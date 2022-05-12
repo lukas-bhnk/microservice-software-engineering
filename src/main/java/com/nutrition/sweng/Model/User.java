@@ -1,42 +1,35 @@
 package com.nutrition.sweng.Model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
-    @Column(nullable = false)
+    private long id;         //Note that the id is independent from id the user has in other services.
     private String name;
-
-    @Column(unique = true, nullable = false)
     private String email;
 
-    @Column(nullable = false)
-    private String passwordHash;
-
-    @Column(nullable = false)
-    private Role role;
-
-    //default constructor required
+    /**
+     * Default constructor; is required for entities by JPA
+     */
     public User() {
     }
 
-    public User(String name, String email, String passwordHash, Role role) {
+    public User(String name, String email) {
         this.name = name;
         this.email = email;
-        this.passwordHash = passwordHash;
-        this.role = role;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id){
         this.id = id;
     }
 
@@ -56,30 +49,12 @@ public class User {
         this.email = email;
     }
 
-    public String getPasswordHash() {
-        return passwordHash;
-    }
-
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
     @Override
     public String toString() {
-        return "UserEntity{" +
+        return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", passwordHash='" + passwordHash + '\'' +
-                ", role=" + role +
                 '}';
     }
 }

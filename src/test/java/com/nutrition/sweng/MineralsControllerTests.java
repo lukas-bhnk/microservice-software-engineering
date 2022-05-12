@@ -31,12 +31,12 @@ public class MineralsControllerTests {
         this.minerals = mineralsService.getMinerals(1L);
     }
     @Test
-    public void getMeal() throws Exception {
+    public void getMinerals() throws Exception {
         given(this.mineralsService.getMinerals(1L)).willReturn(this.minerals);
         this.mvc.perform(get("/rest/minerals/{}", 1))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(1))
-                .andExpect(content().json("{\"id\":2,\"date\":\"2020-03-19T23:00:00.000+00:00\",\"proteins\":43.0,\"carbs\":33.0,\"fats\":20.0,\"calories\":11,\"mealCategory\":\"SNACK\",\"foodList\":[{\"id\":1,\"name\":\"Apfel\",\"unitSize\":\"pro 100g essbarer Anteil\"},{\"id\":2,\"name\":\"Cola\",\"unitSize\":\"pro 100ml\"}]}"));
+                .andExpect(content().json("{\"id\":1,\"chloride\":2.0,\"magnesium\":6.0,\"phosphorus\":5.0,\"iron\":3.0,\"potassium\":9.0,\"selenium\":10.0,\"sodium\":12.0,\"zinc\":33.0}"));
     }
 }

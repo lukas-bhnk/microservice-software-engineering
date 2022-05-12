@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class UserRegisteredEvent {
 
-    private Integer userId;
+    private long userId;
     private String name;
     private String email;
 
@@ -25,11 +25,11 @@ public class UserRegisteredEvent {
         this.email = registeredUser.getEmail();
     }
 
-    public Integer getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 

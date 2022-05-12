@@ -27,4 +27,14 @@ public class EventPublisherImpl implements EventPublisher {
             LOGGER.error("Publishing event failed: " + event);
         return successfullyPublished;
    }
+
+    @Override
+    public boolean publishEvent(MealAddedEvent event) {
+        var successfullyPublished = streamBridge.send("eventPublisher-out-0", event);
+        if (successfullyPublished)
+            LOGGER.info("Event published: " + event);
+        else
+            LOGGER.error("Publishing event failed: " + event);
+        return successfullyPublished;
+    }
 }
