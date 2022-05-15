@@ -15,7 +15,7 @@ import org.springframework.test.context.ActiveProfiles;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
-@ActiveProfiles("timeout")
+@ActiveProfiles("test")
 public class ResilienceTimeoutTest {
 
     @Autowired

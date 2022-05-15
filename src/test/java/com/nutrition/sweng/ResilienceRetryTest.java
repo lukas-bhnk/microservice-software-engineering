@@ -10,11 +10,15 @@ import com.nutrition.sweng.Service.MealService;
 import feign.RetryableException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.BDDMockito.given;
 
+@SpringBootTest
+@ActiveProfiles("test")
 public class ResilienceRetryTest {
     @MockBean
     private FoodInfoServiceClient foodInfoServiceClient;
@@ -27,11 +31,11 @@ public class ResilienceRetryTest {
 
     @Test
     public void testGetInfosFromDelayedThrowsRetryableException() {
-        given(foodInfoServiceClient.getFood("YEAAAAHHHHHHH")).willThrow(RetryableException.class);
-        given(foodInfoServiceClient.getNutritionalValues("JUHHHUUU")).willThrow(RetryableException.class);
-        given(foodInfoServiceClient.getVitamins("Software")).willThrow(RetryableException.class);
-        given(foodInfoServiceClient.getNutritionalValues("JUHHHUUU")).willThrow(RetryableException.class);
-        given(foodInfoServiceClient.getMinerals("Engineering")).willThrow(RetryableException.class);
+        given(foodInfoServiceClient.getFood("YEAAAAHHHHHHH")).willThrow(feign.RetryableException.class);
+        given(foodInfoServiceClient.getNutritionalValues("JUHHHUUU")).willThrow(feign.RetryableException.class);
+        given(foodInfoServiceClient.getVitamins("Software")).willThrow(feign.RetryableException.class);
+        given(foodInfoServiceClient.getNutritionalValues("JUHHHUUU")).willThrow(feign.RetryableException.class);
+        given(foodInfoServiceClient.getMinerals("Engineering")).willThrow(feign.RetryableException.class);
     }
 
     @Test

@@ -491,7 +491,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/C:/Users/lukas/Documents/Schweizer-Nahrwertdatenbank-test.xlsx"
+							"src": "./Schweizer-Nahrwertdatenbank-test.xlsx"
 						}
 					]
 				},
