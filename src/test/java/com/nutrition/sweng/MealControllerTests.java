@@ -99,7 +99,13 @@ public class MealControllerTests {
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"id\":1,\"date\":\"2021-05-15T00:00:00.000+00:00\",\"proteins\":3.0,\"carbs\":3.0,\"fats\":3.0,\"calories\":3,\"mealCategory\":\"BREAKFAST\",\"foodEntries\":[{\"id\":1,\"food\":{\"id\":0,\"name\":\"banane\",\"unitSize\":\"pro 100g essbarer Anteil\"},\"quantity\":200,\"calories\":1,\"fats\":1.0,\"carbs\":1.0,\"proteins\":1.0},{\"id\":1,\"food\":{\"id\":0,\"name\":\"banane\",\"unitSize\":\"pro 100g essbarer Anteil\"},\"quantity\":100,\"calories\":1,\"fats\":1.0,\"carbs\":1.0,\"proteins\":1.0}]}"));
-        //
+        //delete
+        meal2.setFoodEntries(Collections.emptySet());
+        given(this.mealService.deleteFood(1L, 1L)).willReturn(meal2);
+        this.mvc.perform(delete("/rest/meal/{id}/{food}", 1, 1))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().json("{\"id\":1,\"date\":\"2021-05-15T00:00:00.000+00:00\",\"proteins\":3.0,\"carbs\":3.0,\"fats\":3.0,\"calories\":3,\"mealCategory\":\"BREAKFAST\",\"foodEntries\":[]}"));
 
 
     }
@@ -108,26 +114,11 @@ public class MealControllerTests {
     @Test
     public void createMeal() throws Exception{
         Meal meal = new Meal(1L, new SimpleDateFormat("yyyy-MM-dd").parse(2021+"-"+05+"-"+15), 2,  MealCategory.BREAKFAST,2.0,2.0,2.0, user, foodEntries);
-        given(this.mealService.createMeal(new Date(), MealCategory.BREAKFAST, "peter@gmail.com")).willReturn(meal);
-        this.mvc.perform(post("/rest/meal/{day}/{month}/{year}/{category}/{email}", 12, 01, 2000,"breakfast",email))
+        given(this.mealService.createMeal(new SimpleDateFormat("yyyy-MM-dd").parse(2021+"-"+05+"-"+15), MealCategory.BREAKFAST, email)).willReturn(meal);
+        this.mvc.perform(post("/rest/meal/{day}/{month}/{year}/{category}/{email}", 15, 05, 2021,"breakfast",email))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().json("[{\"id\":1,\"date\":\"2022-04-10\",\"calories\":10,\"mealCategory\":\"LUNCH\",\"fats\":30.0,\"carbs\":12.0,\"proteins\":4.0,\"userFk\":{\"id\":1,\"name\":\"peter_user\",\"email\":\"peter@gmail.com\"}}]"));
+                .andExpect(content().json("{\"id\":1,\"date\":\"2021-05-15T00:00:00.000+00:00\",\"proteins\":2.0,\"carbs\":2.0,\"fats\":2.0,\"calories\":2,\"mealCategory\":\"BREAKFAST\",\"foodEntries\":[]}"));
     }
 
-    @Test
-    public void updateQuantity() throws Exception {
-        Meal meal = new Meal(1L, new SimpleDateFormat("yyyy-MM-dd").parse(2021+"-"+05+"-"+15), 2,  MealCategory.BREAKFAST,2.0,2.0,2.0, user, foodEntries);
-        given(this.mealService.updateQuantity(1L, 2L, 200)).willReturn(this.meal);
-        this.mvc.perform(patch("/rest/meal/{id}/{food}/{quantity}", 1L, 1L, 200))
-                .andDo(print())
-                .andExpect(status().isOk());
-    }
-
-    @Test
-    public void deleteFood() throws Exception {
-        Meal meal = new Meal(1L, new SimpleDateFormat("yyyy-MM-dd").parse(2021+"-"+05+"-"+15), 2,  MealCategory.BREAKFAST,2.0,2.0,2.0, user, foodEntries);
-        this.mvc.perform(delete("/rest/meal/{mealId}/{foodId}", 1, 1)).andDo(print())
-                .andExpect(status().isOk());
-    }
 }

@@ -55,10 +55,10 @@ public class MealController {
     public MealDto createMeal(@PathVariable int day, @PathVariable int month, @PathVariable int year, @PathVariable String category, @PathVariable String email) throws ParseException {
         MealCategory mealCategory;
         System.out.println(category);
-        if(category == "breakfast") mealCategory = MealCategory.BREAKFAST;
-        else {if (category == "lunch") mealCategory = MealCategory.LUNCH;
-        else {if (category == "dinner") mealCategory = MealCategory.DINNER;
-        else {if (category == "snack") mealCategory = MealCategory.SNACK;
+        if(category.equals("breakfast")) {mealCategory = MealCategory.BREAKFAST;}
+        else {if (category.equals("lunch")){mealCategory = MealCategory.LUNCH;}
+        else {if (category.equals("dinner")) {mealCategory = MealCategory.DINNER;}
+        else {if (category.equals("snack")) {mealCategory = MealCategory.SNACK;}
         else throw new IllegalArgumentException("Can not resolve Category");}}}
         Meal meal = this.mealService.createMeal(new SimpleDateFormat("yyyy-MM-dd").parse(year+"-"+month+"-"+day), mealCategory, email);
         return new MealDto(meal);
