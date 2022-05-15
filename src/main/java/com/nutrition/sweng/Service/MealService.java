@@ -70,13 +70,16 @@ public class MealService {
             throw new ResourceNotFoundException("User is not in DB");
         }
         User user = userOptional.get();
-        List<Meal> meals = mealRepository.findByDateAndUser(date, user.getId());
+        System.out.println(user);
+        List<Meal> meals = mealRepository.findByDateAndUser(date, user);
+        System.out.println(meals);
         if(meals.isEmpty()){
             LOG.error("Requested Meals({}, {})are not in the DB", date, email);
             throw new ResourceNotFoundException("Requested Meals are not in the DB");
         }
         return meals;
     }
+
     /**
      * Delete a certain Food of a certain Meal in the database.
      * @param mealId Id of the Meal, which should delete the food
@@ -92,9 +95,14 @@ public class MealService {
             for (FoodEntry foodEntry : foodEntries) {
                 Food f = foodEntry.getFood();
                 if (f.getId() == foodId) {
+                    f.getFoodEntries().remove(foodEntry);
                     foodEntries.remove(foodEntry);
+                    meal.setFoodEntries(foodEntries);
+                    foodEntry.setMeal(null);
+                    foodEntry.setFood(null);
                     foodEntryRepository.delete(foodEntry);
                     meal = calculateNutritionalValuesInMeal(meal);
+                    mealRepository.save(meal);
                     LOG.info("Deleting food from meal successful. Food deleted with name: {}", f.getName());
                     var event = new MealChangedEvent(meal);
                     var published = this.eventPublisher.publishEvent(event);
@@ -128,14 +136,15 @@ public class MealService {
         User user = userOptional.get();
         Meal meal = new Meal();
         meal.setDate(date);
+        meal.setMealCategory(mealCategory);
         meal.setProteins(0.0);
         meal.setCarbs(0.0);
         meal.setFats(0.0);
         meal.setCalories(0);
         meal.setUserFk(user);
         meal.setFoodEntries(new HashSet<FoodEntry>());
-        meal.setMealCategory(mealCategory);
         mealRepository.save(meal);
+        System.out.println(meal);
         LOG.info("Creating meal successful. New food created with Date: {} and Category: {}", meal.getDate(), meal.getMealCategory().name());
         var event = new MealAddedEvent(meal);
         var published = this.eventPublisher.publishEvent(event);
@@ -172,11 +181,13 @@ public class MealService {
             if (foodOptional.isPresent()){
                 Food food = foodOptional.get();
                 FoodEntry foodEntry = new FoodEntry();
+                foodEntry = this.calculateNutritionalValuesInFoodEntry(foodEntry, foodId, quantityInGorML);
                 foodEntry.setFood(food);
                 foodEntry.setMeal(meal);
-                foodEntry = this.calculateNutritionalValuesInFoodEntry(foodEntry, foodId, quantityInGorML);
                 foodEntries.add(foodEntry);
+                meal = this.calculateNutritionalValuesInMeal(meal);
                 foodEntryRepository.save(foodEntry);
+                mealRepository.save(meal);
                 LOG.info("Adding Foodentry to meal successful. New food added with name: {}", food.getName());
                 var event = new MealChangedEvent(meal);
                 var published = this.eventPublisher.publishEvent(event);
@@ -209,7 +220,12 @@ public class MealService {
             for (FoodEntry foodEntry : foodEntries) {
                 Food f = foodEntry.getFood();
                 if (f.getId() == foodId) {
-                    foodEntry = this.calculateNutritionalValuesInFoodEntry(foodEntry, foodId,quantityInGorML);
+                    foodEntries.remove(foodEntry);
+                    foodEntry = this.calculateNutritionalValuesInFoodEntry(foodEntry, foodId, quantityInGorML);
+                    foodEntries.add(foodEntry);
+                    meal = this.calculateNutritionalValuesInMeal(meal);
+                    foodEntryRepository.save(foodEntry);
+                    mealRepository.save(meal);
                     var event = new MealChangedEvent(meal);
                     var published = this.eventPublisher.publishEvent(event);
                     if (!published) {
@@ -235,9 +251,10 @@ public class MealService {
      */
     public FoodEntry calculateNutritionalValuesInFoodEntry(FoodEntry foodEntry, Long foodId, int quantityInGorML){
         //food Multiplicator to multiply the Food values with the quantity (the Food is saved with values per 100g or 100ml)
-        double foodMultiplicator = quantityInGorML / 100;
+        double foodMultiplicator = quantityInGorML / 100.0;
         NutritionalValues nutritionalValues = this.foodInfoServiceClient.getNutritionalValues(String.valueOf(foodId));
-        int calories = nutritionalValues.getCalories() + (int)Math.ceil(nutritionalValues.getCalories() * foodMultiplicator);
+        int calories = (int)Math.ceil(nutritionalValues.getCalories() * foodMultiplicator);
+        System.out.println(calories);
         Double carbs = nutritionalValues.getCarbs() * foodMultiplicator;
         Double fats = nutritionalValues.getFats() * foodMultiplicator;
         Double proteins = nutritionalValues.getProteins() * foodMultiplicator;
@@ -265,7 +282,7 @@ public class MealService {
             calories += foodEntry.getCalories();
             fats += foodEntry.getFats();
             carbs += foodEntry.getCarbs();
-            fats += foodEntry.getFats();
+            proteins += foodEntry.getProteins();
         }
         meal.setCalories(calories);
         meal.setFats(fats);

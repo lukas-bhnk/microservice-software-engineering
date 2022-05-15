@@ -1,0 +1,89 @@
+3887 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+3891 [main] INFO  c.n.s.NutritionAppSwengApplication - Starting NutritionAppSwengApplication using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 14476 (C:\Users\lukas\IdeaProjects\nutritionapp\target\classes started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+3894 [main] INFO  c.n.s.NutritionAppSwengApplication - No active profile set, falling back to 1 default profile: "default"
+6295 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+6488 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 175 ms. Found 7 JPA repository interfaces.
+7166 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+7187 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+7371 [main] INFO  o.s.c.context.scope.GenericScope - BeanFactory id=605cb014-89fb-30d0-b97c-d7193dbe2a9b
+8084 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+8111 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+8130 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+8143 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+8246 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+9144 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+9161 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+9162 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+9162 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+9462 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+9463 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5486 ms
+13205 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+13304 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.8.Final
+13806 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+14166 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14531 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14582 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+18684 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18717 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+19975 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22081 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventConsumer-in-0' has 1 subscriber(s).
+24686 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 21 endpoint(s) beneath base path '/actuator'
+26193 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel errorChannel
+26393 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventConsumer-in-0
+26553 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventPublisher-out-0
+26578 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel nullChannel
+26661 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageHandler _org.springframework.integration.errorLogger
+26780 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+26781 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 1 subscriber(s).
+26784 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+26817 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Creating binder: cloud_rabbit
+27211 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Caching the binder: cloud_rabbit
+27212 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: cloud_rabbit
+27614 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+27987 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#2cf7860e:0/SimpleConnection@6846e4e8 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 50062]
+28007 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+28012 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Nothing to declare
+28259 [main] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)
+28328 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1709/0x00000008015b5cb8 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@a632ae0 Shared Rabbit Connection: SimpleConnection@6846e4e8 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 50062]
+28329 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'sweng.events'
+28401 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventPublisher-out-0' has 1 subscriber(s).
+28407 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: cloud_rabbit
+28559 [main] INFO  o.s.c.s.b.r.p.RabbitExchangeQueueProvisioner - declaring queue for inbound: eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ, bound to: eventConsumer-in-0
+28560 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1709/0x00000008015b5cb8 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@a632ae0 Shared Rabbit Connection: SimpleConnection@6846e4e8 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 50062]
+28561 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventConsumer-in-0'
+28588 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1719/0x00000008015ceaf0 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@a632ae0 Shared Rabbit Connection: SimpleConnection@6846e4e8 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 50062]
+28607 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Queue 'eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ'
+28779 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1720/0x00000008015d4410 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@a632ae0 Shared Rabbit Connection: SimpleConnection@6846e4e8 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 50062]
+28780 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Binding destination [eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ (QUEUE)] to exchange [eventConsumer-in-0] with routing key [#]
+28969 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Changing consumers from 1 to 1
+28995 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ.errors' has 1 subscriber(s).
+28999 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ.errors' has 2 subscriber(s).
+29006 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Starting Rabbit listener container.
+29020 [eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@50ca509b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+29145 [eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Started on queue 'eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ' with tag amq.ctag-0CJSHq4A2M4NZudypskEXw: Consumer@50ca509b: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@a632ae0 Shared Rabbit Connection: SimpleConnection@6846e4e8 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 50062], acknowledgeMode=AUTO local queue size=0
+29145 [pool-2-thread-3] DEBUG o.s.a.r.l.BlockingQueueConsumer - ConsumeOK: Consumer@50ca509b: tags=[[amq.ctag-0CJSHq4A2M4NZudypskEXw]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@a632ae0 Shared Rabbit Connection: SimpleConnection@6846e4e8 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 50062], acknowledgeMode=AUTO local queue size=0
+29146 [main] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - started bean 'inbound.eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ'
+29155 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+29259 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+29898 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ.errors
+30473 [main] INFO  c.n.s.NutritionAppSwengApplication - Started NutritionAppSwengApplication in 27.71 seconds (JVM running for 36.806)
+46799 [http-nio-8080-exec-5] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+46799 [http-nio-8080-exec-5] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+46807 [http-nio-8080-exec-5] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+46903 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute getMeal(1).
+47175 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+486938 [SpringApplicationShutdownHook] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Shutting down Rabbit listener container
+487220 [pool-2-thread-4] DEBUG o.s.a.r.l.BlockingQueueConsumer - Received cancelOk for tag amq.ctag-0CJSHq4A2M4NZudypskEXw (eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ); Consumer@50ca509b: tags=[[amq.ctag-0CJSHq4A2M4NZudypskEXw]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@a632ae0 Shared Rabbit Connection: SimpleConnection@6846e4e8 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 50062], acknowledgeMode=AUTO local queue size=0
+487232 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+487412 [eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ-1] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Cancelling Consumer@50ca509b: tags=[[amq.ctag-0CJSHq4A2M4NZudypskEXw]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@a632ae0 Shared Rabbit Connection: SimpleConnection@6846e4e8 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 50062], acknowledgeMode=AUTO local queue size=0
+487413 [eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@a632ae0 Shared Rabbit Connection: SimpleConnection@6846e4e8 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 50062]
+487417 [eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ-1] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)
+487468 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+487475 [SpringApplicationShutdownHook] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - stopped bean 'inbound.eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ'
+487749 [SpringApplicationShutdownHook] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'Meal.eventConsumer-in-0.anonymous.0KFIktMWQNmWSisSpGW1pQ.errors' has 1 subscriber(s).
+487965 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+487966 [SpringApplicationShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 0 subscriber(s).
+487977 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+488662 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+489095 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+489383 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,0 +1,211 @@
+1569 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1569 [main] INFO  c.n.s.NutritionAppSwengApplication - Starting NutritionAppSwengApplication using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 24452 (C:\Users\lukas\IdeaProjects\nutritionapp\target\classes started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1569 [main] INFO  c.n.s.NutritionAppSwengApplication - No active profile set, falling back to 1 default profile: "default"
+3550 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+3753 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 192 ms. Found 7 JPA repository interfaces.
+4222 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+4238 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+4363 [main] INFO  o.s.c.context.scope.GenericScope - BeanFactory id=605cb014-89fb-30d0-b97c-d7193dbe2a9b
+4817 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4895 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4910 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4926 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+5020 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+6395 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+6410 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+6426 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+6426 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+6848 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+6848 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5205 ms
+17002 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+17189 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.8.Final
+17803 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18022 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18637 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18871 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+27242 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+27270 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+29924 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+32618 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventConsumer-in-0' has 1 subscriber(s).
+35340 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 21 endpoint(s) beneath base path '/actuator'
+37089 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel errorChannel
+37775 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventConsumer-in-0
+38072 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventPublisher-out-0
+38087 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel nullChannel
+38197 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageHandler _org.springframework.integration.errorLogger
+39089 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+39090 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 1 subscriber(s).
+39092 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+39095 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Creating binder: cloud_rabbit
+40339 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Caching the binder: cloud_rabbit
+40339 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: cloud_rabbit
+40933 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+41200 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#f4deb35:0/SimpleConnection@2627da4c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49696]
+41215 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+41215 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Nothing to declare
+41294 [main] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)
+41325 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1724/0x00000008015cf130 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@5ce1b67b Shared Rabbit Connection: SimpleConnection@2627da4c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49696]
+41325 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'sweng.events'
+41387 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventPublisher-out-0' has 1 subscriber(s).
+41419 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: cloud_rabbit
+41903 [main] INFO  o.s.c.s.b.r.p.RabbitExchangeQueueProvisioner - declaring queue for inbound: eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw, bound to: eventConsumer-in-0
+41903 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1724/0x00000008015cf130 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@5ce1b67b Shared Rabbit Connection: SimpleConnection@2627da4c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49696]
+41903 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventConsumer-in-0'
+41934 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1734/0x00000008015e30d8 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@5ce1b67b Shared Rabbit Connection: SimpleConnection@2627da4c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49696]
+41934 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Queue 'eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw'
+42075 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1735/0x00000008015e6a48 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@5ce1b67b Shared Rabbit Connection: SimpleConnection@2627da4c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49696]
+42075 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Binding destination [eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw (QUEUE)] to exchange [eventConsumer-in-0] with routing key [#]
+42122 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Changing consumers from 1 to 1
+42137 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw.errors' has 1 subscriber(s).
+42137 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw.errors' has 2 subscriber(s).
+42137 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Starting Rabbit listener container.
+42153 [eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@6d0ef6dc: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42231 [eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Started on queue 'eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw' with tag amq.ctag-FiQvgsGvt_dQ8dwazZgH3Q: Consumer@6d0ef6dc: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@5ce1b67b Shared Rabbit Connection: SimpleConnection@2627da4c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49696], acknowledgeMode=AUTO local queue size=0
+42238 [main] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - started bean 'inbound.eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw'
+42238 [pool-2-thread-3] DEBUG o.s.a.r.l.BlockingQueueConsumer - ConsumeOK: Consumer@6d0ef6dc: tags=[[amq.ctag-FiQvgsGvt_dQ8dwazZgH3Q]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@5ce1b67b Shared Rabbit Connection: SimpleConnection@2627da4c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49696], acknowledgeMode=AUTO local queue size=0
+42238 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+42425 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+42776 [http-nio-8080-exec-4] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+42776 [http-nio-8080-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+42776 [http-nio-8080-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+43776 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(java.util.GregorianCalendar[time=?,areFieldsSet=false,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=2,minimalDaysInFirstWeek=4,ERA=1,YEAR=2020,MONTH=3,WEEK_OF_YEAR=19,WEEK_OF_MONTH=2,DAY_OF_MONTH=20,DAY_OF_YEAR=134,DAY_OF_WEEK=7,DAY_OF_WEEK_IN_MONTH=2,AM_PM=0,HOUR=8,HOUR_OF_DAY=8,MINUTE=51,SECOND=15,MILLISECOND=953,ZONE_OFFSET=0,DST_OFFSET=0], peter@gmail.com).
+44554 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw.errors
+44640 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Parameter value [1] did not match expected type [com.nutrition.sweng.Model.User (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [1] did not match expected type [com.nutrition.sweng.Model.User (n/a)]] with root cause
+java.lang.IllegalArgumentException: Parameter value [1] did not match expected type [com.nutrition.sweng.Model.User (n/a)]
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:54)
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:27)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.validate(QueryParameterBindingImpl.java:90)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.setBindValue(QueryParameterBindingImpl.java:55)
+	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:501)
+	at org.hibernate.query.internal.AbstractProducedQuery.setParameter(AbstractProducedQuery.java:122)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.setParameter(CriteriaQueryTypeQueryAdapter.java:393)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.setParameter(CriteriaQueryTypeQueryAdapter.java:61)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$BindableQuery.setParameter(QueryParameterSetter.java:319)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter.lambda$setParameter$3(QueryParameterSetter.java:116)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$ErrorHandling$1.execute(QueryParameterSetter.java:141)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter.setParameter(QueryParameterSetter.java:116)
+	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:82)
+	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:74)
+	at org.springframework.data.jpa.repository.query.ParameterBinder.bindAndPrepare(ParameterBinder.java:96)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.invokeBinding(PartTreeJpaQuery.java:324)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.createQuery(PartTreeJpaQuery.java:243)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.doCreateQuery(PartTreeJpaQuery.java:106)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:227)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:128)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:155)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:143)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:159)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy2/jdk.proxy2.$Proxy220.findByDateAndUserFk(Unknown Source)
+	at com.nutrition.sweng.Service.MealService.getDailyMeals(MealService.java:74)
+	at com.nutrition.sweng.Service.MealService$$FastClassBySpringCGLIB$$4e35e6c2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.retry.annotation.AnnotationAwareRetryOperationsInterceptor.invoke(AnnotationAwareRetryOperationsInterceptor.java:163)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.nutrition.sweng.Service.MealService$$EnhancerBySpringCGLIB$$6254ffcf.getDailyMeals(<generated>)
+	at com.nutrition.sweng.Controller.MealController.getMeal(MealController.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:68)
+	at org.springframework.cloud.sleuth.autoconfig.instrument.web.TraceWebServletConfiguration$LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:131)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.springframework.cloud.sleuth.instrument.web.tomcat.TraceValve.invoke(TraceValve.java:90)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+45634 [main] INFO  c.n.s.NutritionAppSwengApplication - Started NutritionAppSwengApplication in 44.945 seconds (JVM running for 46.979)
+47713 [RMI TCP Connection(34)-10.11.169.229] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+47807 [RMI TCP Connection(34)-10.11.169.229] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#248b2b61:0/SimpleConnection@13611f2d [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49713]
+47807 [RMI TCP Connection(34)-10.11.169.229] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+47807 [RMI TCP Connection(34)-10.11.169.229] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Nothing to declare
+47854 [RMI TCP Connection(34)-10.11.169.229] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)
+47854 [RMI TCP Connection(34)-10.11.169.229] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitHealthIndicator$$Lambda$1865/0x000000080165d7e8 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@6a6823ab Shared Rabbit Connection: SimpleConnection@13611f2d [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49713]
+47885 [RMI TCP Connection(34)-10.11.169.229] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,2)
+47885 [RMI TCP Connection(34)-10.11.169.229] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitHealthIndicator$$Lambda$1865/0x000000080165d7e8 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,2), conn: Proxy@5ce1b67b Shared Rabbit Connection: SimpleConnection@2627da4c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49696]
+136587 [SpringApplicationShutdownHook] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Shutting down Rabbit listener container
+136618 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+136618 [pool-2-thread-4] DEBUG o.s.a.r.l.BlockingQueueConsumer - Received cancelOk for tag amq.ctag-FiQvgsGvt_dQ8dwazZgH3Q (eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw); Consumer@6d0ef6dc: tags=[[amq.ctag-FiQvgsGvt_dQ8dwazZgH3Q]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@5ce1b67b Shared Rabbit Connection: SimpleConnection@2627da4c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49696], acknowledgeMode=AUTO local queue size=0
+137532 [eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw-1] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Cancelling Consumer@6d0ef6dc: tags=[[amq.ctag-FiQvgsGvt_dQ8dwazZgH3Q]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@5ce1b67b Shared Rabbit Connection: SimpleConnection@2627da4c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49696], acknowledgeMode=AUTO local queue size=0
+137532 [eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@5ce1b67b Shared Rabbit Connection: SimpleConnection@2627da4c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 49696]
+137532 [eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw-1] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)
+137548 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+137563 [SpringApplicationShutdownHook] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - stopped bean 'inbound.eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw'
+137579 [SpringApplicationShutdownHook] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'Meal.eventConsumer-in-0.anonymous.OqfXl5gBQSyWhDZ-6Y5cBw.errors' has 1 subscriber(s).
+137579 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+137579 [SpringApplicationShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 0 subscriber(s).
+137579 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+137657 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+137657 [SpringApplicationShutdownHook] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,2)
+137712 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+137728 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+137744 [SpringApplicationShutdownHook] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)

@@ -6,10 +6,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import java.util.function.Consumer;
 
 
 import java.util.Date;
+import java.util.function.Consumer;
 
 @Component
 public class EventConsumer implements Consumer<UserRegisteredEvent>{
@@ -38,6 +38,11 @@ public class EventConsumer implements Consumer<UserRegisteredEvent>{
         this.mealService.createMeal(
                 new Date(),
                 MealCategory.DINNER,
+                userRegisteredEvent.getEmail()
+        );
+        this.mealService.createMeal(
+                new Date(),
+                MealCategory.SNACK,
                 userRegisteredEvent.getEmail()
         );
     }

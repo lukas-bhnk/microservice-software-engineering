@@ -9,7 +9,7 @@ import java.util.Set;
 @Entity
 public class FoodEntry {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @JsonIgnore
@@ -30,7 +30,7 @@ public class FoodEntry {
     public FoodEntry(){
     }
 
-    public FoodEntry(long id, Meal meal, Food food, int quantity, int calories, double fats, double carbs, double proteins, long userFk, Set<FoodEntry> foodEntries){
+    public FoodEntry(long id, Meal meal, Food food, int quantity, int calories, double fats, double carbs, double proteins){
         this.id = id;
         this.meal = meal;
         this.food = food;

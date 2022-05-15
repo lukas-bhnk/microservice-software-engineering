@@ -1,0 +1,634 @@
+1390 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1390 [main] INFO  c.n.s.NutritionAppSwengApplication - Starting NutritionAppSwengApplication using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 16024 (C:\Users\lukas\IdeaProjects\nutritionapp\target\classes started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1406 [main] INFO  c.n.s.NutritionAppSwengApplication - No active profile set, falling back to 1 default profile: "default"
+2736 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2845 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 106 ms. Found 7 JPA repository interfaces.
+3178 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+3194 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+3272 [main] INFO  o.s.c.context.scope.GenericScope - BeanFactory id=605cb014-89fb-30d0-b97c-d7193dbe2a9b
+3616 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3616 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3631 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3631 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3694 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4132 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+4132 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+4132 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+4132 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+4305 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+4305 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2838 ms
+6168 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+6199 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.8.Final
+6324 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+6434 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+6590 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+6606 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+9514 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+9529 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10202 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11254 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventConsumer-in-0' has 1 subscriber(s).
+11895 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 21 endpoint(s) beneath base path '/actuator'
+12192 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel errorChannel
+12223 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventConsumer-in-0
+12239 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventPublisher-out-0
+12239 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel nullChannel
+12254 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageHandler _org.springframework.integration.errorLogger
+12286 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+12286 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 1 subscriber(s).
+12286 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+12286 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Creating binder: cloud_rabbit
+12364 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Caching the binder: cloud_rabbit
+12364 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: cloud_rabbit
+12473 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+12598 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#614427b2:0/SimpleConnection@79ae2d13 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51557]
+12598 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+12598 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Nothing to declare
+12635 [main] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)
+12645 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1724/0x00000008015bd8a0 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@79ae2d13 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51557]
+12645 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'sweng.events'
+12676 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventPublisher-out-0' has 1 subscriber(s).
+12676 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: cloud_rabbit
+12739 [main] INFO  o.s.c.s.b.r.p.RabbitExchangeQueueProvisioner - declaring queue for inbound: eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ, bound to: eventConsumer-in-0
+12739 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1724/0x00000008015bd8a0 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@79ae2d13 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51557]
+12739 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventConsumer-in-0'
+12755 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1734/0x00000008015d66d8 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@79ae2d13 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51557]
+12755 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Queue 'eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ'
+12786 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1735/0x00000008015dc000 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@79ae2d13 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51557]
+12786 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Binding destination [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ (QUEUE)] to exchange [eventConsumer-in-0] with routing key [#]
+12817 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Changing consumers from 1 to 1
+12817 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ.errors' has 1 subscriber(s).
+12817 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ.errors' has 2 subscriber(s).
+12817 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Starting Rabbit listener container.
+12833 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@3579682: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+12895 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Started on queue 'eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ' with tag amq.ctag-j2jXXr2GFGxMsPuvElKjNw: Consumer@3579682: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@79ae2d13 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51557], acknowledgeMode=AUTO local queue size=0
+12900 [main] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - started bean 'inbound.eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ'
+12900 [pool-2-thread-3] DEBUG o.s.a.r.l.BlockingQueueConsumer - ConsumeOK: Consumer@3579682: tags=[[amq.ctag-j2jXXr2GFGxMsPuvElKjNw]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@79ae2d13 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51557], acknowledgeMode=AUTO local queue size=0
+12902 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+12917 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+13123 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ.errors
+13201 [main] INFO  c.n.s.NutritionAppSwengApplication - Started NutritionAppSwengApplication in 12.688 seconds (JVM running for 14.096)
+13469 [RMI TCP Connection(2)-10.11.169.238] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+13469 [RMI TCP Connection(3)-10.11.169.238] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13469 [RMI TCP Connection(3)-10.11.169.238] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13469 [RMI TCP Connection(3)-10.11.169.238] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+13531 [RMI TCP Connection(2)-10.11.169.238] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#68df8c6:0/SimpleConnection@7405fd2b [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51560]
+13531 [RMI TCP Connection(2)-10.11.169.238] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+13531 [RMI TCP Connection(2)-10.11.169.238] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Nothing to declare
+13562 [RMI TCP Connection(2)-10.11.169.238] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)
+13562 [RMI TCP Connection(2)-10.11.169.238] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitHealthIndicator$$Lambda$1818/0x00000008015f5c00 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@6fc076f4 Shared Rabbit Connection: SimpleConnection@7405fd2b [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51560]
+13578 [RMI TCP Connection(2)-10.11.169.238] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,2)
+13578 [RMI TCP Connection(2)-10.11.169.238] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitHealthIndicator$$Lambda$1818/0x00000008015f5c00 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,2), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@79ae2d13 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51557]
+23905 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.FoodController - Successfully processed the posted file with 6 rows
+311422 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.FoodController - Successfully processed the posted file with 6 rows
+328755 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.FoodController - Successfully processed the posted file with 6 rows
+12710748 [AMQP Connection 54.93.32.234:5672] WARN  c.r.c.i.ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Connection reset)
+12710748 [AMQP Connection 54.93.32.234:5672] WARN  c.r.c.i.ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Connection reset)
+12711105 [pool-2-thread-5] DEBUG o.s.a.r.l.BlockingQueueConsumer - Received shutdown signal for consumer tag=amq.ctag-j2jXXr2GFGxMsPuvElKjNw
+com.rabbitmq.client.ShutdownSignalException: connection error
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:985)
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:975)
+	at com.rabbitmq.client.impl.AMQConnection.handleFailure(AMQConnection.java:779)
+	at com.rabbitmq.client.impl.AMQConnection.access$400(AMQConnection.java:47)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:674)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:263)
+	at java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:294)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:184)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:665)
+	... 1 common frames omitted
+12711890 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-1] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+com.rabbitmq.client.ShutdownSignalException: connection error
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:985)
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:975)
+	at com.rabbitmq.client.impl.AMQConnection.handleFailure(AMQConnection.java:779)
+	at com.rabbitmq.client.impl.AMQConnection.access$400(AMQConnection.java:47)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:674)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:263)
+	at java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:294)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:184)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:665)
+	... 1 common frames omitted
+12712078 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-1] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3579682: tags=[[amq.ctag-j2jXXr2GFGxMsPuvElKjNw]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@79ae2d13 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51557], acknowledgeMode=AUTO local queue size=0
+12712078 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@79ae2d13 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51557]
+12712078 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-1] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)
+12712188 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-2] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@712dece7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+12712204 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-2] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42843533 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11h22m28s371ms436µs900ns).
+42847678 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-2] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42852729 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-2] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createBareChannel(CachingConnectionFactory.java:676)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getCachedChannelProxy(CachingConnectionFactory.java:650)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getChannel(CachingConnectionFactory.java:540)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.access$1600(CachingConnectionFactory.java:100)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$ChannelCachingConnectionProxy.createChannel(CachingConnectionFactory.java:1418)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createChannel(ConnectionFactoryUtils.java:337)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:151)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1519)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 14 common frames omitted
+42852729 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@712dece7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42852729 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-2] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42852777 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-3] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@3285a372: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42852777 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-3] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42852777 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-3] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42858109 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-3] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42858110 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-3] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@3285a372: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42858110 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-3] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42858369 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-4] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@273ac477: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42858370 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-4] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42858371 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-4] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42863411 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-4] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1519)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42863412 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-4] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@273ac477: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42863412 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-4] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42863519 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-5] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@6380e29: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42863519 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-5] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42863521 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-5] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42868596 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-5] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42868599 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-5] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@6380e29: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42868599 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-5] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42868613 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-6] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@266fba71: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42868613 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-6] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42868615 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-6] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42873634 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-6] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1519)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42873635 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-6] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@266fba71: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42873636 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-6] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42873644 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-7] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@1e2b7a5b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42873645 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-7] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42873655 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-7] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42878727 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-7] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42878729 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-7] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@1e2b7a5b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42878729 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-7] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42878730 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-8] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@10922d16: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42878731 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-8] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42878733 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-8] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42883768 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-8] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1519)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42883768 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-8] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@10922d16: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42883768 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-8] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42883768 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-9] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@5402b3b7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42883768 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-9] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42883768 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-9] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42888855 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-9] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42888855 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-9] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5402b3b7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42888855 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-9] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42888856 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-10] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@63e942b7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42888856 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-10] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42888858 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-10] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42893943 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-10] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1519)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42893943 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-10] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@63e942b7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42893943 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-10] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42893943 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-11] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@62890423: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42893943 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-11] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42893943 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-11] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42899025 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-11] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42899025 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-11] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@62890423: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42899025 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-11] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42899025 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-12] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@2a6f4fb5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42899025 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-12] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42899025 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-12] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42904113 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-12] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1519)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42904113 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-12] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@2a6f4fb5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42904113 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-12] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42904113 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-13] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@467587ca: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42904113 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-13] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42904113 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-13] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42909197 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-13] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42909197 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-13] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@467587ca: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42909197 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-13] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42909203 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-14] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@74910df9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42909203 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-14] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42909203 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-14] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42914294 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-14] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: No such host is known (cow.rmq2.cloudamqp.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1519)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42914294 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-14] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@74910df9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42914294 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-14] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42914294 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-15] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@61d5a274: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42914294 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-15] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42914294 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-15] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+42919390 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-15] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: cow.rmq2.cloudamqp.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+42919390 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-15] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@61d5a274: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42919390 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-15] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+42919390 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@68b2b812: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+42919390 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [cow.rmq2.cloudamqp.com:5672]
+42919609 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#614427b2:15/SimpleConnection@7929041c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54800]
+42919625 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+42919641 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ) durable:false, auto-delete:true, exclusive:true. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+42919766 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)
+42919781 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$2078/0x000000080172c900 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@7929041c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54800]
+42919781 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'sweng.events'
+42919812 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventConsumer-in-0'
+42919859 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Queue 'eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ'
+42920000 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Binding destination [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ (QUEUE)] to exchange [eventConsumer-in-0] with routing key [#]
+42920062 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Declarations finished
+42920219 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.a.r.l.BlockingQueueConsumer - Started on queue 'eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ' with tag amq.ctag-dsO9WT4IyvB05NHjUuFH4w: Consumer@68b2b812: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@7929041c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54800], acknowledgeMode=AUTO local queue size=0
+42920219 [pool-2-thread-9] DEBUG o.s.a.r.l.BlockingQueueConsumer - ConsumeOK: Consumer@68b2b812: tags=[[amq.ctag-dsO9WT4IyvB05NHjUuFH4w]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@7929041c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54800], acknowledgeMode=AUTO local queue size=0
+42955494 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getMeal(2).
+42956145 [http-nio-8080-exec-3] ERROR c.n.sweng.Service.MealService - Getting Meal failed. Meal doesnt exist
+43022745 [SpringApplicationShutdownHook] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Shutting down Rabbit listener container
+43022870 [pool-2-thread-10] DEBUG o.s.a.r.l.BlockingQueueConsumer - Received cancelOk for tag amq.ctag-dsO9WT4IyvB05NHjUuFH4w (eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ); Consumer@68b2b812: tags=[[amq.ctag-dsO9WT4IyvB05NHjUuFH4w]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@7929041c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54800], acknowledgeMode=AUTO local queue size=0
+43022870 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+43022964 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Cancelling Consumer@68b2b812: tags=[[amq.ctag-dsO9WT4IyvB05NHjUuFH4w]], channel=Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@7929041c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54800], acknowledgeMode=AUTO local queue size=0
+43022964 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1), conn: Proxy@369773fd Shared Rabbit Connection: SimpleConnection@7929041c [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 54800]
+43022964 [eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ-16] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)
+43023011 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+43023011 [SpringApplicationShutdownHook] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - stopped bean 'inbound.eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ'
+43023058 [SpringApplicationShutdownHook] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'Meal.eventConsumer-in-0.anonymous._D0oPkkhRkquaK6E-Eq0VQ.errors' has 1 subscriber(s).
+43023089 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+43023089 [SpringApplicationShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 0 subscriber(s).
+43023089 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+43023151 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+43023261 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+43023261 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+43023276 [SpringApplicationShutdownHook] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,1)

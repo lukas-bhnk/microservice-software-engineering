@@ -44,19 +44,35 @@ public class FoodController {
         Food food = this.foodService.getFood(id);
         return new FoodDto(food);
     }
-
+    /**
+     * search for all foods that have included a part of the search string
+     * @param name of the food
+     * @return foodlist, a foodlist of all foods that have included the string
+     */
     @GetMapping("/name={name}")
     public List<Food> getFood (@PathVariable String name){
         List<Food> foodList = this.foodService.getFood(name);
         return foodList;
     }
 
+    /**
+     * Get all FoodValues that are saved for the specific values
+     * @param id of the food
+     * @return foodinfo, values of the food inclusive all other values(nutritionalValues, vitamins, minerals)
+     */
     @GetMapping("getInfo/{id}")
     public String getInfo(@PathVariable Long id){
         String info = this.foodService.getInfo(id);
         return info;
     }
 
+    /**
+     * Saves all Food Values incl. NutritionalValues, Vitamins and Minerals automatically
+     * Post food should only be possible for Admins.
+     * @param file a excel, that has the following columns
+     * Name	Bezugseinheit	Energie, Kalorien (kcal)	Fett, total (g)	Fettsäuren, gesättigt (g)	Kohlenhydrate, verfügbar (g)	Zucker (g)	Protein (g)	Salz (NaCl) (g)	Alkohol (g)	Vitamin A-Aktivität, RE (µg-RE)	Retinol (µg)	Betacarotin (µg)	Vitamin B1 (Thiamin) (mg)	Vitamin B2 (Riboflavin) (mg)	Vitamin B6 (Pyridoxin) (mg)	Vitamin B12 (Cobalamin) (µg)	Niacin (mg)	Folat (µg)	Vitamin C (Ascorbinsäure) (mg)	Vitamin D (Calciferol) (µg)	Vitamin E-Aktivität (mg-ATE)	Kalium (K) (mg)	Natrium (Na) (mg)	Chlorid (Cl) (mg)	Magnesium (Mg) (mg)	Phosphor (P) (mg)	Eisen (Fe) (mg)	Zink (Zn)  (mg)	Selen (Se) (µg)
+     * @return a Meal
+     */
     @PostMapping(consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public ResponseEntity<Object> handlePost(@RequestParam(name = "file") MultipartFile file) {
         // validate that the file has the .xlsx ending

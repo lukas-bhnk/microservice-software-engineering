@@ -1,0 +1,13 @@
+10445 [main] INFO  c.nutrition.sweng.PersistenceTests - Starting PersistenceTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 17028 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+10451 [main] INFO  c.nutrition.sweng.PersistenceTests - No active profile set, falling back to 1 default profile: "default"
+10624 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10668 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 7 JPA repository interfaces.
+10700 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+10775 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:a18e5b75-313f-4ef2-b6f5-519e63033ae5;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+10848 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+10863 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+11227 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11227 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11514 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/C:/Users/lukas/IdeaProjects/nutritionapp/target/classes/data.sql]: INSERT INTO user(id, email, name) VALUES (1,"peter@gmail.com","peter_user"); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "peter@gmail.com" not found; SQL statement:
+INSERT INTO user(id, email, name) VALUES (1,"peter@gmail.com","peter_user") [42122-200]
+11515 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'

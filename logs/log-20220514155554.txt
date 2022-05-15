@@ -1,0 +1,8 @@
+3020 [main] INFO  c.n.sweng.MealControllerTests - Starting MealControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 24784 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+3020 [main] INFO  c.n.sweng.MealControllerTests - The following 1 profile is active: "test"
+3050 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+8507 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+8507 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+8507 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+8665 [main] INFO  c.n.sweng.MealControllerTests - Started MealControllerTests in 7.069 seconds (JVM running for 11.854)
+8976 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]

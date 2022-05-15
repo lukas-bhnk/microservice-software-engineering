@@ -6,8 +6,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.retry.annotation.EnableRetry;
 
 @SpringBootTest
-@EnableFeignClients
-@EnableRetry
 class NutritionAppSwengApplicationTests {
 
 	@Test

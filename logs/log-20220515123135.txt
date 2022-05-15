@@ -1,0 +1,7 @@
+1777 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1777 [main] INFO  c.n.s.NutritionalValuesControllerTests - Starting NutritionalValuesControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 27060 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1777 [main] INFO  c.n.s.NutritionalValuesControllerTests - No active profile set, falling back to 1 default profile: "default"
+4890 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+4890 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+4890 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+4952 [main] INFO  c.n.s.NutritionalValuesControllerTests - Started NutritionalValuesControllerTests in 4.101 seconds (JVM running for 6.201)

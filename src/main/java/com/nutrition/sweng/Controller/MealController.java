@@ -4,12 +4,17 @@ import com.nutrition.sweng.DTO.FoodDto;
 import com.nutrition.sweng.DTO.MealDto;
 import com.nutrition.sweng.Model.Food;
 import com.nutrition.sweng.Model.Meal;
+import com.nutrition.sweng.Model.MealCategory;
 import com.nutrition.sweng.Service.MealService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 @RestController
 @RequestMapping("rest/meal")
@@ -28,18 +33,34 @@ public class MealController {
         return new MealDto(meal);
     }
 
-    @GetMapping("/{day}/{month}/{year}/{userFk}")
-    public List<MealDto> getMeal(@PathVariable int day, @PathVariable int month, @PathVariable int year, @PathVariable String email) {
-        Date d = new Date(day, month, year);
-        List<Meal> meals = this.mealService.getDailyMeals(d, email);
-        List<MealDto> mealsDto = null;
-        for (Meal m : meals) mealsDto.add(new MealDto(m));
-        return mealsDto;
+    @GetMapping("/{day}/{month}/{year}/{email}")
+    public List<Meal> getMeal(@PathVariable int day, @PathVariable int month, @PathVariable int year, @PathVariable String email) throws ParseException {
+        List<Meal> meals = this.mealService.getDailyMeals(new SimpleDateFormat("yyyy-MM-dd").parse(year+"-"+month+"-"+day), email);
+        return meals;
+    }
+
+    @PatchMapping("/{mealId}/{foodId}/{quantity}")
+    public MealDto updateFoodQuantity(@PathVariable Long mealId, @PathVariable Long foodId, @PathVariable Integer quantity){
+        Meal meal = this.mealService.updateQuantity(mealId, foodId, quantity);
+        return new MealDto(meal);
     }
 
     @PostMapping("/{mealId}/{foodId}/{quantity}")
     public MealDto addFood(@PathVariable Long mealId, @PathVariable Long foodId, @PathVariable Integer quantity){
         Meal meal = this.mealService.addFood(mealId, foodId, quantity);
+        return new MealDto(meal);
+    }
+
+    @PostMapping("/{day}/{month}/{year}/{category}/{email}")
+    public MealDto createMeal(@PathVariable int day, @PathVariable int month, @PathVariable int year, @PathVariable String category, @PathVariable String email) throws ParseException {
+        MealCategory mealCategory;
+        System.out.println(category);
+        if(category == "breakfast") mealCategory = MealCategory.BREAKFAST;
+        else {if (category == "lunch") mealCategory = MealCategory.LUNCH;
+        else {if (category == "dinner") mealCategory = MealCategory.DINNER;
+        else {if (category == "snack") mealCategory = MealCategory.SNACK;
+        else throw new IllegalArgumentException("Can not resolve Category");}}}
+        Meal meal = this.mealService.createMeal(new SimpleDateFormat("yyyy-MM-dd").parse(year+"-"+month+"-"+day), mealCategory, email);
         return new MealDto(meal);
     }
 

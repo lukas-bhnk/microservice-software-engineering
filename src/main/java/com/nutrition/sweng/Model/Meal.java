@@ -12,6 +12,7 @@ public class Meal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Temporal(TemporalType.DATE)
     private Date date;
     private Integer calories;
     private MealCategory mealCategory;

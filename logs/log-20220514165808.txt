@@ -1,0 +1,3 @@
+753  [main] INFO  o.s.b.t.a.w.s.WebMvcTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.nutrition.sweng.MealControllerTests], using SpringBootContextLoader
+782  [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.nutrition.sweng.MealControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+785  [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nutrition.sweng.MealControllerTests]: MealControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.

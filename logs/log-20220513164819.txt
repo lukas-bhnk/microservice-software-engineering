@@ -1,0 +1,38 @@
+1770 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1787 [main] INFO  c.n.sweng.EventPublisherTests - Starting EventPublisherTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 1760 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1788 [main] INFO  c.n.sweng.EventPublisherTests - The following 1 profile is active: "test"
+3521 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+3909 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 372 ms. Found 7 JPA repository interfaces.
+4538 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+4567 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+4767 [main] INFO  o.s.c.context.scope.GenericScope - BeanFactory id=fe48f14f-1736-3e63-9a56-c563e7bb8978
+5577 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+5653 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+6216 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+6323 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.8.Final
+6660 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+6989 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+7316 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+7353 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+10928 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10941 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14922 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventConsumer-in-0' has 1 subscriber(s).
+16225 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+16226 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 1 subscriber(s).
+16227 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+16299 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'sweng.events.destination' has 1 subscriber(s).
+16303 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventPublisher-out-0' has 1 subscriber(s).
+16324 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.errors' has 1 subscriber(s).
+16324 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.errors' has 2 subscriber(s).
+16325 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'eventConsumer-in-0.destination' has 1 subscriber(s).
+16326 [main] INFO  o.s.c.s.b.t.TestChannelBinder$IntegrationBinderInboundChannelAdapter - started org.springframework.cloud.stream.binder.test.TestChannelBinder$IntegrationBinderInboundChannelAdapter@28817763
+16416 [main] INFO  c.n.sweng.EventPublisherTests - Started EventPublisherTests in 15.392 seconds (JVM running for 17.57)
+16930 [main] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=20, date=null', calories='4', mealCategory='BREAKFAST', fats='1.0', carbs='10.0', proteins='12.0', user='User{id=0, name='null', email='null'}', foodEntries='[]'}
+16930 [main] WARN  o.s.c.s.b.test.OutputDestination - !!!While 'receive(long timeout, int bindingIndex)' method may still work it is deprecated no longer supported. It will be removed after 3.1.3 release. Please use 'receive(long timeout, String bindingName)'
+17035 [SpringApplicationShutdownHook] INFO  o.s.c.s.b.t.TestChannelBinder$IntegrationBinderInboundChannelAdapter - stopped org.springframework.cloud.stream.binder.test.TestChannelBinder$IntegrationBinderInboundChannelAdapter@28817763
+17043 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+17043 [SpringApplicationShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 0 subscriber(s).
+17044 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+17065 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+17068 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+17081 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
