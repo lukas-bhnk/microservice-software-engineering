@@ -19,6 +19,11 @@ public class MineralsController {
         this.mineralsService = mineralsService;
     }
 
+    /**
+     * Get the Minerals of a specific food by its id
+     * @param id of the food
+     * @return minerals of the food
+     */
     @GetMapping("/{id}")
     public MineralsDto getMinerals(@PathVariable Long id){
         Minerals minerals = this.mineralsService.getMinerals(id);

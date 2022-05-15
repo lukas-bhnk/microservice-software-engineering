@@ -19,6 +19,11 @@ public class VitaminsController {
         this.vitaminsService = vitaminsService;
     }
 
+    /**
+     * Get the Vitamins of a specific food by its id
+     * @param id of the food
+     * @return vitamins of the food
+     */
     @GetMapping("/{id}")
     public VitaminsDto getVitamins(@PathVariable Long id){
         Vitamins vitamins = this.vitaminsService.getVitamins(id);

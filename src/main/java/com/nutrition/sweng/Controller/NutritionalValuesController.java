@@ -19,6 +19,11 @@ public class NutritionalValuesController {
         this.nutritionalValuesService = nutritionalValuesService;
     }
 
+    /**
+     * Get the NutritionalValues of a specific food by its id
+     * @param id of the food
+     * @return nutritionalValues of the food
+     */
     @GetMapping("/{id}")
     public NutritionalValuesDto getNutritionalValues(@PathVariable Long id){
         NutritionalValues nutritionalValues = this.nutritionalValuesService.getNutritionalValues(id);

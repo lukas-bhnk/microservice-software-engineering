@@ -51,6 +51,15 @@ public class MealController {
         return new MealDto(meal);
     }
 
+    /**
+     * Create a Meal for a specif day, Mealcategory and user
+     * @param day
+     * @param month
+     * @param year
+     * @param category (breakfast, lunch, dinner, snack)
+     * @param email of the user
+     * @return created food
+     */
     @PostMapping("/{day}/{month}/{year}/{category}/{email}")
     public MealDto createMeal(@PathVariable int day, @PathVariable int month, @PathVariable int year, @PathVariable String category, @PathVariable String email) throws ParseException {
         MealCategory mealCategory;
@@ -64,6 +73,12 @@ public class MealController {
         return new MealDto(meal);
     }
 
+    /**
+     * Delete a food by its it from the meal
+     * @param mealId
+     * @param foodId
+     * @return changed meal
+     */
     @DeleteMapping("/{mealId}/{foodId}")
     public MealDto deleteFood(@PathVariable Long mealId, @PathVariable Long foodId){
         Meal meal = this.mealService.deleteFood(mealId, foodId);

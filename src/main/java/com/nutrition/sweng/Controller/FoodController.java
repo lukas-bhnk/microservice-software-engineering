@@ -39,6 +39,11 @@ public class FoodController {
         this.foodService = foodService;
     }
 
+    /**
+     * Get the Food values by its id
+     * @param id of the food
+     * @return food
+     */
     @GetMapping("/{id}")
     public FoodDto getFood(@PathVariable Long id){
         Food food = this.foodService.getFood(id);
