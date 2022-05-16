@@ -1,0 +1,8 @@
+2350 [main] INFO  c.n.sweng.VitaminsControllerTests - Starting VitaminsControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 27088 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+2350 [main] INFO  c.n.sweng.VitaminsControllerTests - No active profile set, falling back to 1 default profile: "default"
+2350 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+5500 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+5500 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+5500 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+5542 [main] INFO  c.n.sweng.VitaminsControllerTests - Started VitaminsControllerTests in 4.241 seconds (JVM running for 6.98)
+5687 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "{}"]

@@ -1,0 +1,7 @@
+1823 [main] INFO  c.n.sweng.FoodControllerTests - Starting FoodControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 27140 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1823 [main] INFO  c.n.sweng.FoodControllerTests - The following 1 profile is active: "test"
+1823 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+5866 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+5866 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+5866 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+5917 [main] INFO  c.n.sweng.FoodControllerTests - Started FoodControllerTests in 4.993 seconds (JVM running for 7.161)
