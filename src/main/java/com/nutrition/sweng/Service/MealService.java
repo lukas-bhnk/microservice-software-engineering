@@ -44,9 +44,15 @@ public class MealService {
      * @param id of the requested Meal
      * @return a Meal
      */
-    public Meal getMeal(Long id){
-        LOG.info("Execute getMeal({}).", id);
-        Optional<Meal> mealOptional = mealRepository.findById(id);
+    public Meal getMeal(Long id, String email){
+        LOG.info("Execute getMeal({}, {}).", id, email);
+        Optional<User> userOptional = userRepository.findByEmail(email);
+        if (!userOptional.isPresent()) {
+            LOG.error("User is not in DB");
+            throw new ResourceNotFoundException("User is not in DB");
+        }
+        User user = userOptional.get();
+        Optional<Meal> mealOptional = mealRepository.findByIdAndUser(id, user);
         if (mealOptional.isPresent()) {
             Meal meal = mealOptional.get();
             LOG.info("Getting Meal successful with ID {}", meal.getId());
@@ -56,6 +62,7 @@ public class MealService {
             throw new ResourceNotFoundException("Requested Meal is not in DB");
         }
     }
+
     /**
      * Find all meals of a specific day and user in the database.
      * @param date of the requested Meal
@@ -70,9 +77,7 @@ public class MealService {
             throw new ResourceNotFoundException("User is not in DB");
         }
         User user = userOptional.get();
-        System.out.println(user);
         List<Meal> meals = mealRepository.findByDateAndUser(date, user);
-        System.out.println(meals);
         if(meals.isEmpty()){
             LOG.error("Requested Meals({}, {})are not in the DB", date, email);
             throw new ResourceNotFoundException("Requested Meals are not in the DB");
@@ -84,11 +89,18 @@ public class MealService {
      * Delete a certain Food of a certain Meal in the database.
      * @param mealId Id of the Meal, which should delete the food
      * @param foodId Id of the Food that should be delete of the meal
+     * @param email of the User
      * @return a Meal
      */
-    public Meal deleteFood(Long mealId, Long foodId){
-        LOG.info("Execute deleteFood(MealId: {}, FoodId: {}).", mealId, foodId);
-        Optional<Meal> mealOptional = mealRepository.findById(mealId);
+    public Meal deleteFood(Long mealId, Long foodId, String email){
+        LOG.info("Execute deleteFood(MealId: {}, FoodId: {}, Email: {}).", mealId, foodId, email);
+        Optional<User> userOptional = userRepository.findByEmail(email);
+        if (!userOptional.isPresent()) {
+            LOG.error("User is not in DB");
+            throw new ResourceNotFoundException("User is not in DB");
+        }
+        User user = userOptional.get();
+        Optional<Meal> mealOptional = mealRepository.findByIdAndUser(mealId, user);
         if (mealOptional.isPresent()) {
             Meal meal = mealOptional.get();
             Set<FoodEntry> foodEntries = meal.getFoodEntries();
@@ -129,11 +141,13 @@ public class MealService {
      */
     public Meal createMeal(Date date, MealCategory mealCategory, String email){
         Optional<User> userOptional = userRepository.findByEmail(email);
+        User user = null;
         if (!userOptional.isPresent()) {
-            LOG.error("User is not in DB");
-            throw new ResourceNotFoundException("User is not in DB");
+            LOG.info("User is not in DB, created a new User");
+            user = new User(email);
+            userRepository.save(user);
         }
-        User user = userOptional.get();
+        else user = userOptional.get();
         Meal meal = new Meal();
         meal.setDate(date);
         meal.setMealCategory(mealCategory);
@@ -144,7 +158,6 @@ public class MealService {
         meal.setUserFk(user);
         meal.setFoodEntries(new HashSet<FoodEntry>());
         mealRepository.save(meal);
-        System.out.println(meal);
         LOG.info("Creating meal successful. New food created with Date: {} and Category: {}", meal.getDate(), meal.getMealCategory().name());
         var event = new MealAddedEvent(meal);
         var published = this.eventPublisher.publishEvent(event);
@@ -163,10 +176,16 @@ public class MealService {
      * @param quantityInGorML Quantity of the food (Grams or Millilitre), that should be added into the meal
      * @return a Meal
      */
-    public Meal addFood(Long mealId, Long foodId, Integer quantityInGorML) {
+    public Meal addFood(Long mealId, Long foodId, Integer quantityInGorML, String email) {
 
         LOG.info("Execute addFood(MealId: {}, FoodId: {}, Quantity: {}).", mealId, foodId, quantityInGorML);
-        Optional<Meal> mealOptional = mealRepository.findById(mealId);
+        Optional<User> userOptional = userRepository.findByEmail(email);
+        if (!userOptional.isPresent()) {
+            LOG.error("User is not in DB");
+            throw new ResourceNotFoundException("User is not in DB");
+        }
+        User user = userOptional.get();
+        Optional<Meal> mealOptional = mealRepository.findByIdAndUser(mealId, user);
         if (mealOptional.isPresent()) {
             Meal meal = mealOptional.get();
             Set<FoodEntry> foodEntries = meal.getFoodEntries();
@@ -211,9 +230,15 @@ public class MealService {
      * @param quantityInGorML Quantity of the food (Grams or Millilitre), that should be updated in the meal
      * @return a Meal
      */
-    public Meal updateQuantity(Long mealId, Long foodId, int quantityInGorML ){
+    public Meal updateQuantity(Long mealId, Long foodId, int quantityInGorML, String email ){
         LOG.info("Execute updateQuantityOfAFoodEntry(MealId: {}, FoodId: {}, Quantity: {}).", mealId, foodId, quantityInGorML);
-        Optional<Meal> mealOptional = mealRepository.findById(mealId);
+        Optional<User> userOptional = userRepository.findByEmail(email);
+        if (!userOptional.isPresent()) {
+            LOG.error("User is not in DB");
+            throw new ResourceNotFoundException("User is not in DB");
+        }
+        User user = userOptional.get();
+        Optional<Meal> mealOptional = mealRepository.findByIdAndUser(mealId, user);
         if (mealOptional.isPresent()) {
             Meal meal = mealOptional.get();
             Set<FoodEntry> foodEntries = meal.getFoodEntries();

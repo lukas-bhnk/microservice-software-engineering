@@ -1,0 +1,7 @@
+2633 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2649 [main] INFO  c.n.sweng.MealControllerTests - Starting MealControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 43664 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+2649 [main] INFO  c.n.sweng.MealControllerTests - The following 1 profile is active: "test"
+7663 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+7663 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+7663 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+7741 [main] INFO  c.n.sweng.MealControllerTests - Started MealControllerTests in 6.532 seconds (JVM running for 9.625)

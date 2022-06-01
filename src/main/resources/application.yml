@@ -2,26 +2,31 @@
 spring:
   cloud:
     stream:
-      source: eventPublisher
       bindings:
-        eventPublisher-out-0:
-          destination: sweng.events
+        eventConsumer-in-0:
+          destination: sweng.events.registeredEvent
           binder: cloud_rabbit
+        eventPublisher-out-1:
+          destination: sweng.events.MealChangedEvent
+          binder: cloud_rabbit
+        eventPublisher-out-2:
+          destination: sweng.events.MealAddedEvent
+          binder: cloud_rabbit
+
       binders:
         cloud_rabbit:
           type: rabbit
           environment:
             spring:
               rabbitmq:
-                host: cow.rmq2.cloudamqp.com
-                port: 5672
-                username: ghkcurap
-                password: 6a2CWs9YHE0cRhinwBdu2QRJaBXFiwmS
-                virtual-host: ghkcurap
+                host: rabbitmq.team12.svc.cluster.local
+                username: admin
+                password: password
+                virtual-host: /
+
   #repeat the rabbitmq credentials as follows when actuator health checks are active:
   rabbitmq:
-    host: cow.rmq2.cloudamqp.com
-    port: 5672
-    username: ghkcurap
-    password: 6a2CWs9YHE0cRhinwBdu2QRJaBXFiwmS
-    virtual-host: ghkcurap
+    host: rabbitmq.team12.svc.cluster.local
+    username: admin
+    password: password
+    virtual-host: /

@@ -31,6 +31,7 @@ public class MealAddedEvent {
         this.id = id;
         this.mealCategory = mealCategory.name();
         this.calories = calories;
+        this.date = date;
         this.fats = fats;
         this.carbs = carbs;
         this.proteins = proteins;
@@ -142,12 +143,12 @@ public class MealAddedEvent {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MealAddedEvent that = (MealAddedEvent) o;
-        return Objects.equals(id, that.id) && Objects.equals(date, that.date) && Objects.equals(mealCategory, that.mealCategory) && Objects.equals(calories, that.calories) && Objects.equals(userFk, that.userFk) && Objects.equals(foodEntries, that.foodEntries);
+        return Objects.equals(id, that.id) && Objects.equals(date, that.date) && Objects.equals(mealCategory, that.mealCategory) && Objects.equals(calories, that.calories) && Objects.equals(foodEntries, that.foodEntries);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, date, mealCategory, calories, proteins, carbs, fats, userFk, foodEntries);
+        return Objects.hash(id, date, mealCategory, calories, proteins, carbs, fats, foodEntries);
     }
 
 }

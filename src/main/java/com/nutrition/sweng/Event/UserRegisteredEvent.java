@@ -7,13 +7,13 @@ import java.util.Objects;
 public class UserRegisteredEvent {
 
     private long userId;
-    private String name;
     private String email;
+    private String name;
 
     public UserRegisteredEvent() {
     }
 
-    public UserRegisteredEvent(Integer id, String name, String email, String inviteCode) {
+    public UserRegisteredEvent(Integer id,  String email, String name) {
         this.userId = id;
         this.name = name;
         this.email = email;
@@ -21,7 +21,6 @@ public class UserRegisteredEvent {
 
     public UserRegisteredEvent(User registeredUser, String inviteCode) {
         this.userId = registeredUser.getId();
-        this.name = registeredUser.getName();
         this.email = registeredUser.getEmail();
     }
 
@@ -31,14 +30,6 @@ public class UserRegisteredEvent {
 
     public void setUserId(long userId) {
         this.userId = userId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getEmail() {

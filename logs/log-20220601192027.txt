@@ -1,0 +1,9 @@
+1538 [main] INFO  c.n.sweng.MineralsControllerTests - Starting MineralsControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 3904 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1538 [main] INFO  c.n.sweng.MineralsControllerTests - The following 1 profile is active: "test"
+1538 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+5097 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e6d30c0, org.springframework.security.web.context.SecurityContextPersistenceFilter@51b51641, org.springframework.security.web.header.HeaderWriterFilter@277bc3a5, org.springframework.security.web.authentication.logout.LogoutFilter@1a5b7394, com.nutrition.sweng.security.JwtFilter@38929da, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@139089a4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@687b0ddc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69d667a5, org.springframework.security.web.session.SessionManagementFilter@36cfe107, org.springframework.security.web.access.ExceptionTranslationFilter@d76099a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1073c664]
+5254 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+5254 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+5254 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+5332 [main] INFO  c.n.sweng.MineralsControllerTests - Started MineralsControllerTests in 4.581 seconds (JVM running for 6.557)
+5535 [main] INFO  c.n.s.Controller.MineralsController - Received GET-Request /rest/minerals/{id}).

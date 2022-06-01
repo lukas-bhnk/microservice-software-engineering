@@ -1,0 +1,8 @@
+1713 [main] INFO  c.n.sweng.FoodControllerTests - Starting FoodControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 21808 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1713 [main] INFO  c.n.sweng.FoodControllerTests - The following 1 profile is active: "test"
+1728 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+9218 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ad1b737, org.springframework.security.web.context.SecurityContextPersistenceFilter@123ca460, org.springframework.security.web.header.HeaderWriterFilter@5560b64d, org.springframework.security.web.authentication.logout.LogoutFilter@67dc6b48, com.nutrition.sweng.security.JwtFilter@342a1f84, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@460f1cdb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@308a9264, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77d0dbba, org.springframework.security.web.session.SessionManagementFilter@76db9048, org.springframework.security.web.access.ExceptionTranslationFilter@40a8a26f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3cb195dd]
+9546 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+9546 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+9546 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+9671 [main] INFO  c.n.sweng.FoodControllerTests - Started FoodControllerTests in 8.756 seconds (JVM running for 11.027)

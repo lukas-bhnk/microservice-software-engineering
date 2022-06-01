@@ -5,6 +5,7 @@ import com.nutrition.sweng.Repository.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -16,7 +17,6 @@ import java.util.*;
 @DataJpaTest
 @ActiveProfiles("test")
 public class PersistenceTests {
-
     @Autowired
     private MealRepository mealRepository;
 
@@ -35,13 +35,22 @@ public class PersistenceTests {
     @Autowired
     private MineralsRepository mineralsRepository;
 
+    @Autowired
+    private UserRepository userRepository;
+
+    private User user;
+
+    @BeforeEach
+    public void setUp() throws Exception {
+        user = userRepository.findByEmail("peter@gmail.com").get();
+    }
 
     @Test
     public void findMealById() {
-        Optional<Meal> mealOptional = mealRepository.findById(1L);
+        Optional<Meal> mealOptional = mealRepository.findByIdAndUser(1L, user);
         Meal meal = mealOptional.get();
         assert (meal.getId()==1L);
-        Optional<Meal> mealOptional2 = mealRepository.findById(10L);
+        Optional<Meal> mealOptional2 = mealRepository.findByIdAndUser(10L, user);
         assertFalse (mealOptional2.isPresent());
 
     }
@@ -116,19 +125,19 @@ public class PersistenceTests {
 
     @Test
     public void saveAndDeleteMeal() {
-        Meal meal = new Meal(4L,new Date() , 40, MealCategory.BREAKFAST, 2.9, 3.0, 4.0, new User(), Collections.emptySet());
+        Meal meal = new Meal(4L,new Date() , 40, MealCategory.BREAKFAST, 2.9, 3.0, 4.0, user, Collections.emptySet());
         Meal m = mealRepository.save(meal);
-        Optional<Meal> mealOptional = mealRepository.findById(4L);
+        Optional<Meal> mealOptional = mealRepository.findByIdAndUser(4L, user);
         assert  (mealOptional.isPresent());
         Meal meal2 = mealOptional.get();
         mealRepository.delete(meal2);
-        Optional<Meal> mealOptional2 = mealRepository.findById(4L);
+        Optional<Meal> mealOptional2 = mealRepository.findByIdAndUser(4L, user);
         assertFalse(mealOptional2.isPresent());
     }
 
     @Test
     public void saveAndDeleteFoodEntry() {
-        Meal meal = mealRepository.findById(1L).get();
+        Meal meal = mealRepository.findByIdAndUser(1L, user).get();
         Food food = foodRepository.findById(1L).get();
         FoodEntry foodEntry = new FoodEntry(3L, meal, food, 120, 240, 12.0, 16.0, 12.0);
         foodEntryRepository.save(foodEntry);
@@ -140,7 +149,7 @@ public class PersistenceTests {
         assertFalse(foodEntryOptional1.isPresent());
     }
 
-/*    @Test
+    @Test
     public void saveAndFindAllFoodValues() {
         Food food = new Food(4L,"test", FoodUnitSize.MILLILITRE, Collections.emptySet());
         Minerals minerals = new Minerals();
@@ -176,5 +185,5 @@ public class PersistenceTests {
         assert  (vitaminsOptional.isPresent());
         Optional<NutritionalValues> nutritionalValuesOptional = nutritionalValuesRepository.findById(4L);
         assert  (nutritionalValuesOptional.isPresent());
-    }*/
+    }
 }

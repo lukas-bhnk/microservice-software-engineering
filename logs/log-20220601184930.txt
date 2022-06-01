@@ -1,0 +1,9 @@
+1796 [main] INFO  c.n.sweng.MealControllerTests - Starting MealControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 18924 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1796 [main] INFO  c.n.sweng.MealControllerTests - The following 1 profile is active: "test"
+1812 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+5733 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b3feb26, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d3ad37a, org.springframework.security.web.header.HeaderWriterFilter@46894dc5, org.springframework.security.web.authentication.logout.LogoutFilter@780129bc, com.nutrition.sweng.security.JwtFilter@2e4ecdf8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37986daf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a0f06ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@503a7990, org.springframework.security.web.session.SessionManagementFilter@57f2e67, org.springframework.security.web.access.ExceptionTranslationFilter@5fc7255c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35e689a0]
+5858 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+5858 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+5858 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+5905 [main] INFO  c.n.sweng.MealControllerTests - Started MealControllerTests in 4.996 seconds (JVM running for 7.436)
+6108 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingRequestHeaderException: Required request header 'Authorization' for method parameter type String is not present]

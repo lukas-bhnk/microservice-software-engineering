@@ -41,6 +41,7 @@ public class Food {
     public Food(){}
 
     public Food(long id, String name, FoodUnitSize unitSize, Set<FoodEntry> foodEntries) {
+        this.id = id;
         this.name = name;
         this.unitSize = unitSize;
         this.foodEntries = foodEntries;

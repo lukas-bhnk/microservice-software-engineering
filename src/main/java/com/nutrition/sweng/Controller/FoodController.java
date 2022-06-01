@@ -2,9 +2,8 @@ package com.nutrition.sweng.Controller;
 
 import com.nutrition.sweng.DTO.FoodDto;
 import com.nutrition.sweng.Model.*;
-import com.nutrition.sweng.Service.FoodInfoServiceClient;
 import com.nutrition.sweng.Service.FoodService;
-import feign.RetryableException;
+import com.nutrition.sweng.security.JwtValidator;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -14,29 +13,26 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.retry.annotation.Recover;
-import org.springframework.retry.annotation.Retryable;
-import org.springframework.retry.annotation.Backoff;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.persistence.Column;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 @RestController
 @RequestMapping("rest/food")
 public class FoodController {
     private FoodService foodService;
     private final Logger LOG = LoggerFactory.getLogger(getClass());
+    private JwtValidator jwtTokenValidator;
 
     @Autowired
-    public FoodController(FoodService foodService){
+    public FoodController(FoodService foodService, JwtValidator jwtTokenValidator){
         this.foodService = foodService;
+        this.jwtTokenValidator = jwtTokenValidator;
     }
 
     /**
@@ -45,17 +41,22 @@ public class FoodController {
      * @return food
      */
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('NORMAL') || hasAuthority('PREMIUM') || hasAuthority('ADMIN')")
     public FoodDto getFood(@PathVariable Long id){
+        LOG.info("Received GET-Request /rest/food/{id}).", id);
         Food food = this.foodService.getFood(id);
         return new FoodDto(food);
     }
+
     /**
      * search for all foods that have included a part of the search string
      * @param name of the food
      * @return foodlist, a foodlist of all foods that have included the string
      */
     @GetMapping("/name={name}")
+    @PreAuthorize("hasAuthority('NORMAL') || hasAuthority('PREMIUM') || hasAuthority('ADMIN')")
     public List<Food> getFood (@PathVariable String name){
+        LOG.info("Received GET-Request /rest/food/name={name}).", name);
         List<Food> foodList = this.foodService.getFood(name);
         return foodList;
     }
@@ -66,20 +67,25 @@ public class FoodController {
      * @return foodinfo, values of the food inclusive all other values(nutritionalValues, vitamins, minerals)
      */
     @GetMapping("getInfo/{id}")
+    @PreAuthorize("hasAuthority('NORMAL') || hasAuthority('PREMIUM') || hasAuthority('ADMIN')")
     public String getInfo(@PathVariable Long id){
+        LOG.info("Received GET-Request /rest/food/getInfo/{id}).", id);
         String info = this.foodService.getInfo(id);
         return info;
     }
 
     /**
-     * Saves all Food Values incl. NutritionalValues, Vitamins and Minerals automatically
-     * Post food should only be possible for Admins.
+     * Saves all Food Values incl. NutritionalValues, Vitamins and Minerals automatically form a Xlsx file.
+     * Post food is only be possible for Admins.
+     * An example of the excel is in the Repo (SchweizerNahrwertdatenbank.xlsx and SchweizerNahrwertdatenbank-test.xlsx)
      * @param file a excel, that has the following columns
      * Name	Bezugseinheit	Energie, Kalorien (kcal)	Fett, total (g)	Fettsäuren, gesättigt (g)	Kohlenhydrate, verfügbar (g)	Zucker (g)	Protein (g)	Salz (NaCl) (g)	Alkohol (g)	Vitamin A-Aktivität, RE (µg-RE)	Retinol (µg)	Betacarotin (µg)	Vitamin B1 (Thiamin) (mg)	Vitamin B2 (Riboflavin) (mg)	Vitamin B6 (Pyridoxin) (mg)	Vitamin B12 (Cobalamin) (µg)	Niacin (mg)	Folat (µg)	Vitamin C (Ascorbinsäure) (mg)	Vitamin D (Calciferol) (µg)	Vitamin E-Aktivität (mg-ATE)	Kalium (K) (mg)	Natrium (Na) (mg)	Chlorid (Cl) (mg)	Magnesium (Mg) (mg)	Phosphor (P) (mg)	Eisen (Fe) (mg)	Zink (Zn)  (mg)	Selen (Se) (µg)
      * @return a Meal
      */
     @PostMapping(consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
+    @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<Object> handlePost(@RequestParam(name = "file") MultipartFile file) {
+        LOG.info("Received POST-Request /rest/food/");
         // validate that the file has the .xlsx ending
         String fileName = file.getOriginalFilename();
         //count the rows that have been processed

@@ -1,4 +1,3 @@
-/*
 package com.nutrition.sweng.security;
 
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
@@ -20,4 +19,3 @@ public class JwtFilterConfigurer extends SecurityConfigurerAdapter<DefaultSecuri
         http.addFilterBefore(customFilter, UsernamePasswordAuthenticationFilter.class);
     }
 }
-*/

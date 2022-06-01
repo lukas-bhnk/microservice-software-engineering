@@ -1,4 +1,3 @@
-/*
 package com.nutrition.sweng.security;
 
 import org.springframework.security.core.Authentication;
@@ -38,4 +37,3 @@ public class JwtFilter extends OncePerRequestFilter {
 
 }
 
-*/

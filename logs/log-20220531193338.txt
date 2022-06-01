@@ -1,0 +1,15 @@
+15956 [main] INFO  c.nutrition.sweng.PersistenceTests - Starting PersistenceTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 25196 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+15956 [main] INFO  c.nutrition.sweng.PersistenceTests - The following 1 profile is active: "test"
+16099 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16130 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 7 JPA repository interfaces.
+16146 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+16193 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:257befa9-ccae-4330-94c7-546b0c33a85c;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+16224 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16240 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+16403 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16404 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16687 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mealJpaRepository' defined in com.nutrition.sweng.Outbound.MealJpaRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.Optional com.nutrition.sweng.Repository.MealRepository.findByIdAndUser(java.lang.Long,com.nutrition.sweng.Model.User)! Reason: Failed to create query for method public abstract java.util.Optional com.nutrition.sweng.Repository.MealRepository.findByIdAndUser(java.lang.Long,com.nutrition.sweng.Model.User)! No property 'user' found for type 'Meal'! Did you mean ''userFk''?; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.nutrition.sweng.Repository.MealRepository.findByIdAndUser(java.lang.Long,com.nutrition.sweng.Model.User)! No property 'user' found for type 'Meal'! Did you mean ''userFk''?
+16688 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+16689 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.

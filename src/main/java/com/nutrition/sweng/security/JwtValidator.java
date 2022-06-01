@@ -1,4 +1,3 @@
-/*
 package com.nutrition.sweng.security;
 
 import com.nutrition.sweng.Model.ResourceNotFoundException;
@@ -20,13 +19,11 @@ public class JwtValidator {
     @Autowired
     private PublicKeyProvider keys;
 
-    */
 /**
      * Retrieves JWT from HTTP-Header 'Authorization'.
      * @param req
-     * @return JWT as String withoud previx
-     *//*
-
+     * @return JWT as String without prefix
+ * */
     public String resolveToken(HttpServletRequest req) {
         String bearerToken = req.getHeader("Authorization");
         if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
@@ -45,35 +42,33 @@ public class JwtValidator {
         }
     }
 
-    */
+
 /**
      * Derives Authentication object from JWT.
      * @param token
      * @return
-     *//*
-
+ */
     public Authentication getAuthentication(String token) {
         return new UsernamePasswordAuthenticationToken(getUserEmail(token), "", getRoles(token));
     }
 
-    */
+
 /**
      * Extracts the user's email from a JWT.
      * @param token
      * @return
-     *//*
-
+*/
     public String getUserEmail(String token) {
         return Jwts.parserBuilder().setSigningKey(keys.getPublicKey()).build().parseClaimsJws(token).getBody().getSubject();
     }
 
-    */
-/**
+
+/*
+*
      * Extracts the user roles from a JWT.
      * @param token
      * @return
-     *//*
-
+*/
     public Collection<GrantedAuthority> getRoles(String token) {
         Collection<GrantedAuthority> result = new ArrayList<>();
         String temp = Jwts.parserBuilder().setSigningKey(keys.getPublicKey()).build().parseClaimsJws(token).getBody().get("auth", String.class);
@@ -90,4 +85,3 @@ public class JwtValidator {
     }
 
 }
-*/

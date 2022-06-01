@@ -1,0 +1,11 @@
+1689 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1689 [main] INFO  c.n.sweng.FoodControllerTests - Starting FoodControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 21180 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1704 [main] INFO  c.n.sweng.FoodControllerTests - The following 1 profile is active: "test"
+8946 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58636b50, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d4d65f5, org.springframework.security.web.header.HeaderWriterFilter@126675fd, org.springframework.security.web.authentication.logout.LogoutFilter@3386ed8, com.nutrition.sweng.security.JwtFilter@7f4f1536, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11228bee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2487e20, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ad1b737, org.springframework.security.web.session.SessionManagementFilter@33f349ae, org.springframework.security.web.access.ExceptionTranslationFilter@44aeae34, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@210635fd]
+10025 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+10040 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+10040 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+10181 [main] INFO  c.n.sweng.FoodControllerTests - Started FoodControllerTests in 9.319 seconds (JVM running for 11.342)
+11119 [main] INFO  c.n.sweng.Controller.FoodController - Received POST-Request /rest/food/
+11135 [main] ERROR c.n.sweng.Controller.FoodController - Can not process the posted .xlsx file
+11135 [main] INFO  c.n.sweng.Controller.FoodController - Successfully processed the posted file with 0 rows

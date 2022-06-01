@@ -1,0 +1,11 @@
+1667 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1683 [main] INFO  c.n.sweng.MealControllerTests - Starting MealControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 4772 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1683 [main] INFO  c.n.sweng.MealControllerTests - The following 1 profile is active: "test"
+5486 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69069866, org.springframework.security.web.context.SecurityContextPersistenceFilter@5432dca2, org.springframework.security.web.header.HeaderWriterFilter@11cadb32, org.springframework.security.web.authentication.logout.LogoutFilter@342a1f84, com.nutrition.sweng.security.JwtFilter@ac417a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a90fcaa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@702f4124, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64c95480, org.springframework.security.web.session.SessionManagementFilter@667a467f, org.springframework.security.web.access.ExceptionTranslationFilter@3386ed8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f1d799]
+5611 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+5611 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+5611 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+5674 [main] INFO  c.n.sweng.MealControllerTests - Started MealControllerTests in 4.856 seconds (JVM running for 6.954)
+5877 [main] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+6033 [main] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+6033 [main] INFO  c.n.sweng.Controller.MealController - Received DELETE-Request /rest/meal/{mealId}/{foodId}).

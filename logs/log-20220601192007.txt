@@ -1,0 +1,9 @@
+1661 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1677 [main] INFO  c.n.s.NutritionalValuesControllerTests - Starting NutritionalValuesControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 14800 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1677 [main] INFO  c.n.s.NutritionalValuesControllerTests - The following 1 profile is active: "test"
+5326 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@478530cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@70543cae, org.springframework.security.web.header.HeaderWriterFilter@393ae7a0, org.springframework.security.web.authentication.logout.LogoutFilter@48106381, com.nutrition.sweng.security.JwtFilter@5be7b749, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26f75d9c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e4ac598, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44aeae34, org.springframework.security.web.session.SessionManagementFilter@4f7bb8df, org.springframework.security.web.access.ExceptionTranslationFilter@67b8d45, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@652b3733]
+5436 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+5436 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+5436 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+5498 [main] INFO  c.n.s.NutritionalValuesControllerTests - Started NutritionalValuesControllerTests in 4.696 seconds (JVM running for 7.026)
+5686 [main] INFO  c.n.s.C.NutritionalValuesController - Received GET-Request /rest/nutritionalValues/{id}).

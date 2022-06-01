@@ -1,0 +1,11 @@
+1647 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1647 [main] INFO  c.n.sweng.FoodControllerTests - Starting FoodControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 25160 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1647 [main] INFO  c.n.sweng.FoodControllerTests - The following 1 profile is active: "test"
+5843 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11180750, org.springframework.security.web.context.SecurityContextPersistenceFilter@5aa7cfdf, org.springframework.security.web.header.HeaderWriterFilter@478530cb, org.springframework.security.web.authentication.logout.LogoutFilter@79ba0285, com.nutrition.sweng.security.JwtFilter@210635fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@574ebdaf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d4d65f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63814bbe, org.springframework.security.web.session.SessionManagementFilter@61ad30f6, org.springframework.security.web.access.ExceptionTranslationFilter@7b598d05, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@286a4c52]
+5984 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+5984 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+6000 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 16 ms
+6063 [main] INFO  c.n.sweng.FoodControllerTests - Started FoodControllerTests in 5.265 seconds (JVM running for 7.194)
+6250 [main] INFO  c.n.sweng.Controller.FoodController - Received POST-Request /rest/food/
+6266 [main] ERROR c.n.sweng.Controller.FoodController - Can not process the posted .xlsx file
+6266 [main] INFO  c.n.sweng.Controller.FoodController - Successfully processed the posted file with 0 rows

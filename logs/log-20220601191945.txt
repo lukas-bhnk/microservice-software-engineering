@@ -1,0 +1,9 @@
+1816 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1816 [main] INFO  c.n.sweng.VitaminsControllerTests - Starting VitaminsControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 4692 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1832 [main] INFO  c.n.sweng.VitaminsControllerTests - The following 1 profile is active: "test"
+5941 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ee6fdc4, org.springframework.security.web.context.SecurityContextPersistenceFilter@9f1ca74, org.springframework.security.web.header.HeaderWriterFilter@26101efc, org.springframework.security.web.authentication.logout.LogoutFilter@580ffea, com.nutrition.sweng.security.JwtFilter@1bbb42b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52f43225, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63326a3a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f9f8d23, org.springframework.security.web.session.SessionManagementFilter@61554b6b, org.springframework.security.web.access.ExceptionTranslationFilter@1857fe6c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7fe87c0e]
+6082 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+6082 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+6098 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 16 ms
+6161 [main] INFO  c.n.sweng.VitaminsControllerTests - Started VitaminsControllerTests in 5.174 seconds (JVM running for 7.378)
+6348 [main] INFO  c.n.s.Controller.VitaminsController - Received GET-Request /rest/vitamins/{id}).

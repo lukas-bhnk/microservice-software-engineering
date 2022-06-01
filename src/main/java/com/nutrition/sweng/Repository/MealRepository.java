@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public interface MealRepository {
     List<Meal> findByDateAndUser(Date date, User userFk);
-    Optional<Meal> findById(Long id);
+    Optional<Meal> findByIdAndUser(Long id, User userFk);
     Meal save(Meal m);
     void delete(Meal m);
 }

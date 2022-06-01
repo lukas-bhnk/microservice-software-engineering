@@ -1,4 +1,4 @@
-INSERT INTO user(id, email, name) VALUES (1,'peter@gmail.com','peter_user');
+INSERT INTO user(id, email) VALUES (1,'ab@domain.com');
 
 INSERT INTO meal(id,calories,carbs,date,fats,meal_category,proteins, user_fk) VALUES (1,10,12,'2022-04-10',30,1,4,1);
 INSERT INTO meal(id,calories,carbs,date,fats,meal_category,proteins, user_fk) VALUES (2,11,33,'2020-03-20',20,3,43,1);

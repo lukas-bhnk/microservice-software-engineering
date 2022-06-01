@@ -1,17 +1,19 @@
 package com.nutrition.sweng.Model;
 
+import com.nutrition.sweng.Event.MealChangedEvent;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Objects;
 
 @Entity
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;         //Note that the id is independent from id the user has in other services.
-    private String name;
+    private long id;
     private String email;
 
     /**
@@ -20,8 +22,7 @@ public class User {
     public User() {
     }
 
-    public User(String name, String email) {
-        this.name = name;
+    public User(String email) {
         this.email = email;
     }
 
@@ -31,14 +32,6 @@ public class User {
 
     public void setId(Long id){
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getEmail() {
@@ -53,8 +46,15 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User that = (User) o;
+        return Objects.equals(id, that.id) && Objects.equals(email, that.email);
     }
 }

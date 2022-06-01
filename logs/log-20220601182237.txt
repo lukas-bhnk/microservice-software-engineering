@@ -1,0 +1,9 @@
+2147 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2163 [main] INFO  c.n.sweng.MealControllerTests - Starting MealControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 11204 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+2163 [main] INFO  c.n.sweng.MealControllerTests - The following 1 profile is active: "test"
+6444 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3451fc88, org.springframework.security.web.context.SecurityContextPersistenceFilter@1805ec96, org.springframework.security.web.header.HeaderWriterFilter@37986daf, org.springframework.security.web.authentication.logout.LogoutFilter@3fc1abf, com.nutrition.sweng.security.JwtFilter@1e0294a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47797401, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15be68b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3041beb3, org.springframework.security.web.session.SessionManagementFilter@5432dca2, org.springframework.security.web.access.ExceptionTranslationFilter@4571cebe, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3b7b0b57]
+6585 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+6585 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+6585 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+6648 [main] INFO  c.n.sweng.MealControllerTests - Started MealControllerTests in 5.67 seconds (JVM running for 8.001)
+6882 [main] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{mealId}/{foodId}/{quantity}).

@@ -1,4 +1,3 @@
-/*
 package com.nutrition.sweng.Model;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -11,4 +10,3 @@ public enum Role implements GrantedAuthority {
         return name();
     }
 }
-*/

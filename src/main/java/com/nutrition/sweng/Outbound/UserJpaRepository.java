@@ -13,8 +13,6 @@ import java.util.Optional;
 @Repository
 public interface UserJpaRepository extends CrudRepository<User, Integer>, UserRepository {
 
-    List<User> findByName(String name);
-
     @Query("SELECT u FROM User u WHERE u.email = :email")
     Optional<User> findByEmail(@Param("email") String email);
 }

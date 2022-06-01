@@ -1,4 +1,3 @@
-/*
 package com.nutrition.sweng.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,4 +41,3 @@ public class AuthenticationConfiguration extends WebSecurityConfigurerAdapter {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 }
-*/

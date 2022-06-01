@@ -1,0 +1,32 @@
+#RabbitMQ Configuration
+spring:
+  cloud:
+    stream:
+      bindings:
+        eventConsumer-in-0:
+          destination: test-sweng.events.registeredEvent
+          binder: cloud_rabbit
+        eventPublisher-out-1:
+          destination: test-sweng.events.MealChangedEvent
+          binder: cloud_rabbit
+        eventPublisher-out-2:
+          destination: test-sweng.events.MealAddedEvent
+          binder: cloud_rabbit
+
+      binders:
+        cloud_rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: rabbitmq.team12.svc.cluster.local
+                username: admin
+                password: password
+                virtual-host: test
+
+  #repeat the rabbitmq credentials as follows when actuator health checks are active:
+  rabbitmq:
+    host: rabbitmq.team12.svc.cluster.local
+    username: admin
+    password: password
+    virtual-host: test
