@@ -42,7 +42,7 @@ public class PersistenceTests {
 
     @BeforeEach
     public void setUp() throws Exception {
-        user = userRepository.findByEmail("peter@gmail.com").get();
+        user = userRepository.findByEmail("ab@domain.com").get();
     }
 
     @Test
@@ -161,6 +161,28 @@ public class PersistenceTests {
         minerals.setMagnesium(12.0);
         minerals.setPhosphorus(20.0);
         minerals.setSelenium(12.0);
+
+        nutritionalValues.setCalories(1);
+        nutritionalValues.setAlcohol(1.0);
+        nutritionalValues.setCarbs(1.0);
+        nutritionalValues.setFats(1.0);
+        nutritionalValues.setFatsSaturated(1.0);
+        nutritionalValues.setProteins(1.0);
+        nutritionalValues.setSalt(1.0);
+        nutritionalValues.setSugar(1.0);
+
+        vitamins.setA(1);
+        vitamins.setB1(2);
+        vitamins.setB2(3);
+        vitamins.setB6(4);
+        vitamins.setB12(5);
+        vitamins.setC(6);
+        vitamins.setD(7);
+        vitamins.setE(7);
+        vitamins.setFol(8);
+        vitamins.setBetacarotin(9);
+        vitamins.setNiacin(0);
+        vitamins.setRetinol(4);
 
         food.setNutritionalValues(nutritionalValues);
         food.setMinerals(minerals);
