@@ -20,7 +20,7 @@ public class Meal {
     private Double carbs;
     private Double proteins;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "user_fk")
     private User userFk;
 

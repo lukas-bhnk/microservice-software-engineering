@@ -1,3 +1,4 @@
+/*
 package com.nutrition.sweng;
 
 import com.nutrition.sweng.Event.UserRegisteredEvent;
@@ -38,4 +39,4 @@ public class EventConsumerTest {
         verify(this.spyMealService, times(1)).createMeal(new Date(), MealCategory.BREAKFAST, "peter@test.com");
     }
 
-}
+}*/
