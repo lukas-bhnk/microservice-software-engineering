@@ -151,11 +151,12 @@ public class PersistenceTests {
 
     @Test
     public void saveAndFindAllFoodValues() {
-        Food food = new Food(4L,"test", FoodUnitSize.MILLILITRE, Collections.emptySet());
+        Food food = new Food();
+        food.setUnitSize(FoodUnitSize.GRAMS);
+        food.setName("Test");
         Minerals minerals = new Minerals();
         Vitamins vitamins = new Vitamins();
         NutritionalValues nutritionalValues = new NutritionalValues();
-        minerals.setId(4L);
         minerals.setChloride(9.0);
         minerals.setIron(10.0);
         minerals.setMagnesium(12.0);
@@ -187,6 +188,7 @@ public class PersistenceTests {
         food.setNutritionalValues(nutritionalValues);
         food.setMinerals(minerals);
         food.setVitamins(vitamins);
+        food.setFoodEntries(new HashSet<FoodEntry>());
         vitamins.setFood(food);
         minerals.setFood(food);
         nutritionalValues.setFood(food);
@@ -195,11 +197,7 @@ public class PersistenceTests {
         mineralsRepository.save(minerals);
         nutritionalValuesRepository.save(nutritionalValues);
 
-
-        Food f = foodRepository.save(food);
         Optional<Food> foodOptional = foodRepository.findById(4L);
-
-        System.out.println(f);
         assert  (foodOptional.isPresent());
         Optional<Minerals> mineralsOptional = mineralsRepository.findById(4L);
         assert  (mineralsOptional.isPresent());
