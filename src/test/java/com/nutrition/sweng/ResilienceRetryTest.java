@@ -1,4 +1,3 @@
-/*
 package com.nutrition.sweng;
 
 import com.nutrition.sweng.Model.Food;
@@ -45,8 +44,7 @@ public class ResilienceRetryTest {
 
     @Test
     public void testGetAllFoodInfos(){
-        String info = foodService.getAllFoodInfos(20L);
+        String info = foodService.getAllFoodInfos(1000L);
         assertEquals(foodService.NO_FOOD_INFO, info);
     }
 }
-*/

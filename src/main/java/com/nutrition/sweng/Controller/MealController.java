@@ -17,6 +17,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+/**
+ * This class is a Rest Api Controller to patch, post or get a Meal from/by a user
+ */
 @RestController
 @RequestMapping("rest/meal")
 public class MealController {
@@ -73,7 +76,7 @@ public class MealController {
     @PatchMapping("/{mealId}/{foodId}/{quantity}")
     @PreAuthorize("hasAuthority('NORMAL') || hasAuthority('PREMIUM') || hasAuthority('ADMIN')")
     public MealDto updateFoodQuantity(@PathVariable Long mealId, @PathVariable Long foodId, @PathVariable Integer quantity, @RequestHeader String Authorization){
-        LOG.info("Received GET-Request /rest/meal/{mealId}/{foodId}/{quantity}).", mealId, foodId, quantity);
+        LOG.info("Received PATCH-Request /rest/meal/{mealId}/{foodId}/{quantity}).", mealId, foodId, quantity);
         String email = jwtValidator.getUserEmail(Authorization.substring(7));
         Meal meal = this.mealService.updateQuantity(mealId, foodId, quantity, email);
         return new MealDto(meal);

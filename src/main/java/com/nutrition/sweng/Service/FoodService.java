@@ -89,7 +89,7 @@ public class FoodService {
     }
 
     @Recover
-    public String fallBackPrice(RetryableException e) {
+    public String fallBackFoodInfo(RetryableException e) {
         LOG.error("Problem occured when calling food information service. Use fallback! ", e);
         return NO_FOOD_INFO;
     }
