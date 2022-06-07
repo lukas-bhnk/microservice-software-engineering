@@ -1,0 +1,1 @@
+364  [main] INFO  c.n.sweng.Service.FoodService - Execute get all Food Infos(Food: 1).

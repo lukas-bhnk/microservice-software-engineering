@@ -1,4 +1,3 @@
-/*
 package com.nutrition.sweng;
 
 import com.nutrition.sweng.Model.Food;
@@ -29,24 +28,23 @@ public class ResilienceRetryTest {
     @Autowired
     private FoodService foodService;
 
-    @Test
+/*    @Test
     public void testGetInfosFromDelayedThrowsRetryableException() {
         given(foodInfoServiceClient.getFood("YEAAAAHHHHHHH")).willThrow(feign.RetryableException.class);
         given(foodInfoServiceClient.getNutritionalValues("JUHHHUUU")).willThrow(feign.RetryableException.class);
         given(foodInfoServiceClient.getVitamins("Software")).willThrow(feign.RetryableException.class);
         given(foodInfoServiceClient.getNutritionalValues("JUHHHUUU")).willThrow(feign.RetryableException.class);
         given(foodInfoServiceClient.getMinerals("Engineering")).willThrow(feign.RetryableException.class);
-    }
+    }*/
 
     @Test
     public void testGetNutritionalValuesDelayedThrowsTimeoutException(){
         given(mealService.getNutritionalValues(20L)).willThrow(ResourceNotFoundException.class);
     }
 
-    @Test
+/*    @Test
     public void testGetAllFoodInfos(){
         String info = foodService.getAllFoodInfos(1000L);
         assertEquals(foodService.NO_FOOD_INFO, info);
-    }
+    }*/
 }
-*/
