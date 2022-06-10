@@ -1,6 +1,7 @@
 package com.nutrition.sweng.Model;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 public class Minerals {
@@ -15,6 +16,9 @@ public class Minerals {
     private double selenium;
     private double sodium;
     private double zinc;
+
+    @Version
+    private long version;
 
     @JoinColumn(name="FOOD_ID")
     @OneToOne
@@ -130,5 +134,18 @@ public class Minerals {
                 ", sodium='" + sodium + '\'' +
                 ", zinc='" + zinc + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Minerals minerals = (Minerals) o;
+        return id == minerals.id && Double.compare(minerals.chloride, chloride) == 0 && Double.compare(minerals.magnesium, magnesium) == 0 && Double.compare(minerals.phosphorus, phosphorus) == 0 && Double.compare(minerals.iron, iron) == 0 && Double.compare(minerals.potassium, potassium) == 0 && Double.compare(minerals.selenium, selenium) == 0 && Double.compare(minerals.sodium, sodium) == 0 && Double.compare(minerals.zinc, zinc) == 0 && version == minerals.version && Objects.equals(food, minerals.food);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, chloride, magnesium, phosphorus, iron, potassium, selenium, sodium, zinc, version, food);
     }
 }

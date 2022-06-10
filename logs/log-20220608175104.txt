@@ -1,0 +1,54 @@
+1923 [main] INFO  c.n.sweng.ResilienceTimeoutTest - Starting ResilienceTimeoutTest using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 49372 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1923 [main] INFO  c.n.sweng.ResilienceTimeoutTest - The following 1 profile is active: "timeout"
+1943 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+4242 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+4539 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 287 ms. Found 7 JPA repository interfaces.
+5258 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+5289 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+5477 [main] INFO  o.s.c.context.scope.GenericScope - BeanFactory id=6e2209e3-2703-38b5-a744-1bd72350004b
+6516 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+6578 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+7344 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+7469 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.8.Final
+7860 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+8125 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+8375 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+8438 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+11575 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11591 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+13690 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19714 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventConsumer-in-0' has 1 subscriber(s).
+22764 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6df37cc4, org.springframework.security.web.context.SecurityContextPersistenceFilter@48f27e0b, org.springframework.security.web.header.HeaderWriterFilter@435e857c, org.springframework.security.web.authentication.logout.LogoutFilter@46b4819c, com.nutrition.sweng.security.JwtFilter@7b3c411f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ace2ce3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f475ede, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46eb5c0c, org.springframework.security.web.session.SessionManagementFilter@12008a54, org.springframework.security.web.access.ExceptionTranslationFilter@79e0f00b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32317a37]
+26364 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 21 endpoint(s) beneath base path '/actuator'
+26817 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+26817 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 1 subscriber(s).
+26817 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+26832 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Creating binder: cloud_rabbit
+26973 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Caching the binder: cloud_rabbit
+26973 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: cloud_rabbit
+27131 [main] INFO  o.s.c.s.b.r.p.RabbitExchangeQueueProvisioner - declaring queue for inbound: sweng.events.registeredEvent.anonymous.XtgLRu8eT0WxGX7fYElurA, bound to: sweng.events.registeredEvent
+27131 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+27146 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+27146 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+27162 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Changing consumers from 1 to 1
+27178 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'sweng.events.registeredEvent.anonymous.XtgLRu8eT0WxGX7fYElurA.errors' has 1 subscriber(s).
+27178 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'sweng.events.registeredEvent.anonymous.XtgLRu8eT0WxGX7fYElurA.errors' has 2 subscriber(s).
+27178 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Starting Rabbit listener container.
+27178 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+27178 [main] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Broker not available; cannot force queue declarations during start: java.net.UnknownHostException: rabbitmq.team12.svc.cluster.local
+27193 [sweng.events.registeredEvent.anonymous.XtgLRu8eT0WxGX7fYElurA-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@68400aa5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+27193 [sweng.events.registeredEvent.anonymous.XtgLRu8eT0WxGX7fYElurA-1] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+27193 [sweng.events.registeredEvent.anonymous.XtgLRu8eT0WxGX7fYElurA-1] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+27193 [main] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - started bean 'inbound.sweng.events.registeredEvent.anonymous.XtgLRu8eT0WxGX7fYElurA'
+27303 [main] INFO  c.n.sweng.ResilienceTimeoutTest - Started ResilienceTimeoutTest in 26.148 seconds (JVM running for 28.502)
+29128 [SpringApplicationShutdownHook] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Shutting down Rabbit listener container
+29128 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+29128 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+29128 [SpringApplicationShutdownHook] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - stopped bean 'inbound.sweng.events.registeredEvent.anonymous.XtgLRu8eT0WxGX7fYElurA'
+29144 [SpringApplicationShutdownHook] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'Meal.sweng.events.registeredEvent.anonymous.XtgLRu8eT0WxGX7fYElurA.errors' has 1 subscriber(s).
+29144 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+29144 [SpringApplicationShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 0 subscriber(s).
+29144 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+29160 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+29175 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+29175 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

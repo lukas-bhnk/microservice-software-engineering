@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import javax.validation.constraints.Positive;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -25,7 +26,8 @@ public class FoodEntry {
     private double fats;
     private double carbs;
     private double proteins;
-
+    @Version
+    private long version;
 
     public FoodEntry(){
     }
@@ -105,5 +107,16 @@ public class FoodEntry {
         this.proteins = proteins;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FoodEntry foodEntry = (FoodEntry) o;
+        return id == foodEntry.id && quantity == foodEntry.quantity && calories == foodEntry.calories && Double.compare(foodEntry.fats, fats) == 0 && Double.compare(foodEntry.carbs, carbs) == 0 && Double.compare(foodEntry.proteins, proteins) == 0 && version == foodEntry.version && Objects.equals(meal, foodEntry.meal) && Objects.equals(food, foodEntry.food);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, meal, food, quantity, calories, fats, carbs, proteins, version);
+    }
 }

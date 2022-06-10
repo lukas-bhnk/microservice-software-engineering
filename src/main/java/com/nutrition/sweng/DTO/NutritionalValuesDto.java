@@ -6,7 +6,7 @@ public class NutritionalValuesDto {
     private long id;
     private double carbs;
     private double proteins;
-    private double calories;
+    private int calories;
     private double sugar;
     private double fats;
     private double fatsSaturated;
@@ -52,11 +52,11 @@ public class NutritionalValuesDto {
         this.proteins = proteins;
     }
 
-    public double getCalories() {
+    public int getCalories() {
         return calories;
     }
 
-    public void setCalories(double calories) {
+    public void setCalories(int calories) {
         this.calories = calories;
     }
 

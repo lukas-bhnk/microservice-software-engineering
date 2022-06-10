@@ -28,6 +28,9 @@ public class Meal {
     @OneToMany(mappedBy = "meal")
     private Set<FoodEntry> foodEntries;
 
+    @Version
+    private long version;
+
     public Meal() {
 
     }

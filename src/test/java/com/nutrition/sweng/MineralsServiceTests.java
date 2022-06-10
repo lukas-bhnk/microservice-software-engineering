@@ -2,17 +2,13 @@ package com.nutrition.sweng;
 
 import com.nutrition.sweng.Model.*;
 import com.nutrition.sweng.Repository.*;
-import com.nutrition.sweng.Service.FoodInfoServiceClient;
-import com.nutrition.sweng.Service.FoodService;
 import com.nutrition.sweng.Service.MineralsService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.util.*;
@@ -22,7 +18,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.times;
 
 @ExtendWith(MockitoExtension.class)
 @ActiveProfiles("test")

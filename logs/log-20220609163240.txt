@@ -1,0 +1,2 @@
+329  [main] INFO  c.n.sweng.Service.MealService - User is not in DB, created a new User
+329  [main] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Sat May 15 00:00:00 CEST 2021 and Category: BREAKFAST

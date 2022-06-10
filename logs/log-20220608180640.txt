@@ -1,0 +1,14 @@
+1652 [main] INFO  c.n.sweng.MealControllerTests - Starting MealControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 43420 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1652 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1652 [main] INFO  c.n.sweng.MealControllerTests - The following 1 profile is active: "test"
+6333 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64c95480, org.springframework.security.web.context.SecurityContextPersistenceFilter@43fd77d8, org.springframework.security.web.header.HeaderWriterFilter@26f5e45d, org.springframework.security.web.authentication.logout.LogoutFilter@70b196d3, com.nutrition.sweng.security.JwtFilter@69499c6f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32ba5c65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7221539, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3451fc88, org.springframework.security.web.session.SessionManagementFilter@1488a861, org.springframework.security.web.access.ExceptionTranslationFilter@67dc6b48, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a120b9]
+6505 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+6505 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+6505 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+6598 [main] INFO  c.n.sweng.MealControllerTests - Started MealControllerTests in 5.805 seconds (JVM running for 8.272)
+6995 [main] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+7230 [main] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+7277 [main] INFO  c.n.sweng.Controller.MealController - Received PATCH-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+7292 [main] INFO  c.n.sweng.Controller.MealController - Received DELETE-Request /rest/meal/{mealId}/{foodId}).
+7339 [main] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+7402 [main] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{day}/{month}/{year}).

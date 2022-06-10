@@ -4,10 +4,7 @@ import com.nutrition.sweng.Event.EventPublisher;
 import com.nutrition.sweng.Event.MealAddedEvent;
 import com.nutrition.sweng.Event.MealChangedEvent;
 import com.nutrition.sweng.Model.*;
-import com.nutrition.sweng.Repository.FoodEntryRepository;
-import com.nutrition.sweng.Repository.FoodRepository;
-import com.nutrition.sweng.Repository.MealRepository;
-import com.nutrition.sweng.Repository.UserRepository;
+import com.nutrition.sweng.Repository.*;
 import feign.RetryableException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,24 +13,30 @@ import org.springframework.retry.annotation.Backoff;
 import org.springframework.retry.annotation.Recover;
 import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
 import java.util.*;
 
 @Service
+@Transactional
 public class MealService {
     private MealRepository mealRepository;
     private FoodRepository foodRepository;
+    private NutritionalValuesRepository nutritionalValuesRepository;
     private FoodEntryRepository foodEntryRepository;
-    private FoodInfoServiceClient foodInfoServiceClient;
+    private JokeServiceClient jokeServiceClient;
     private UserRepository userRepository;
     private EventPublisher eventPublisher;
+    public static final String NO_JOKE = "No Joke Available.";
     private final Logger LOG =  LoggerFactory.getLogger(getClass());
 
     @Autowired
-    public MealService(MealRepository mealRepository, FoodInfoServiceClient foodInfoServiceClient, FoodRepository foodRepository, FoodEntryRepository foodEntryRepository, UserRepository userRepository, EventPublisher eventPublisher){
+    public MealService(MealRepository mealRepository, JokeServiceClient jokeServiceClient, NutritionalValuesRepository nutritionalValuesRepository, FoodRepository foodRepository, FoodEntryRepository foodEntryRepository, UserRepository userRepository, EventPublisher eventPublisher){
         this.mealRepository = mealRepository;
         this.foodRepository = foodRepository;
-        this.foodInfoServiceClient = foodInfoServiceClient;
+        this.nutritionalValuesRepository = nutritionalValuesRepository;
+        this.jokeServiceClient = jokeServiceClient;
         this.foodEntryRepository = foodEntryRepository;
         this.userRepository = userRepository;
         this.eventPublisher = eventPublisher;
@@ -216,10 +219,12 @@ public class MealService {
                 return meal;
             }
             else {
+                LOG.error("Adding food to Meal failed. Food {} not exists in DB", foodId);
                 throw new ResourceNotFoundException("Requested Food is not in DB");
             }
         }
         else {
+            LOG.error("Adding food to Meal failed. Meal {} not exists in DB", mealId);
             throw new ResourceNotFoundException("Requested Meal is not in DB");
         }
     }
@@ -277,7 +282,12 @@ public class MealService {
     public FoodEntry calculateNutritionalValuesInFoodEntry(FoodEntry foodEntry, Long foodId, int quantityInGorML){
         //food Multiplicator to multiply the Food values with the quantity (the Food is saved with values per 100g or 100ml)
         double foodMultiplicator = quantityInGorML / 100.0;
-        NutritionalValues nutritionalValues = this.foodInfoServiceClient.getNutritionalValues(String.valueOf(foodId));
+        Optional<NutritionalValues> nutritionalValuesOptional = this.nutritionalValuesRepository.findById(foodId);
+        if (!nutritionalValuesOptional.isPresent()) {
+            LOG.error("Updating quantity of Meal failed. Food {} does not exist in Meal", foodId);
+            throw new ResourceNotFoundException("Food does not exist in Meal");
+        }
+        NutritionalValues nutritionalValues = nutritionalValuesOptional.get();
         int calories = (int)Math.ceil(nutritionalValues.getCalories() * foodMultiplicator);
         System.out.println(calories);
         Double carbs = nutritionalValues.getCarbs() * foodMultiplicator;
@@ -316,17 +326,30 @@ public class MealService {
         return meal;
     }
 
+    public String getJoke(String category){
+        String joke = this.queryJoke(category);
+        return joke;
+    }
+
+    /**
+     * This method is used to query a joke by a specific category.
+     * Uses the pricingServiceClient to send an external request.
+     * @param category
+     * @return joke for this category
+     */
     @Retryable(include = RetryableException.class,
             maxAttempts = 3, //first attempt and 2 retries
             backoff=@Backoff(delay=100, maxDelay=500))
-    public NutritionalValues getNutritionalValues(Long id) {
-        LOG.info("Execute get Nutritional Values({}).", ("Food: " + id));
-        return this.foodInfoServiceClient.getNutritionalValues(String.valueOf(id));
+    public String queryJoke(String category) {
+        LOG.info("Execute query Joke({}).", category);
+        Joke joke = this.jokeServiceClient.getJoke(category);
+        return joke.getJoke();
+
     }
 
     @Recover
-    public void fallBackNutritionalValues(RetryableException e) {
-        LOG.error("Problem occured when calling food information service. Use fallback! ", e);
-        throw new ResourceNotFoundException("These Nutritional Values are not in the DB");
+    public String fallBackJoke(RetryableException e) {
+        LOG.error("Problem occured when calling joke service. Use fallback! ", e);
+        return NO_JOKE;
     }
 }

@@ -1,0 +1,2 @@
+172  [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, test@email.com).
+188  [main] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1

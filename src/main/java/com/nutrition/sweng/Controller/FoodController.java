@@ -61,18 +61,6 @@ public class FoodController {
         return foodList;
     }
 
-    /**
-     * Get all FoodValues that are saved for the specific values
-     * @param id of the food
-     * @return foodinfo, values of the food inclusive all other values(nutritionalValues, vitamins, minerals)
-     */
-    @GetMapping("getInfo/{id}")
-    @PreAuthorize("hasAuthority('NORMAL') || hasAuthority('PREMIUM') || hasAuthority('ADMIN')")
-    public String getInfo(@PathVariable Long id){
-        LOG.info("Received GET-Request /rest/food/getInfo/{id}).", id);
-        String info = this.foodService.getInfo(id);
-        return info;
-    }
 
     /**
      * Saves all Food Values incl. NutritionalValues, Vitamins and Minerals automatically form a Xlsx file.

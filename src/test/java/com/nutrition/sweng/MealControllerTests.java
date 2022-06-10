@@ -98,6 +98,17 @@ public class MealControllerTests {
     }
 
     @Test
+    public void getAJoke() throws Exception{
+        given(this.mealService.getJoke("Ich möchte einen Witz hören")).willReturn("Das ist ein Joke");
+        this.mvc.perform(get("/rest/meal/tellAJoke/{category}", "Ich möchte einen Witz hören")
+                .header("Authorization",this.AUTH_HEADER))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().string("Das ist ein Joke"));
+
+    }
+
+    @Test
     public void addUpdateDeleteFood() throws Exception{
         Meal meal2 = new Meal(1L, new SimpleDateFormat("yyyy-MM-dd").parse(2021+"-"+05+"-"+15), 3,  MealCategory.BREAKFAST,3.0,3.0,3.0, user, foodEntries);
         Set<FoodEntry> foodEntryList = new HashSet<>();

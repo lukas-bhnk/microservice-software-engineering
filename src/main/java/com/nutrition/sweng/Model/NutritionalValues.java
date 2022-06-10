@@ -1,5 +1,6 @@
 package com.nutrition.sweng.Model;
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 public class NutritionalValues {
@@ -129,5 +130,18 @@ public class NutritionalValues {
                 ", alcohol='" + alcohol + '\'' +
                 ", salt='" + salt + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        NutritionalValues that = (NutritionalValues) o;
+        return id == that.id && Double.compare(that.carbs, carbs) == 0 && Double.compare(that.proteins, proteins) == 0 && calories == that.calories && Double.compare(that.sugar, sugar) == 0 && Double.compare(that.fats, fats) == 0 && Double.compare(that.fatsSaturated, fatsSaturated) == 0 && Double.compare(that.alcohol, alcohol) == 0 && Double.compare(that.salt, salt) == 0 && Objects.equals(food, that.food);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, carbs, proteins, calories, sugar, fats, fatsSaturated, alcohol, salt, food);
     }
 }

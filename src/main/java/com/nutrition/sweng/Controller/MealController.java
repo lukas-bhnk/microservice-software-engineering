@@ -48,6 +48,20 @@ public class MealController {
         return new MealDto(meal);
     }
     /**
+     * Get a specific joke by a category.
+     * It is used to tell the user a joke, when the user want to create a meal
+     * @param category of the joke
+     * @return a Joke
+     */
+    @GetMapping("/tellAJoke/{category}")
+    @PreAuthorize("hasAuthority('NORMAL') || hasAuthority('PREMIUM') || hasAuthority('ADMIN')")
+    public String getJoke(@PathVariable String category, @RequestHeader String Authorization){
+        LOG.info("Received GET-Request /rest/meal/weekday/{}/{}/{}", category);
+        String email = jwtValidator.getUserEmail(Authorization.substring(7));
+        String joke = this.mealService.getJoke(category);
+        return joke;
+    }
+    /**
      * Get all meals, that are saved for a specific day.
      * @param day
      * @param month

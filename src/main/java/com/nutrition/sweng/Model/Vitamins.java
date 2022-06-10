@@ -1,6 +1,7 @@
 package com.nutrition.sweng.Model;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 public class Vitamins {
@@ -21,6 +22,9 @@ public class Vitamins {
     private double betacarotin;
     private double niacin;
     private double retinol;
+
+    @Version
+    private long version;
 
     @JoinColumn(name="FOOD_ID")
     @OneToOne
@@ -187,4 +191,16 @@ public class Vitamins {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vitamins vitamins = (Vitamins) o;
+        return id == vitamins.id && Double.compare(vitamins.c, c) == 0 && Double.compare(vitamins.fol, fol) == 0 && Double.compare(vitamins.a, a) == 0 && Double.compare(vitamins.b1, b1) == 0 && Double.compare(vitamins.b2, b2) == 0 && Double.compare(vitamins.b6, b6) == 0 && Double.compare(vitamins.b12, b12) == 0 && Double.compare(vitamins.d, d) == 0 && Double.compare(vitamins.e, e) == 0 && Double.compare(vitamins.k, k) == 0 && Double.compare(vitamins.betacarotin, betacarotin) == 0 && Double.compare(vitamins.niacin, niacin) == 0 && Double.compare(vitamins.retinol, retinol) == 0 && version == vitamins.version && food.equals(vitamins.food);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, c, fol, a, b1, b2, b6, b12, d, e, k, betacarotin, niacin, retinol, version, food);
+    }
 }

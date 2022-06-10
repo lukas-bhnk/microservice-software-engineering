@@ -1,0 +1,12 @@
+219  [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, lalelu).
+234  [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+265  [main] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sat May 15 00:00:00 CEST 2021, test@email.com).
+265  [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+281  [main] INFO  c.n.sweng.Service.MealService - Execute query Joke(Softwaree).
+297  [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, test@email.com).
+297  [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+312  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 120).
+312  [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+312  [main] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Sat May 15 00:00:00 CEST 2021 and Category: BREAKFAST
+328  [main] INFO  c.n.sweng.Service.MealService - User is not in DB, created a new User
+328  [main] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Sat May 15 00:00:00 CEST 2021 and Category: BREAKFAST
