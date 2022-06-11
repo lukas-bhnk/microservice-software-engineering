@@ -10,10 +10,7 @@ spring:
           destination: sweng.events.registeredEvent
           binder: cloud_rabbit
         eventPublisher-out-1:
-          destination: sweng.events.MealChangedEvent
-          binder: cloud_rabbit
-        eventPublisher-out-2:
-          destination: sweng.events.MealAddedEvent
+          destination: amq.topic
           binder: cloud_rabbit
 
       binders:
@@ -23,6 +20,7 @@ spring:
             spring:
               rabbitmq:
                 host: rabbitmq.team12.svc.cluster.local
+                port: 5672
                 username: admin
                 password: password
                 virtual-host: /

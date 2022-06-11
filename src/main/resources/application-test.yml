@@ -4,14 +4,11 @@ spring:
     stream:
       source: eventPublisher
       bindings:
-        eventConsumer-in-0:
+        eventConsumer-in-3:
           destination: test.sweng.events.registeredEvent
           binder: cloud_rabbit
-        eventPublisher-out-1:
+        eventPublisher-out-4:
           destination: test.sweng.events.MealChangedEvent
-          binder: cloud_rabbit
-        eventPublisher-out-2:
-          destination: test.sweng.events.MealAddedEvent
           binder: cloud_rabbit
 
       binders:
@@ -21,6 +18,7 @@ spring:
             spring:
               rabbitmq:
                 host: rabbitmq.team12.svc.cluster.local
+                port: 5672
                 username: admin
                 password: password
                 virtual-host: /
