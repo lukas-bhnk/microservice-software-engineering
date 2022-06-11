@@ -16,6 +16,9 @@ public class NutritionalValues {
     private double alcohol;
     private double salt;
 
+    @Version
+    private long version;
+
 
     @JoinColumn(name="FOOD_ID")
     @OneToOne
