@@ -1,8 +1,8 @@
 package com.nutrition.sweng;
 
+import com.nutrition.sweng.Exceptions.ResourceNotFoundException;
 import com.nutrition.sweng.Model.*;
 import com.nutrition.sweng.Repository.*;
-import com.nutrition.sweng.Service.JokeServiceClient;
 import com.nutrition.sweng.Service.FoodService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

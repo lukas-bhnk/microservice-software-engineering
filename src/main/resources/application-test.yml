@@ -2,17 +2,18 @@
 spring:
   cloud:
     stream:
-      bindings:
-        eventConsumer-in-0:
-          destination: test-sweng.events.registeredEvent
-          binder: cloud_rabbit
-        eventPublisher-out-1:
-          destination: test-sweng.events.MealChangedEvent
-          binder: cloud_rabbit
-        eventPublisher-out-2:
-          destination: test-sweng.events.MealAddedEvent
-          binder: cloud_rabbit
-
+      rabbit:
+        bindings:
+          eventConsumer-in-0:
+            consumer:
+              transacted: true
+              max-attempts: 3
+          eventPublisher-out-1:
+            producer:
+              transacted: true
+          eventPublisher-out-2:
+            producer:
+              transacted: true
       binders:
         cloud_rabbit:
           type: rabbit

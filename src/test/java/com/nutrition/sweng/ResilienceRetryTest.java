@@ -1,8 +1,6 @@
 package com.nutrition.sweng;
 
-import com.nutrition.sweng.Model.ResourceNotFoundException;
 import com.nutrition.sweng.Service.JokeServiceClient;
-import com.nutrition.sweng.Service.FoodService;
 import com.nutrition.sweng.Service.MealService;
 import feign.RetryableException;
 import org.junit.jupiter.api.Test;

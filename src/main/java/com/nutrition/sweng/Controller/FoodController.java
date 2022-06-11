@@ -1,6 +1,7 @@
 package com.nutrition.sweng.Controller;
 
 import com.nutrition.sweng.DTO.FoodDto;
+import com.nutrition.sweng.Exceptions.ProcessException;
 import com.nutrition.sweng.Model.*;
 import com.nutrition.sweng.Service.FoodService;
 import com.nutrition.sweng.security.JwtValidator;

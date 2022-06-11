@@ -96,8 +96,8 @@
 26737 [http-nio-8080-exec-4] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=3, date=2019-04-10', calories='329', mealCategory='DINNER', fats='8.0', carbs='120.0', proteins='231.0', user='User{id=1, name='peter_user', email='peter@gmail.com'}', foodEntries='[com.nutrition.sweng.Model.FoodEntry@7cf059c4]'}
 223188 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 3, FoodId: 3, Quantity: 140).
 223235 [http-nio-8080-exec-3] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Food Spaghetti already exists in Meal
-223250 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.nutrition.sweng.Model.AlreadyExistException: Food already exists in Meal] with root cause
-com.nutrition.sweng.Model.AlreadyExistException: Food already exists in Meal
+223250 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.nutrition.sweng.Exceptions.AlreadyExistException: Food already exists in Meal] with root cause
+com.nutrition.sweng.Exceptions.AlreadyExistException: Food already exists in Meal
 	at com.nutrition.sweng.Service.MealService.addFood(MealService.java:171)
 	at com.nutrition.sweng.Service.MealService$$FastClassBySpringCGLIB$$4e35e6c2.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)

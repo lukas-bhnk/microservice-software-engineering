@@ -80,8 +80,8 @@
 16064 [RMI TCP Connection(1)-10.11.169.229] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitHealthIndicator$$Lambda$1818/0x00000008015fed88 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://ghkcurap@54.93.32.234:5672/ghkcurap,2), conn: Proxy@1c89cec5 Shared Rabbit Connection: SimpleConnection@69c00140 [delegate=amqp://ghkcurap@54.93.32.234:5672/ghkcurap, localPort= 51505]
 114425 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 2, Quantity: 140).
 114596 [http-nio-8080-exec-1] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Food Cola already exists in Meal
-114610 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.nutrition.sweng.Model.AlreadyExistException: Food already exists in Meal] with root cause
-com.nutrition.sweng.Model.AlreadyExistException: Food already exists in Meal
+114610 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.nutrition.sweng.Exceptions.AlreadyExistException: Food already exists in Meal] with root cause
+com.nutrition.sweng.Exceptions.AlreadyExistException: Food already exists in Meal
 	at com.nutrition.sweng.Service.MealService.addFood(MealService.java:170)
 	at com.nutrition.sweng.Service.MealService$$FastClassBySpringCGLIB$$4e35e6c2.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)

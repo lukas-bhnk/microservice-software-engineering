@@ -1,5 +1,6 @@
 package com.nutrition.sweng.Service;
 
+import com.nutrition.sweng.Exceptions.ResourceNotFoundException;
 import com.nutrition.sweng.Model.*;
 import com.nutrition.sweng.Repository.FoodRepository;
 import com.nutrition.sweng.Repository.MineralsRepository;
@@ -16,7 +17,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@Transactional
 public class FoodService {
     private FoodRepository foodRepository;
     private MineralsRepository mineralsRepository;
@@ -33,6 +33,7 @@ public class FoodService {
         this.vitaminsRepository = vitaminsRepository;
     }
 
+    @Transactional(readOnly=true)
     public Food getFood(long id){
         Optional<Food> foodOptional = foodRepository.findById(id);
         if(foodOptional.isPresent()){
@@ -46,6 +47,7 @@ public class FoodService {
         }
     }
 
+    @Transactional(readOnly=true)
     public List<Food> getFood(String name){
         List<Food> foodList = foodRepository.findByName(name);
         if(foodList.isEmpty()) {
@@ -56,7 +58,7 @@ public class FoodService {
         return foodList;
     }
 
-
+    @Transactional
     public void saveAllFoodValues(Food food, Minerals minerals, Vitamins vitamins, NutritionalValues nutritionalValues){
         food.setNutritionalValues(nutritionalValues);
         food.setMinerals(minerals);

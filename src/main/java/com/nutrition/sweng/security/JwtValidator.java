@@ -1,6 +1,6 @@
 package com.nutrition.sweng.security;
 
-import com.nutrition.sweng.Model.ResourceNotFoundException;
+import com.nutrition.sweng.Exceptions.ResourceNotFoundException;
 import com.nutrition.sweng.Model.Role;
 import io.jsonwebtoken.Jwts;
 import org.springframework.beans.factory.annotation.Autowired;

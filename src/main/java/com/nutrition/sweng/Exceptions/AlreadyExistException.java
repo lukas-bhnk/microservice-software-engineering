@@ -1,4 +1,4 @@
-package com.nutrition.sweng.Model;
+package com.nutrition.sweng.Exceptions;
 
 public class AlreadyExistException extends RuntimeException {
 

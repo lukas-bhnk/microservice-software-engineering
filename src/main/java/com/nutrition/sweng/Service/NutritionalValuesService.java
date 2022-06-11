@@ -1,7 +1,7 @@
 package com.nutrition.sweng.Service;
 
 import com.nutrition.sweng.Model.NutritionalValues;
-import com.nutrition.sweng.Model.ResourceNotFoundException;
+import com.nutrition.sweng.Exceptions.ResourceNotFoundException;
 import com.nutrition.sweng.Repository.NutritionalValuesRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
 @Service
-@Transactional
 public class NutritionalValuesService {
     private NutritionalValuesRepository nutritionalValuesRepository;
     private final Logger LOG =  LoggerFactory.getLogger(getClass());
@@ -21,7 +20,7 @@ public class NutritionalValuesService {
     public NutritionalValuesService(NutritionalValuesRepository nutritionalValuesRepository){
         this.nutritionalValuesRepository = nutritionalValuesRepository;
     }
-
+    @Transactional(readOnly=true)
     public NutritionalValues getNutritionalValues(long id){
         Optional<NutritionalValues> nutritionalValuesOptional = nutritionalValuesRepository.findById(id);
         if(nutritionalValuesOptional.isPresent()){

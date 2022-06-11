@@ -3,6 +3,9 @@ package com.nutrition.sweng.Service;
 import com.nutrition.sweng.Event.EventPublisher;
 import com.nutrition.sweng.Event.MealAddedEvent;
 import com.nutrition.sweng.Event.MealChangedEvent;
+import com.nutrition.sweng.Exceptions.AlreadyExistException;
+import com.nutrition.sweng.Exceptions.MessagePubishException;
+import com.nutrition.sweng.Exceptions.ResourceNotFoundException;
 import com.nutrition.sweng.Model.*;
 import com.nutrition.sweng.Repository.*;
 import feign.RetryableException;
@@ -15,11 +18,9 @@ import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.io.IOException;
 import java.util.*;
 
 @Service
-@Transactional
 public class MealService {
     private MealRepository mealRepository;
     private FoodRepository foodRepository;
@@ -47,6 +48,7 @@ public class MealService {
      * @param id of the requested Meal
      * @return a Meal
      */
+    @Transactional(readOnly=true)
     public Meal getMeal(Long id, String email){
         LOG.info("Execute getMeal({}, {}).", id, email);
         Optional<User> userOptional = userRepository.findByEmail(email);
@@ -72,6 +74,7 @@ public class MealService {
      * @param email of the user to find the user
      * @return meals list of all meals of the day and the user
      */
+    @Transactional(readOnly=true)
     public List<Meal> getDailyMeals(Date date, String email){
         LOG.info("Execute getDailyMeals({}, {}).", date, email);
         Optional<User> userOptional = userRepository.findByEmail(email);
@@ -95,6 +98,7 @@ public class MealService {
      * @param email of the User
      * @return a Meal
      */
+    @Transactional
     public Meal deleteFood(Long mealId, Long foodId, String email){
         LOG.info("Execute deleteFood(MealId: {}, FoodId: {}, Email: {}).", mealId, foodId, email);
         Optional<User> userOptional = userRepository.findByEmail(email);
@@ -122,7 +126,8 @@ public class MealService {
                     var event = new MealChangedEvent(meal);
                     var published = this.eventPublisher.publishEvent(event);
                     if (!published) {
-                        //TODO: we have to rollback the transaction
+                        LOG.error("Could not published Event.");
+                        throw new MessagePubishException("Event could not published.");
                     }
                     return meal;
                 }
@@ -142,6 +147,7 @@ public class MealService {
      * @param email find the user by his email and add it to the meal
      * @return a Meal
      */
+    @Transactional
     public Meal createMeal(Date date, MealCategory mealCategory, String email){
         Optional<User> userOptional = userRepository.findByEmail(email);
         User user = null;
@@ -165,7 +171,8 @@ public class MealService {
         var event = new MealAddedEvent(meal);
         var published = this.eventPublisher.publishEvent(event);
         if (!published) {
-            //TODO: we have to rollback the transaction
+            LOG.error("Could not published Event.");
+            throw new MessagePubishException("Event could not published.");
         }
 
         return meal;
@@ -179,6 +186,7 @@ public class MealService {
      * @param quantityInGorML Quantity of the food (Grams or Millilitre), that should be added into the meal
      * @return a Meal
      */
+    @Transactional
     public Meal addFood(Long mealId, Long foodId, Integer quantityInGorML, String email) {
 
         LOG.info("Execute addFood(MealId: {}, FoodId: {}, Quantity: {}).", mealId, foodId, quantityInGorML);
@@ -214,7 +222,8 @@ public class MealService {
                 var event = new MealChangedEvent(meal);
                 var published = this.eventPublisher.publishEvent(event);
                 if (!published) {
-                    //TODO: we have to rollback the transaction
+                    LOG.error("Could not published Event.");
+                    throw new MessagePubishException("Event could not published.");
                 }
                 return meal;
             }
@@ -235,6 +244,7 @@ public class MealService {
      * @param quantityInGorML Quantity of the food (Grams or Millilitre), that should be updated in the meal
      * @return a Meal
      */
+    @Transactional
     public Meal updateQuantity(Long mealId, Long foodId, int quantityInGorML, String email ){
         LOG.info("Execute updateQuantityOfAFoodEntry(MealId: {}, FoodId: {}, Quantity: {}).", mealId, foodId, quantityInGorML);
         Optional<User> userOptional = userRepository.findByEmail(email);
@@ -279,6 +289,7 @@ public class MealService {
      * @param quantityInGorML int quantity in grams or millilitres
      * @return FoodEntry
      */
+    @Transactional(readOnly=true)
     public FoodEntry calculateNutritionalValuesInFoodEntry(FoodEntry foodEntry, Long foodId, int quantityInGorML){
         //food Multiplicator to multiply the Food values with the quantity (the Food is saved with values per 100g or 100ml)
         double foodMultiplicator = quantityInGorML / 100.0;

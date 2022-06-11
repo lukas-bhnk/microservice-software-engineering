@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 
@@ -38,6 +40,16 @@ public class PersistenceTests {
     @Autowired
     private UserRepository userRepository;
 
+    private static Date TEST_DATE;
+
+    static {
+        try {
+            TEST_DATE = new SimpleDateFormat("yyyy-MM-dd").parse("2022-04-10");
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
     private User user;
 
     @BeforeEach
@@ -52,7 +64,14 @@ public class PersistenceTests {
         assert (meal.getId()==1L);
         Optional<Meal> mealOptional2 = mealRepository.findByIdAndUser(10L, user);
         assertFalse (mealOptional2.isPresent());
+    }
 
+    @Test
+    public void findByDate() {
+        List<Meal> mealList = mealRepository.findByDateAndUser(TEST_DATE, user);
+        assertFalse (mealList.isEmpty());
+        List<Meal> mealList2 = mealRepository.findByDateAndUser(new Date(), user);
+        assertTrue (mealList2.isEmpty());
     }
 
 

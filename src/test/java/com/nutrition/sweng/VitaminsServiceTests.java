@@ -1,5 +1,6 @@
 package com.nutrition.sweng;
 
+import com.nutrition.sweng.Exceptions.ResourceNotFoundException;
 import com.nutrition.sweng.Model.*;
 import com.nutrition.sweng.Repository.VitaminsRepository;
 import com.nutrition.sweng.Service.VitaminsService;
