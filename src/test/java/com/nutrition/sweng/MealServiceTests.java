@@ -1,6 +1,8 @@
 package com.nutrition.sweng;
 
 import com.nutrition.sweng.Event.EventPublisher;
+import com.nutrition.sweng.Event.MealAddedEvent;
+import com.nutrition.sweng.Event.MealChangedEvent;
 import com.nutrition.sweng.Exceptions.ResourceNotFoundException;
 import com.nutrition.sweng.Model.*;
 import com.nutrition.sweng.Repository.*;
@@ -10,6 +12,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.context.ActiveProfiles;
@@ -83,6 +86,7 @@ public class MealServiceTests {
 
     @Test
     public void shouldCreateMeal() throws Exception {
+        given(this.eventPublisher.publishEvent((MealAddedEvent) ArgumentMatchers.any())).willReturn(true);
         given(this.userRepository.findByEmail(TEST_EMAIL)).willReturn(Optional.of(this.user));
         Meal meal = this.subject.createMeal(TEST_DATE, MealCategory.BREAKFAST, TEST_EMAIL);
         assertThat(meal.getCalories(), is(0));
@@ -90,6 +94,7 @@ public class MealServiceTests {
 
     @Test
     public void shouldCreateMealWithNewUser() throws Exception {
+        given(this.eventPublisher.publishEvent((MealAddedEvent) ArgumentMatchers.any())).willReturn(true);
         Meal meal = this.subject.createMeal(TEST_DATE, MealCategory.BREAKFAST, "neuemail@mail.com");
         assertThat(meal.getCalories(), is(0));
         assertThat(meal.getCarbs(), is(0.0));
@@ -130,6 +135,7 @@ public class MealServiceTests {
         FoodEntry foodEntry = new FoodEntry(1L,this.meal, this.food, 100, 100, 100, 100.0, 100.0);
         this.foodList.add(foodEntry);
         this.meal.setFoodEntries(this.foodList);
+        given(this.eventPublisher.publishEvent((MealChangedEvent) ArgumentMatchers.any())).willReturn(true);
         given(this.mealRepository.findByIdAndUser(1L, new User(TEST_EMAIL))).willReturn(Optional.of(this.meal));
         given(this.userRepository.findByEmail(TEST_EMAIL)).willReturn(Optional.of(this.user));
         given(this.nutritionalValuesRepository.findById(1L)).willReturn(Optional.of(this.nutritionalValues));
@@ -142,6 +148,7 @@ public class MealServiceTests {
 
     @Test
     public void shouldSaveFoodEntry() throws Exception {
+        given(this.eventPublisher.publishEvent((MealChangedEvent) ArgumentMatchers.any())).willReturn(true);
         given(this.mealRepository.findByIdAndUser(1L, new User(TEST_EMAIL))).willReturn(Optional.of(this.meal));
         given(this.foodRepository.findById(1L)).willReturn(Optional.of(this.food));
         given(this.userRepository.findByEmail(TEST_EMAIL)).willReturn(Optional.of(this.user));

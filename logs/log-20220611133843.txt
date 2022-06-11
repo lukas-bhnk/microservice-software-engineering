@@ -1,0 +1,15 @@
+263  [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, lalelu).
+288  [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+313  [main] INFO  c.n.sweng.Service.MealService - Execute updateQuantityOfAFoodEntry(MealId: 1, FoodId: 1, Quantity: 124).
+329  [main] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sat May 15 00:00:00 CEST 2021, test@email.com).
+336  [main] INFO  c.n.sweng.Service.MealService - Execute query Joke(Softwaree).
+346  [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, test@email.com).
+346  [main] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+352  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 120).
+352  [main] INFO  c.n.sweng.Service.MealService - Adding Foodentry to meal successful. New food added with name: Banane
+352  [main] ERROR c.n.sweng.Service.MealService - Could not published Event.
+369  [main] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Sat May 15 00:00:00 CEST 2021 and Category: BREAKFAST
+369  [main] ERROR c.n.sweng.Service.MealService - Could not published Event.
+379  [main] INFO  c.n.sweng.Service.MealService - User is not in DB, created a new User
+379  [main] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Sat May 15 00:00:00 CEST 2021 and Category: BREAKFAST
+379  [main] ERROR c.n.sweng.Service.MealService - Could not published Event.
