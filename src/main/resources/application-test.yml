@@ -14,7 +14,18 @@ spring:
           eventPublisher-out-2:
             producer:
               transacted: true
-          source: eventpublisher
+      source: eventpublisher
+      bindings:
+        eventConsumer-in-0:
+          destination: test.sweng.events.registeredEvent
+          binder: cloud_rabbit
+        eventPublisher-out-1:
+          destination: test.sweng.events.MealChangedEvent
+          binder: cloud_rabbit
+        eventPublisher-out-2:
+          destination: test.sweng.events.MealAddedEvent
+          binder: cloud_rabbit
+
       binders:
         cloud_rabbit:
           type: rabbit
