@@ -14,7 +14,7 @@ spring:
           eventPublisher-out-2:
             producer:
               transacted: true
-      source: eventpublischer
+      source: eventpublisher
       bindings:
         eventConsumer-in-0:
           destination: sweng.events.registeredEvent
