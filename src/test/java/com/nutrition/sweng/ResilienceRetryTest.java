@@ -23,13 +23,13 @@ public class ResilienceRetryTest {
 
 
     @Test
-    public void testGetInfosFromDelayedThrowsRetryableException() {
+    public void testGetJokeFromDelayedThrowsRetryableException() {
         given(jokeServiceClient.getJoke("YEAAAAHHHHHHH")).willThrow(feign.RetryableException.class);
     }
 
 
     @Test
-    public void testGetNutritionalValuesDelayedThrowsTimeoutException(){
+    public void testGetJokeThrowsTimeoutException(){
         given(jokeServiceClient.getJoke("Hallo Herr Prof. Dr. Thöne")).willThrow(RetryableException.class);
         String joke = mealService.queryJoke("Hallo Herr Prof. Dr. Thöne");
         assertEquals(mealService.NO_JOKE, joke);

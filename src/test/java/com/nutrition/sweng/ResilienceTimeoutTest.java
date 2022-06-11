@@ -18,7 +18,7 @@ public class ResilienceTimeoutTest {
     private JokeServiceClient jokeServiceClient;
 
     @Test
-    public void testMethodsInfoDelayedThrowsTimeoutException() {
+    public void testMethodsJokeDelayedThrowsTimeoutException() {
         assertThrows(RetryableException.class, () -> {
             Joke joke = jokeServiceClient.getJoke("Hello World");
         });

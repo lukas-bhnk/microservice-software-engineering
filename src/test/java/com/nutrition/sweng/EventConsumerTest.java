@@ -1,10 +1,10 @@
-/*
 package com.nutrition.sweng;
 
 import com.nutrition.sweng.Event.UserRegisteredEvent;
 import com.nutrition.sweng.Model.MealCategory;
 import com.nutrition.sweng.Service.MealService;
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentMatchers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -36,7 +36,7 @@ public class EventConsumerTest {
                 .build()
         );
         //checks if the EventConsumer class triggers the right service method on consumption of an event:
-        verify(this.spyMealService, times(1)).createMeal(new Date(), MealCategory.BREAKFAST, "peter@test.com");
+        verify(this.spyMealService, times(4)).createMeal(ArgumentMatchers.any(),ArgumentMatchers.any(),ArgumentMatchers.any());
     }
 
-}*/
+}

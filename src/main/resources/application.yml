@@ -2,8 +2,6 @@
 spring:
   cloud:
     stream:
-      rabbit:
-        bindings:
       source: eventPublisher
       bindings:
         eventConsumer-in-0:
