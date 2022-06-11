@@ -69,7 +69,7 @@ public class DTOTests {
         nutritionalValuesDto.setAlcohol(doubleNumber);
         nutritionalValuesDto.setSalt(doubleNumber);
         nutritionalValuesDto.setSugar(doubleNumber);
-        assertThat(nutritionalValuesDto.getCalories(), is(doubleNumber));
+        assertThat(nutritionalValuesDto.getCalories(), is(number));
         assertThat(nutritionalValuesDto.getFats(), is(doubleNumber));
         assertThat(nutritionalValuesDto.getCarbs(), is(doubleNumber));
         assertThat(nutritionalValuesDto.getProteins(), is(doubleNumber));
