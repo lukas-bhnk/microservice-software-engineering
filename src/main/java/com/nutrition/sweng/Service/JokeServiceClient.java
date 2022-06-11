@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.IOException;
 
-@FeignClient(url = "${joke.service.error.url}", name = "JokeService")
+@FeignClient(url = "${joke.service.url}", name = "JokeService")
 public interface JokeServiceClient {
     /**
      * get a joke by a specific category.
