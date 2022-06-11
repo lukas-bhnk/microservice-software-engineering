@@ -1,12 +1,12 @@
-INSERT INTO user(id, email) VALUES (1,'ab@domain.com');
+INSERT INTO user(id, email, version) VALUES (1,'ab@domain.com',1);
 
 INSERT INTO meal(id,calories,carbs,date,fats,meal_category,proteins, user_fk, version) VALUES (1,10,12,'2022-04-10',30,1,4,1,1);
 INSERT INTO meal(id,calories,carbs,date,fats,meal_category,proteins, user_fk, version) VALUES (2,11,33,'2020-03-20',20,3,43,1,1);
 INSERT INTO meal(id,calories,carbs,date,fats,meal_category,proteins, user_fk, version) VALUES (3,409,40,'2019-04-10',34,2,12,1,1);
 
-INSERT INTO food(id, name, unit_size) VALUES (1,'Apfel', 0);
-INSERT INTO food(id, name, unit_size) VALUES (2,'Cola', 1);
-INSERT INTO food(id, name, unit_size) VALUES (3,'Spaghetti', 1);
+INSERT INTO food(id, name, unit_size, version) VALUES (1,'Apfel', 0,1);
+INSERT INTO food(id, name, unit_size, version) VALUES (2,'Cola', 1,1);
+INSERT INTO food(id, name, unit_size, version) VALUES (3,'Spaghetti', 1,1);
 INSERT INTO food_entry(id, calories, carbs, fats, proteins, quantity, food_id, meal_id, version) VALUES (1,100,12,1,21,150,1,1,1);
 INSERT INTO food_entry(id, calories, carbs, fats, proteins, quantity, food_id, meal_id, version) VALUES (2,100,12,1,21,150,2,1,1);
 
