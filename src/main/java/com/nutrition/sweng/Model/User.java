@@ -2,10 +2,7 @@ package com.nutrition.sweng.Model;
 
 import com.nutrition.sweng.Event.MealChangedEvent;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -15,6 +12,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String email;
+
+    @Version
+    private long version;
 
     /**
      * Default constructor; is required for entities by JPA
@@ -54,12 +54,12 @@ public class User {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User that = (User) o;
-        return Objects.equals(id, that.id) && Objects.equals(email, that.email);
+        User user = (User) o;
+        return id == user.id && version == user.version && Objects.equals(email, user.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, email);
+        return Objects.hash(id, email, version);
     }
 }
