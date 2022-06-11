@@ -69,7 +69,7 @@ public class ModelTests {
         nutritionalValues.setAlcohol(doubleNumber);
         nutritionalValues.setSalt(doubleNumber);
         nutritionalValues.setSugar(doubleNumber);
-        assertThat(nutritionalValues.getCalories(), is(doubleNumber));
+        assertThat(nutritionalValues.getCalories(), is(number));
         assertThat(nutritionalValues.getFats(), is(doubleNumber));
         assertThat(nutritionalValues.getCarbs(), is(doubleNumber));
         assertThat(nutritionalValues.getProteins(), is(doubleNumber));
