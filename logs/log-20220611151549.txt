@@ -1,0 +1,3 @@
+242  [main] INFO  c.n.sweng.Service.MealService - Execute updateQuantityOfAFoodEntry(MealId: 1, FoodId: 1, Quantity: 130).
+256  [main] ERROR c.n.sweng.Service.MealService - Could not published Event.
+257  [main] INFO  c.n.sweng.Service.MealService - Execute deleteFood(MealId: 1, FoodId: 1, Email: test@email.com).

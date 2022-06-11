@@ -3,11 +3,14 @@ package com.nutrition.sweng;
 import com.nutrition.sweng.Event.EventPublisher;
 import com.nutrition.sweng.Event.MealAddedEvent;
 import com.nutrition.sweng.Event.MealChangedEvent;
+import com.nutrition.sweng.Exceptions.AlreadyExistException;
+import com.nutrition.sweng.Exceptions.MessagePubishException;
 import com.nutrition.sweng.Exceptions.ResourceNotFoundException;
 import com.nutrition.sweng.Model.*;
 import com.nutrition.sweng.Repository.*;
 import com.nutrition.sweng.Service.JokeServiceClient;
 import com.nutrition.sweng.Service.MealService;
+import feign.RetryableException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,8 +26,7 @@ import java.util.*;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
 
 @ExtendWith(MockitoExtension.class)
@@ -114,12 +116,32 @@ public class MealServiceTests {
     }
 
     @Test
+    public void shouldNotFindMealAndUser() throws Exception {
+        assertThrows(ResourceNotFoundException.class, () -> {
+            this.subject.getMeal(1L, TEST_EMAIL);
+        });
+        given(this.userRepository.findByEmail(TEST_EMAIL)).willReturn(Optional.of(this.user));
+        assertThrows(ResourceNotFoundException.class, () -> {
+            this.subject.getMeal(1L, TEST_EMAIL);
+        });
+    }
+
+    @Test
     public void shouldFindDailyMeals() throws Exception {
         given(this.mealRepository.findByDateAndUser(TEST_DATE, new User(TEST_EMAIL))).willReturn(List.of(this.meal));
         given(this.userRepository.findByEmail(TEST_EMAIL)).willReturn(Optional.of(this.user));
         List<Meal> meals = this.subject.getDailyMeals(TEST_DATE, TEST_EMAIL);
         assertThat(meals.size(), is(1));
         assertThat(meals.get(0).getDate(), is(TEST_DATE));
+    }
+
+    @Test
+    public void shouldNotFindDailyMeals() throws Exception {
+        given(this.userRepository.findByEmail(TEST_EMAIL)).willReturn(Optional.of(this.user));
+        List<Meal> meals = this.subject.getDailyMeals(TEST_DATE, TEST_EMAIL);
+        assertThrows(RetryableException.class, () -> {
+            this.subject.getDailyMeals(TEST_DATE, "Hello World");
+        });
     }
 
 
@@ -142,7 +164,20 @@ public class MealServiceTests {
         Meal meal = this.subject.updateQuantity(1L, 1L, 124, TEST_EMAIL);
         FoodEntry foodEntries = (FoodEntry) meal.getFoodEntries().toArray()[0];
         assertThat(foodEntries.getQuantity(), is(124));
+    }
 
+    @Test
+    public void shouldNotUpdateQuantity() {
+        FoodEntry foodEntry = new FoodEntry(1L,this.meal, this.food, 100, 100, 100, 100.0, 100.0);
+        this.foodList.add(foodEntry);
+        this.meal.setFoodEntries(this.foodList);
+        assertThrows(ResourceNotFoundException.class, () -> {
+            this.subject.updateQuantity(1L, 1L, 124, TEST_EMAIL);
+        });
+        given(this.userRepository.findByEmail(TEST_EMAIL)).willReturn(Optional.of(this.user));
+        assertThrows(ResourceNotFoundException.class, () -> {
+            this.subject.updateQuantity(1L, 1L, 124, TEST_EMAIL);
+        });
     }
 
 
@@ -159,12 +194,82 @@ public class MealServiceTests {
     }
 
     @Test
+    public void shouldNotSaveFoodEntry() throws Exception {
+        assertThrows(ResourceNotFoundException.class, () -> {
+            this.subject.addFood(1L, 1L, 124, TEST_EMAIL);
+        });
+        given(this.userRepository.findByEmail(TEST_EMAIL)).willReturn(Optional.of(this.user));
+        assertThrows(ResourceNotFoundException.class, () -> {
+            this.subject.addFood(1L, 1L, 124, TEST_EMAIL);
+        });
+        given(this.mealRepository.findByIdAndUser(1L, new User(TEST_EMAIL))).willReturn(Optional.of(this.meal));
+        assertThrows(ResourceNotFoundException.class, () -> {
+            this.subject.addFood(1L, 1L, 124, TEST_EMAIL);
+        });
+        given(this.foodRepository.findById(1L)).willReturn(Optional.of(this.food));
+        assertThrows(ResourceNotFoundException.class, () -> {
+            this.subject.addFood(1L, 1L, 124, TEST_EMAIL);
+        });
+        FoodEntry foodEntry = new FoodEntry(1L,this.meal, this.food, 100, 100, 100, 100.0, 100.0);
+        this.foodList.add(foodEntry);
+        this.meal.setFoodEntries(this.foodList);
+        assertThrows(AlreadyExistException.class, () -> {
+            this.subject.addFood(1L, 1L, 124, TEST_EMAIL);
+        });
+    }
+
+    @Test
+    public void shouldDeleteFood() throws Exception {
+        FoodEntry foodEntry = new FoodEntry(1L,this.meal, this.food, 100, 100, 100, 100.0, 100.0);
+        this.foodList.add(foodEntry);
+        this.food.setFoodEntries(this.foodList);
+        this.meal.setFoodEntries(this.foodList);
+        foodEntry.setFood(this.food);
+        given(this.eventPublisher.publishEvent((MealChangedEvent) ArgumentMatchers.any())).willReturn(true);
+        given(this.mealRepository.findByIdAndUser(1L, new User(TEST_EMAIL))).willReturn(Optional.of(this.meal));
+        given(this.userRepository.findByEmail(TEST_EMAIL)).willReturn(Optional.of(this.user));
+        Meal meal = this.subject.deleteFood(1L, 1L,  TEST_EMAIL);
+        assertTrue(meal.getFoodEntries().isEmpty());
+    }
+
+    @Test
     public void shouldFindAJoke() throws Exception {
         Joke joke = new Joke();
         joke.setJoke("Hallo Herr Prof. Dr. Thöne");
         given(this.jokeServiceClient.getJoke("Softwaree")).willReturn(joke);
         String jokeString = this.subject.getJoke("Softwaree");
         assertThat(jokeString, is("Hallo Herr Prof. Dr. Thöne"));
+    }
+
+    @Test
+    public void testPublishAndAlreadyExistsExceptions() {
+        FoodEntry foodEntry = new FoodEntry(1L,this.meal, this.food, 100, 100, 100, 100.0, 100.0);
+        this.foodList.add(foodEntry);
+        this.meal.setFoodEntries(this.foodList);
+        given(this.mealRepository.findByIdAndUser(1L, new User(TEST_EMAIL))).willReturn(Optional.of(this.meal));
+        given(this.userRepository.findByEmail(TEST_EMAIL)).willReturn(Optional.of(this.user));
+        given(this.nutritionalValuesRepository.findById(1L)).willReturn(Optional.of(this.nutritionalValues));
+        assertThrows(MessagePubishException.class, () -> {
+            this.subject.updateQuantity(1L, 1L, 130, TEST_EMAIL);
+        });
+        assertThrows(AlreadyExistException.class, () -> {
+            this.subject.addFood(1L, 1L, 200, TEST_EMAIL);
+        });
+        assertThrows(ResourceNotFoundException.class, () -> {
+            this.subject.addFood(1L, 2L, 200, TEST_EMAIL);
+        });
+        given(this.foodRepository.findById(2L)).willReturn(Optional.of(this.food));
+        assertThrows(ResourceNotFoundException.class, () -> {
+            this.subject.addFood(1L, 2L, 200, TEST_EMAIL);
+        });
+        given(this.nutritionalValuesRepository.findById(2L)).willReturn(Optional.of(this.nutritionalValues));
+        given(this.foodRepository.findById(2L)).willReturn(Optional.of(this.food));
+        assertThrows(MessagePubishException.class, () -> {
+            this.subject.addFood(1L, 2L, 200, TEST_EMAIL);
+        });
+        assertThrows(MessagePubishException.class, () -> {
+            this.subject.createMeal(TEST_DATE, MealCategory.BREAKFAST, TEST_EMAIL);
+        });
     }
 
 }

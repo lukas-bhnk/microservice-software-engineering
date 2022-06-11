@@ -1,0 +1,2 @@
+198  [main] INFO  c.n.sweng.Service.MealService - Execute updateQuantityOfAFoodEntry(MealId: 1, FoodId: 1, Quantity: 124).
+207  [main] ERROR c.n.sweng.Service.MealService - Could not published Event.

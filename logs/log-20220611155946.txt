@@ -1,0 +1,4 @@
+165  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 124).
+182  [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+189  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 124).
+190  [main] ERROR c.n.sweng.Service.MealService - User is not in DB

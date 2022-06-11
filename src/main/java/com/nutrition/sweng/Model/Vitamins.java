@@ -201,6 +201,6 @@ public class Vitamins {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, c, fol, a, b1, b2, b6, b12, d, e, k, betacarotin, niacin, retinol, version, food);
+        return Objects.hash(id, c, fol, a, b1, b2, b6, b12, d, e, k, betacarotin, niacin, retinol, version);
     }
 }

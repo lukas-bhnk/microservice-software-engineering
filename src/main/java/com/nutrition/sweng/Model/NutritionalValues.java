@@ -145,6 +145,6 @@ public class NutritionalValues {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, carbs, proteins, calories, sugar, fats, fatsSaturated, alcohol, salt, food);
+        return Objects.hash(id, carbs, proteins, calories, sugar, fats, fatsSaturated, alcohol, salt);
     }
 }

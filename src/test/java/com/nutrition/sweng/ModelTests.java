@@ -15,6 +15,7 @@ import java.util.Optional;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.BDDMockito.given;
 
 @ActiveProfiles("test")
@@ -47,6 +48,8 @@ public class ModelTests {
         meal.setMealCategory(mealcategory);
         meal.setFoodEntries(foodEntries);
         meal.setDate(date);
+        assertTrue(meal.equals(meal));
+        assertTrue(meal.hashCode()==meal.hashCode());
         assertThat(meal.getCalories(), is(number));
         assertThat(meal.getCarbs(), is(doubleNumber));
         assertThat(meal.getProteins(), is(doubleNumber));
@@ -69,6 +72,8 @@ public class ModelTests {
         nutritionalValues.setAlcohol(doubleNumber);
         nutritionalValues.setSalt(doubleNumber);
         nutritionalValues.setSugar(doubleNumber);
+        assertTrue(nutritionalValues.hashCode()==nutritionalValues.hashCode());
+        assertTrue(nutritionalValues.equals(nutritionalValues));
         assertThat(nutritionalValues.getCalories(), is(number));
         assertThat(nutritionalValues.getFats(), is(doubleNumber));
         assertThat(nutritionalValues.getCarbs(), is(doubleNumber));
@@ -91,6 +96,8 @@ public class ModelTests {
         minerals.setSelenium(doubleNumber);
         minerals.setZinc(doubleNumber);
         minerals.setSodium(doubleNumber);
+        assertTrue(minerals.hashCode()==minerals.hashCode());
+        assertTrue(minerals.equals(minerals));
         assertThat(minerals.getChloride(), is(doubleNumber));
         assertThat(minerals.getIron(), is(doubleNumber));
         assertThat(minerals.getMagnesium(), is(doubleNumber));
@@ -118,6 +125,8 @@ public class ModelTests {
         vitamins.setK(doubleNumber);
         vitamins.setNiacin(doubleNumber);
         vitamins.setRetinol(doubleNumber);
+        assertTrue(vitamins.hashCode()==vitamins.hashCode());
+        assertTrue(vitamins.equals(vitamins));
         assertThat(vitamins.getA(), is(doubleNumber));
         assertThat(vitamins.getB1(), is(doubleNumber));
         assertThat(vitamins.getB2(), is(doubleNumber));
@@ -141,6 +150,8 @@ public class ModelTests {
         food.setId(longNumber);
         food.setName(string);
         food.setUnitSize(FoodUnitSize.MILLILITRE);
+        assertTrue(food.hashCode()==food.hashCode());
+        assertTrue(food.equals(food));
         assertThat(food.getId(), is(longNumber));
         assertThat(food.getName(), is(string));
         assertThat(food.getUnitSize(), is(FoodUnitSize.MILLILITRE));

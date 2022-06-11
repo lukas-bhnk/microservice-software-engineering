@@ -269,7 +269,8 @@ public class MealService {
                     var event = new MealChangedEvent(meal);
                     var published = this.eventPublisher.publishEvent(event);
                     if (!published) {
-                        //TODO: we have to rollback the transaction
+                        LOG.error("Could not published Event.");
+                        throw new MessagePubishException("Event could not published.");
                     }
                     return meal;
                 }

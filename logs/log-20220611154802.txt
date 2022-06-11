@@ -1,0 +1,4 @@
+203  [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, test@email.com).
+225  [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+236  [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, test@email.com).
+241  [main] ERROR c.n.sweng.Service.MealService - Getting Meal failed. Meal doesnt exist

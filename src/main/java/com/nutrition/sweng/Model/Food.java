@@ -126,6 +126,6 @@ public class Food {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, unitSize, version, foodEntries, nutritionalValues, minerals, vitamins);
+        return Objects.hash(id, name, unitSize, version);
     }
 }

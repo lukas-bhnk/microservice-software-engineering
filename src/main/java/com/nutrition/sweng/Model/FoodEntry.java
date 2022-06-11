@@ -117,6 +117,6 @@ public class FoodEntry {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, meal, food, quantity, calories, fats, carbs, proteins, version);
+        return Objects.hash(id, quantity, calories, fats, carbs, proteins, version);
     }
 }

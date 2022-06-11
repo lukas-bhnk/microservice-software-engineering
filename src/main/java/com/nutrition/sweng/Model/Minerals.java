@@ -146,6 +146,6 @@ public class Minerals {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, chloride, magnesium, phosphorus, iron, potassium, selenium, sodium, zinc, version, food);
+        return Objects.hash(id, chloride, magnesium, phosphorus, iron, potassium, selenium, sodium, zinc, version);
     }
 }
