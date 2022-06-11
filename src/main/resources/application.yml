@@ -4,16 +4,6 @@ spring:
     stream:
       rabbit:
         bindings:
-          eventConsumer-in-0:
-            consumer:
-              transacted: true
-              max-attempts: 3
-          eventPublisher-out-1:
-            producer:
-              transacted: true
-          eventPublisher-out-2:
-            producer:
-              transacted: true
       source: eventpublisher
       bindings:
         eventConsumer-in-0:
