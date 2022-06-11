@@ -2,7 +2,7 @@
 spring:
   cloud:
     stream:
-      source: eventpublisher
+      source: eventPublisher
       bindings:
         eventConsumer-in-0:
           destination: test.sweng.events.registeredEvent

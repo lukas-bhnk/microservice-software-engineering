@@ -4,7 +4,7 @@ spring:
     stream:
       rabbit:
         bindings:
-      source: eventpublisher
+      source: eventPublisher
       bindings:
         eventConsumer-in-0:
           destination: sweng.events.registeredEvent
