@@ -1,5 +1,10 @@
 # NutritionApp
 
+##Post Excel
+
+There a two Example Excel files in the Root Directory for posting it to the Food Controller
+-> one for the test environment and one for production.
+The Prod excel (Schweizer-Nahrwertdatenbank.xlsx) file was posted before the screencast.
 
 
 ## Microservice Data Input

@@ -3,6 +3,7 @@ package com.nutrition.sweng.Controller;
 import com.nutrition.sweng.DTO.FoodDto;
 import com.nutrition.sweng.DTO.MealDto;
 import com.nutrition.sweng.Model.Food;
+import com.nutrition.sweng.Model.Joke;
 import com.nutrition.sweng.Model.Meal;
 import com.nutrition.sweng.Model.MealCategory;
 import com.nutrition.sweng.Service.MealService;
@@ -55,10 +56,10 @@ public class MealController {
      */
     @GetMapping("/tellAJoke/{category}")
     @PreAuthorize("hasAuthority('NORMAL') || hasAuthority('PREMIUM') || hasAuthority('ADMIN')")
-    public String getJoke(@PathVariable String category, @RequestHeader String Authorization){
-        LOG.info("Received GET-Request /rest/meal/weekday/{}/{}/{}", category);
+    public Joke getJoke(@PathVariable String category, @RequestHeader String Authorization){
+        LOG.info("Received GET-Request /rest/meal/tellAJoke/{}", category);
         String email = jwtValidator.getUserEmail(Authorization.substring(7));
-        String joke = this.mealService.getJoke(category);
+        Joke joke = this.mealService.getJoke(category);
         return joke;
     }
     /**

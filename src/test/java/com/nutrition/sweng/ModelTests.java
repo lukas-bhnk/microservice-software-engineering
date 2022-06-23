@@ -74,6 +74,7 @@ public class ModelTests {
         nutritionalValues.setSugar(doubleNumber);
         assertTrue(nutritionalValues.hashCode()==nutritionalValues.hashCode());
         assertTrue(nutritionalValues.equals(nutritionalValues));
+        assertTrue(nutritionalValues.toString().equals(nutritionalValues.toString()));
         assertThat(nutritionalValues.getCalories(), is(number));
         assertThat(nutritionalValues.getFats(), is(doubleNumber));
         assertThat(nutritionalValues.getCarbs(), is(doubleNumber));
@@ -98,6 +99,7 @@ public class ModelTests {
         minerals.setSodium(doubleNumber);
         assertTrue(minerals.hashCode()==minerals.hashCode());
         assertTrue(minerals.equals(minerals));
+        assertTrue(minerals.toString().equals(minerals.toString()));
         assertThat(minerals.getChloride(), is(doubleNumber));
         assertThat(minerals.getIron(), is(doubleNumber));
         assertThat(minerals.getMagnesium(), is(doubleNumber));
@@ -127,6 +129,7 @@ public class ModelTests {
         vitamins.setRetinol(doubleNumber);
         assertTrue(vitamins.hashCode()==vitamins.hashCode());
         assertTrue(vitamins.equals(vitamins));
+        assertTrue(vitamins.toString().equals(vitamins.toString()));
         assertThat(vitamins.getA(), is(doubleNumber));
         assertThat(vitamins.getB1(), is(doubleNumber));
         assertThat(vitamins.getB2(), is(doubleNumber));
@@ -152,6 +155,7 @@ public class ModelTests {
         food.setUnitSize(FoodUnitSize.MILLILITRE);
         assertTrue(food.hashCode()==food.hashCode());
         assertTrue(food.equals(food));
+        assertTrue(food.toString().equals(food.toString()));
         assertThat(food.getId(), is(longNumber));
         assertThat(food.getName(), is(string));
         assertThat(food.getUnitSize(), is(FoodUnitSize.MILLILITRE));

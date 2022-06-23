@@ -1,0 +1,46 @@
+185  [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, lalelu).
+202  [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+223  [main] INFO  c.n.sweng.Service.MealService - Execute updateQuantityOfAFoodEntry(MealId: 1, FoodId: 1, Quantity: 124).
+224  [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+234  [main] INFO  c.n.sweng.Service.MealService - Execute updateQuantityOfAFoodEntry(MealId: 1, FoodId: 1, Quantity: 124).
+247  [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, test@email.com).
+248  [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+249  [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, test@email.com).
+250  [main] ERROR c.n.sweng.Service.MealService - Getting Meal failed. Meal doesnt exist
+259  [main] INFO  c.n.sweng.Service.MealService - Execute updateQuantityOfAFoodEntry(MealId: 1, FoodId: 1, Quantity: 124).
+270  [main] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sat May 15 00:00:00 CEST 2021, test@email.com).
+271  [main] ERROR c.n.sweng.Service.MealService - Requested Meals(Sat May 15 00:00:00 CEST 2021, test@email.com)are not in the DB
+284  [main] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sat May 15 00:00:00 CEST 2021, test@email.com).
+293  [main] INFO  c.n.sweng.Service.MealService - Execute query Joke(Softwaree).
+301  [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, test@email.com).
+302  [main] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+309  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 124).
+310  [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+312  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 124).
+312  [main] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Meal 1 not exists in DB
+314  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 124).
+315  [main] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Food 1 not exists in DB
+316  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 124).
+317  [main] ERROR c.n.sweng.Service.MealService - Updating quantity of Meal failed. Food 1 does not exist in Meal
+318  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 124).
+318  [main] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Food Banane already exists in Meal
+325  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 120).
+380  [main] INFO  c.n.sweng.Service.MealService - Adding Foodentry to meal successful. New food added with name: Banane
+393  [main] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Sat May 15 00:00:00 CEST 2021 and Category: BREAKFAST
+406  [main] INFO  c.n.sweng.Service.MealService - Execute deleteFood(MealId: 1, FoodId: 1, Email: test@email.com).
+408  [main] INFO  c.n.sweng.Service.MealService - Deleting food from meal successful. Food deleted with name: Banane
+420  [main] INFO  c.n.sweng.Service.MealService - User is not in DB, created a new User
+422  [main] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Sat May 15 00:00:00 CEST 2021 and Category: BREAKFAST
+435  [main] INFO  c.n.sweng.Service.MealService - Execute updateQuantityOfAFoodEntry(MealId: 1, FoodId: 1, Quantity: 130).
+440  [main] ERROR c.n.sweng.Service.MealService - Could not published Event.
+442  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 200).
+444  [main] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Food Banane already exists in Meal
+445  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 2, Quantity: 200).
+447  [main] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Food 2 not exists in DB
+449  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 2, Quantity: 200).
+451  [main] ERROR c.n.sweng.Service.MealService - Updating quantity of Meal failed. Food 2 does not exist in Meal
+453  [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 2, Quantity: 200).
+457  [main] INFO  c.n.sweng.Service.MealService - Adding Foodentry to meal successful. New food added with name: Banane
+459  [main] ERROR c.n.sweng.Service.MealService - Could not published Event.
+461  [main] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Sat May 15 00:00:00 CEST 2021 and Category: BREAKFAST
+463  [main] ERROR c.n.sweng.Service.MealService - Could not published Event.

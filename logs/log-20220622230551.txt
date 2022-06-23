@@ -1,0 +1,2 @@
+254  [main] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sat May 15 00:00:00 CEST 2021, test@email.com).
+264  [main] ERROR c.n.sweng.Service.MealService - Requested Meals(Sat May 15 00:00:00 CEST 2021, test@email.com)are not in the DB

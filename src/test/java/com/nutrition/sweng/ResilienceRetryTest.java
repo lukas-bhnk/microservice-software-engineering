@@ -1,5 +1,6 @@
 package com.nutrition.sweng;
 
+import com.nutrition.sweng.Model.Joke;
 import com.nutrition.sweng.Service.JokeServiceClient;
 import com.nutrition.sweng.Service.MealService;
 import feign.RetryableException;
@@ -31,7 +32,7 @@ public class ResilienceRetryTest {
     @Test
     public void testGetJokeThrowsTimeoutException(){
         given(jokeServiceClient.getJoke("Hallo Herr Prof. Dr. Thöne")).willThrow(RetryableException.class);
-        String joke = mealService.queryJoke("Hallo Herr Prof. Dr. Thöne");
+        Joke joke = mealService.queryJoke("Hallo Herr Prof. Dr. Thöne");
         assertEquals(mealService.NO_JOKE, joke);
     }
 

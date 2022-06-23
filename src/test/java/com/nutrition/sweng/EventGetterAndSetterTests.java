@@ -14,6 +14,7 @@ import java.util.HashSet;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ActiveProfiles("test")
 public class EventGetterAndSetterTests {
@@ -45,6 +46,9 @@ public class EventGetterAndSetterTests {
         meal.setMealCategory(mealcategory);
         meal.setFoodEntries(foodEntries);
         meal.setDate(date);
+        assertTrue(meal.equals(meal));
+        assertTrue(meal.toString().equals(meal.toString()));
+        assertTrue(meal.hashCode() == meal.hashCode());
         assertThat(meal.getCalories(), is(number));
         assertThat(meal.getCarbs(), is(doubleNumber));
         assertThat(meal.getProteins(), is(doubleNumber));
@@ -66,6 +70,9 @@ public class EventGetterAndSetterTests {
         meal.setMealCategory(mealcategory);
         meal.setFoodEntries(foodEntries);
         meal.setDate(date);
+        assertTrue(meal.equals(meal));
+        assertTrue(meal.toString().equals(meal.toString()));
+        assertTrue(meal.hashCode() == meal.hashCode());
         assertThat(meal.getCalories(), is(number));
         assertThat(meal.getCarbs(), is(doubleNumber));
         assertThat(meal.getProteins(), is(doubleNumber));
@@ -81,6 +88,9 @@ public class EventGetterAndSetterTests {
         UserRegisteredEvent user = new UserRegisteredEvent();
         user.setUserId(longNumber);
         user.setEmail(string);
+        assertTrue(user.equals(user));
+        assertTrue(user.toString().equals(user.toString()));
+        assertTrue(user.hashCode() == user.hashCode());
         assertThat(user.getUserId(), is(longNumber));
         assertThat(user.getEmail(), is(string));
     }

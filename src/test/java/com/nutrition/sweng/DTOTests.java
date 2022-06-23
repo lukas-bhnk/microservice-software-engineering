@@ -15,6 +15,7 @@ import java.util.Optional;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.BDDMockito.given;
 
 @ActiveProfiles("test")
@@ -47,6 +48,9 @@ public class DTOTests {
         mealDto.setMealCategory(mealcategory);
         mealDto.setFoodEntries(foodEntries);
         mealDto.setDate(date);
+        assertTrue(mealDto.equals(mealDto));
+        assertTrue(mealDto.toString().equals(mealDto.toString()));
+        assertTrue(mealDto.hashCode() == mealDto.hashCode());
         assertThat(mealDto.getCalories(), is(number));
         assertThat(mealDto.getCarbs(), is(doubleNumber));
         assertThat(mealDto.getProteins(), is(doubleNumber));
@@ -69,6 +73,9 @@ public class DTOTests {
         nutritionalValuesDto.setAlcohol(doubleNumber);
         nutritionalValuesDto.setSalt(doubleNumber);
         nutritionalValuesDto.setSugar(doubleNumber);
+        assertTrue(nutritionalValuesDto.equals(nutritionalValuesDto));
+        assertTrue(nutritionalValuesDto.toString().equals(nutritionalValuesDto.toString()));
+        assertTrue(nutritionalValuesDto.hashCode() == nutritionalValuesDto.hashCode());
         assertThat(nutritionalValuesDto.getCalories(), is(10));
         assertThat(nutritionalValuesDto.getFats(), is(doubleNumber));
         assertThat(nutritionalValuesDto.getCarbs(), is(doubleNumber));
@@ -91,6 +98,9 @@ public class DTOTests {
         mineralsDto.setSelenium(doubleNumber);
         mineralsDto.setZinc(doubleNumber);
         mineralsDto.setSodium(doubleNumber);
+        assertTrue(mineralsDto.equals(mineralsDto));
+        assertTrue(mineralsDto.toString().equals(mineralsDto.toString()));
+        assertTrue(mineralsDto.hashCode() == mineralsDto.hashCode());
         assertThat(mineralsDto.getChloride(), is(doubleNumber));
         assertThat(mineralsDto.getIron(), is(doubleNumber));
         assertThat(mineralsDto.getMagnesium(), is(doubleNumber));
@@ -118,6 +128,9 @@ public class DTOTests {
         vitaminsDto.setK(doubleNumber);
         vitaminsDto.setNiacin(doubleNumber);
         vitaminsDto.setRetinol(doubleNumber);
+        assertTrue(vitaminsDto.equals(vitaminsDto));
+        assertTrue(vitaminsDto.toString().equals(vitaminsDto.toString()));
+        assertTrue(vitaminsDto.hashCode() == vitaminsDto.hashCode());
         assertThat(vitaminsDto.getA(), is(doubleNumber));
         assertThat(vitaminsDto.getB1(), is(doubleNumber));
         assertThat(vitaminsDto.getB2(), is(doubleNumber));
@@ -144,7 +157,9 @@ public class DTOTests {
         assertThat(foodDto.getId(), is(longNumber));
         assertThat(foodDto.getName(), is(string));
         assertThat(foodDto.getUnitSize(), is(FoodUnitSize.MILLILITRE.name()));
-
+        assertTrue(foodDto.equals(foodDto));
+        assertTrue(foodDto.toString().equals(foodDto.toString()));
+        assertTrue(foodDto.hashCode() == foodDto.hashCode());
     }
 
 }

@@ -1,0 +1,1 @@
+192  [main] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sat May 15 00:00:00 CEST 2021, Hello World).

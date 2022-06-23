@@ -1,31 +1,31 @@
-#RabbitMQ Configuration
-spring:
-  cloud:
-    stream:
-      source: eventPublisher
-      bindings:
-        eventConsumer-in-0:
-          destination: sweng.events.registeredEvent
-          binder: cloud_rabbit
-        eventPublisher-out-1:
-          destination: amq.topic
-          binder: cloud_rabbit
-
-      binders:
-        cloud_rabbit:
-          type: rabbit
-          environment:
-            spring:
-              rabbitmq:
-                host: rabbitmq.team12.svc.cluster.local
-                port: 5672
-                username: admin
-                password: password
-                virtual-host: /
-
-  #repeat the rabbitmq credentials as follows when actuator health checks are active:
-  rabbitmq:
-    host: rabbitmq.team12.svc.cluster.local
-    username: admin
-    password: password
-    virtual-host: /
+##RabbitMQ Configuration
+#spring:
+#  cloud:
+#    stream:
+#      source: eventPublisher
+#      bindings:
+#        eventConsumer-in-0:
+#          destination: sweng.events.registeredEvent
+#          binder: cloud_rabbit
+#        eventPublisher-out-1:
+#          destination: amq.topic
+#          binder: cloud_rabbit
+#
+#      binders:
+#        cloud_rabbit:
+#          type: rabbit
+#          environment:
+#            spring:
+#              rabbitmq:
+#                host: rabbitmq.team12.svc.cluster.local
+#                port: 5672
+#                username: admin
+#                password: password
+#                virtual-host: /
+#
+#  #repeat the rabbitmq credentials as follows when actuator health checks are active:
+#  rabbitmq:
+#    host: rabbitmq.team12.svc.cluster.local
+#    username: admin
+#    password: password
+#    virtual-host: /

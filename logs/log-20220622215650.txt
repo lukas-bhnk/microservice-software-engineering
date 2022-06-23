@@ -1,0 +1,483 @@
+1622 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1621 [main] INFO  c.n.s.NutritionAppSwengApplication - Starting NutritionAppSwengApplication using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 20032 (C:\Users\lukas\IdeaProjects\nutritionapp\target\classes started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1625 [main] INFO  c.n.s.NutritionAppSwengApplication - No active profile set, falling back to 1 default profile: "default"
+3637 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+3767 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 119 ms. Found 7 JPA repository interfaces.
+4293 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+4313 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+4426 [main] INFO  o.s.c.context.scope.GenericScope - BeanFactory id=e45df4fb-c997-3205-8284-3e4d00b5800b
+4930 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4949 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4959 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4968 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+5047 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+6066 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+6090 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+6091 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+6091 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+6513 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+6513 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4810 ms
+9008 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+9073 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.8.Final
+9254 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+9380 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+9531 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+9554 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+10647 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10659 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11755 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13109 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventConsumer-in-0' has 1 subscriber(s).
+13689 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1afea182, org.springframework.security.web.context.SecurityContextPersistenceFilter@221c097f, org.springframework.security.web.header.HeaderWriterFilter@4cb1af3f, org.springframework.security.web.authentication.logout.LogoutFilter@ae2227, com.nutrition.sweng.security.JwtFilter@4bcff08c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c82f6bd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ee2e363, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52a1d6f, org.springframework.security.web.session.SessionManagementFilter@81ac569, org.springframework.security.web.access.ExceptionTranslationFilter@27c68ccb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ca574db]
+14187 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 21 endpoint(s) beneath base path '/actuator'
+14867 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel errorChannel
+15085 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventConsumer-in-0
+15241 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel nullChannel
+15325 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageHandler _org.springframework.integration.errorLogger
+15562 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+15563 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 1 subscriber(s).
+15564 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+15604 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Creating binder: rabbit
+16117 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Caching the binder: rabbit
+16118 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: rabbit
+16585 [main] INFO  o.s.c.s.b.r.p.RabbitExchangeQueueProvisioner - declaring queue for inbound: eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA, bound to: eventConsumer-in-0
+16591 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+16939 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#57927bc9:0/SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896]
+16952 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+16960 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Nothing to declare
+16961 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+16961 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Nothing to declare
+17033 [main] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+17060 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1735/0x0000000801600680 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@70798698 Shared Rabbit Connection: SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896]
+17060 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventConsumer-in-0'
+17089 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1747/0x0000000801615170 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@70798698 Shared Rabbit Connection: SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896]
+17089 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Queue 'eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA'
+17124 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1748/0x0000000801616988 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@70798698 Shared Rabbit Connection: SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896]
+17124 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Binding destination [eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA (QUEUE)] to exchange [eventConsumer-in-0] with routing key [#]
+17139 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Changing consumers from 1 to 1
+17155 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA.errors' has 1 subscriber(s).
+17155 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA.errors' has 2 subscriber(s).
+17158 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Starting Rabbit listener container.
+17168 [eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@496203da: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+17196 [eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Started on queue 'eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA' with tag amq.ctag-Wo4j3pIZVeS0kJBUGtGcNQ: Consumer@496203da: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@70798698 Shared Rabbit Connection: SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896], acknowledgeMode=AUTO local queue size=0
+17197 [pool-1-thread-3] DEBUG o.s.a.r.l.BlockingQueueConsumer - ConsumeOK: Consumer@496203da: tags=[[amq.ctag-Wo4j3pIZVeS0kJBUGtGcNQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@70798698 Shared Rabbit Connection: SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896], acknowledgeMode=AUTO local queue size=0
+17197 [main] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - started bean 'inbound.eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA'
+17202 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17251 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+17563 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA.errors
+17763 [main] INFO  c.n.s.NutritionAppSwengApplication - Started NutritionAppSwengApplication in 17.045 seconds (JVM running for 19.052)
+18362 [RMI TCP Connection(5)-192.168.56.1] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,2)
+18363 [RMI TCP Connection(5)-192.168.56.1] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitHealthIndicator$$Lambda$1832/0x0000000801636d68 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2), conn: Proxy@70798698 Shared Rabbit Connection: SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896]
+18364 [RMI TCP Connection(5)-192.168.56.1] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitHealthIndicator$$Lambda$1832/0x0000000801636d68 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2), conn: Proxy@70798698 Shared Rabbit Connection: SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896]
+18367 [RMI TCP Connection(4)-192.168.56.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18367 [RMI TCP Connection(4)-192.168.56.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18371 [RMI TCP Connection(4)-192.168.56.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+33550 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+33560 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+95314 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+95461 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Wed Jun 22 00:00:00 UTC 2022, ac@domain.com).
+95637 [http-nio-8080-exec-4] ERROR c.n.sweng.Service.MealService - User is not in DB
+103013 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+103017 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+122084 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+122100 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+122142 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+122154 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+122960 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+122972 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+133882 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+133886 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+139995 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+140002 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+147496 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+147507 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+152619 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+152624 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+2091935 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+2092015 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Wed Jun 22 00:00:00 UTC 2022, ac@domain.com).
+2092113 [http-nio-8080-exec-8] ERROR c.n.sweng.Service.MealService - User is not in DB
+2106778 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+2106785 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+2119956 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+2119967 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+2137035 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{day}/{month}/{year}).
+2137074 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - User is not in DB, created a new User
+2138590 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Wed Jun 22 00:00:00 UTC 2022 and Category: LUNCH
+2139046 [http-nio-8080-exec-1] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: rabbit
+2139287 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1735/0x0000000801600680 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2), conn: Proxy@70798698 Shared Rabbit Connection: SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896]
+2139287 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventPublisher-out-0'
+2139316 [http-nio-8080-exec-1] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'unknown.channel.name' has 1 subscriber(s).
+2139459 [http-nio-8080-exec-1] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2139483 [http-nio-8080-exec-1] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory.publisher#15324e21:0/SimpleConnection@296d969d [delegate=amqp://guest@127.0.0.1:5672/, localPort= 51112]
+2139484 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+2139489 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Nothing to declare
+2139490 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+2139491 [http-nio-8080-exec-1] INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA) durable:false, auto-delete:true, exclusive:true. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2139492 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1982/0x0000000801793690 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2), conn: Proxy@70798698 Shared Rabbit Connection: SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896]
+2139492 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventConsumer-in-0'
+2139493 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventPublisher-out-0'
+2139494 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Queue 'eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA'
+2139495 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Binding destination [eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA (QUEUE)] to exchange [eventConsumer-in-0] with routing key [#]
+2139496 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Declarations finished
+2139498 [http-nio-8080-exec-1] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2139498 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda$1981/0x0000000801793470 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@50baa3c5 Shared Rabbit Connection: SimpleConnection@296d969d [delegate=amqp://guest@127.0.0.1:5672/, localPort= 51112]
+2139499 [http-nio-8080-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@11ac0dd0(byte[180])' MessageProperties [headers={b3=40d81003bd1c0a1e-4a2b2d354fa1ef7b-1, nativeHeaders={b3=[40d81003bd1c0a1e-4a2b2d354fa1ef7b-1]}, target-protocol=streamBridge}, timestamp=Wed Jun 22 20:32:28 UTC 2022, messageId=f261da03-c563-7e56-7072-7d3d50151b87, contentType=application/json, contentLength=0, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [eventPublisher-out-0], routingKey = [eventPublisher-out-0]
+2139538 [http-nio-8080-exec-1] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=4, date=Wed Jun 22 00:00:00 UTC 2022', calories='0', mealCategory='LUNCH', fats='0.0', carbs='0.0', proteins='0.0', user='User{id=2, email='ac@domain.com'}', foodEntries='[]'}
+2139842 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+2139849 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Wed Jun 22 00:00:00 UTC 2022, ac@domain.com).
+2148651 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/4
+2148657 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getMeal(4, ac@domain.com).
+2148668 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 4
+2162203 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+2162207 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Wed Jun 22 00:00:00 UTC 2022, ac@domain.com).
+2167145 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/4
+2167150 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute getMeal(4, ac@domain.com).
+2167154 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 4
+2181319 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+2181323 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+2181356 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+2181356 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+2192172 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+2192180 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 4, FoodId: 1, Quantity: 120).
+2192259 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Adding Foodentry to meal successful. New food added with name: Apfel
+2192269 [http-nio-8080-exec-8] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda$1981/0x0000000801793470 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@50baa3c5 Shared Rabbit Connection: SimpleConnection@296d969d [delegate=amqp://guest@127.0.0.1:5672/, localPort= 51112]
+2192270 [http-nio-8080-exec-8] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@6011f523(byte[338])' MessageProperties [headers={b3=175062ee98fd6980-0b2f117d215f50bc-1, nativeHeaders={b3=[175062ee98fd6980-0b2f117d215f50bc-1]}, target-protocol=streamBridge}, timestamp=Wed Jun 22 20:33:21 UTC 2022, messageId=65f1a032-6798-0a54-a445-3d3e37d1eb26, contentType=application/json, contentLength=0, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [eventPublisher-out-0], routingKey = [eventPublisher-out-0]
+2192271 [http-nio-8080-exec-8] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=4, date=2022-06-22', calories='47', mealCategory='LUNCH', fats='48.0', carbs='1.2', proteins='27.599999999999998', user='User{id=2, email='ac@domain.com'}', foodEntries='[com.nutrition.sweng.Model.FoodEntry@8805b9d9]'}
+2192849 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/4
+2192854 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute getMeal(4, ac@domain.com).
+2192862 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 4
+2200251 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+2200268 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Nov 30 00:00:00 UTC 2, ac@domain.com).
+2200272 [http-nio-8080-exec-10] ERROR c.n.sweng.Service.MealService - Requested Meals(Sun Nov 30 00:00:00 UTC 2, ac@domain.com)are not in the DB
+2400854 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+2400897 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Wed Jun 22 00:00:00 UTC 2022, ac@domain.com).
+2406260 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/4
+2406269 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getMeal(4, ac@domain.com).
+2406275 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 4
+2415554 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received DELETE-Request /rest/meal/{mealId}/{foodId}).
+2415569 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute deleteFood(MealId: 4, FoodId: 1, Email: ac@domain.com).
+2415643 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Deleting food from meal successful. Food deleted with name: Apfel
+2415665 [http-nio-8080-exec-5] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda$1981/0x0000000801793470 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@50baa3c5 Shared Rabbit Connection: SimpleConnection@296d969d [delegate=amqp://guest@127.0.0.1:5672/, localPort= 51112]
+2415666 [http-nio-8080-exec-5] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@442cb18e(byte[161])' MessageProperties [headers={b3=5532c9eee719b160-aff6548a132233eb-1, nativeHeaders={b3=[5532c9eee719b160-aff6548a132233eb-1]}, target-protocol=streamBridge}, timestamp=Wed Jun 22 20:37:04 UTC 2022, messageId=72924206-673c-d900-0e53-752b1de2abcd, contentType=application/json, contentLength=0, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [eventPublisher-out-0], routingKey = [eventPublisher-out-0]
+2415670 [http-nio-8080-exec-5] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=4, date=2022-06-22', calories='0', mealCategory='LUNCH', fats='0.0', carbs='0.0', proteins='0.0', user='User{id=2, email='ac@domain.com'}', foodEntries='[]'}
+2419943 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+2419949 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Wed Jun 22 00:00:00 UTC 2022, ac@domain.com).
+2422611 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/4
+2422631 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Execute getMeal(4, ac@domain.com).
+2422638 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 4
+2432497 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+2432499 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+2432508 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+2432508 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+2441807 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+2441812 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 4, FoodId: 1, Quantity: 120).
+2441827 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Adding Foodentry to meal successful. New food added with name: Apfel
+2441829 [http-nio-8080-exec-10] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda$1981/0x0000000801793470 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@50baa3c5 Shared Rabbit Connection: SimpleConnection@296d969d [delegate=amqp://guest@127.0.0.1:5672/, localPort= 51112]
+2441830 [http-nio-8080-exec-10] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@471aec98(byte[338])' MessageProperties [headers={b3=78329e068cf8883c-8f6b6386b7ee452a-1, nativeHeaders={b3=[78329e068cf8883c-8f6b6386b7ee452a-1]}, target-protocol=streamBridge}, timestamp=Wed Jun 22 20:37:31 UTC 2022, messageId=41a62d93-cd9d-137c-1704-37454b9958c3, contentType=application/json, contentLength=0, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [eventPublisher-out-0], routingKey = [eventPublisher-out-0]
+2441831 [http-nio-8080-exec-10] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=4, date=2022-06-22', calories='47', mealCategory='LUNCH', fats='48.0', carbs='1.2', proteins='27.599999999999998', user='User{id=2, email='ac@domain.com'}', foodEntries='[com.nutrition.sweng.Model.FoodEntry@bcebf51a]'}
+2442386 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/4
+2442393 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute getMeal(4, ac@domain.com).
+2442398 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 4
+2459434 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+2459439 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Nov 30 00:00:00 UTC 2, ac@domain.com).
+2459443 [http-nio-8080-exec-2] ERROR c.n.sweng.Service.MealService - Requested Meals(Sun Nov 30 00:00:00 UTC 2, ac@domain.com)are not in the DB
+2654760 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+2654796 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Wed Jun 22 00:00:00 UTC 2022, ac@domain.com).
+2657119 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/4
+2657126 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute getMeal(4, ac@domain.com).
+2657130 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 4
+2672403 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+2672407 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+2672428 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+2672436 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+2683836 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+2683843 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 4, FoodId: 1, Quantity: 120).
+2683859 [http-nio-8080-exec-9] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Food Apfel already exists in Meal
+2684233 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.nutrition.sweng.Exceptions.AlreadyExistException: Food already exists in Meal] with root cause
+com.nutrition.sweng.Exceptions.AlreadyExistException: Food already exists in Meal
+	at com.nutrition.sweng.Service.MealService.addFood(MealService.java:209)
+	at com.nutrition.sweng.Service.MealService$$FastClassBySpringCGLIB$$4e35e6c2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.retry.annotation.AnnotationAwareRetryOperationsInterceptor.invoke(AnnotationAwareRetryOperationsInterceptor.java:163)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.nutrition.sweng.Service.MealService$$EnhancerBySpringCGLIB$$faa168ac.addFood(<generated>)
+	at com.nutrition.sweng.Controller.MealController.addFood(MealController.java:113)
+	at com.nutrition.sweng.Controller.MealController$$FastClassBySpringCGLIB$$fe295cda.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor.invoke(MethodSecurityInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.nutrition.sweng.Controller.MealController$$EnhancerBySpringCGLIB$$970000e5.addFood(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.nutrition.sweng.security.JwtFilter.doFilterInternal(JwtFilter.java:35)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:68)
+	at org.springframework.cloud.sleuth.autoconfig.instrument.web.TraceWebServletConfiguration$LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:131)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.springframework.cloud.sleuth.instrument.web.tomcat.TraceValve.invoke(TraceValve.java:90)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2691094 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+2691100 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 4, FoodId: 1, Quantity: 120).
+2691106 [http-nio-8080-exec-10] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Food Apfel already exists in Meal
+2691110 [http-nio-8080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.nutrition.sweng.Exceptions.AlreadyExistException: Food already exists in Meal] with root cause
+com.nutrition.sweng.Exceptions.AlreadyExistException: Food already exists in Meal
+	at com.nutrition.sweng.Service.MealService.addFood(MealService.java:209)
+	at com.nutrition.sweng.Service.MealService$$FastClassBySpringCGLIB$$4e35e6c2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.retry.annotation.AnnotationAwareRetryOperationsInterceptor.invoke(AnnotationAwareRetryOperationsInterceptor.java:163)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.nutrition.sweng.Service.MealService$$EnhancerBySpringCGLIB$$faa168ac.addFood(<generated>)
+	at com.nutrition.sweng.Controller.MealController.addFood(MealController.java:113)
+	at com.nutrition.sweng.Controller.MealController$$FastClassBySpringCGLIB$$fe295cda.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.security.access.intercept.aopalliance.MethodSecurityInterceptor.invoke(MethodSecurityInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.nutrition.sweng.Controller.MealController$$EnhancerBySpringCGLIB$$970000e5.addFood(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.nutrition.sweng.security.JwtFilter.doFilterInternal(JwtFilter.java:35)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:68)
+	at org.springframework.cloud.sleuth.autoconfig.instrument.web.TraceWebServletConfiguration$LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:131)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.springframework.cloud.sleuth.instrument.web.tomcat.TraceValve.invoke(TraceValve.java:90)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2723268 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+2723270 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+2723271 [http-nio-8080-exec-1] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+2723272 [http-nio-8080-exec-2] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+2725751 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+2725753 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+2725753 [http-nio-8080-exec-3] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+2725754 [http-nio-8080-exec-4] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+2765644 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+2765649 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Wed Jun 22 00:00:00 UTC 2022, ac@domain.com).
+2782311 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{day}/{month}/{year}).
+2782367 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Wed Jun 22 00:00:00 UTC 2022 and Category: LUNCH
+2782418 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda$1981/0x0000000801793470 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@50baa3c5 Shared Rabbit Connection: SimpleConnection@296d969d [delegate=amqp://guest@127.0.0.1:5672/, localPort= 51112]
+2782419 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@5634aade(byte[180])' MessageProperties [headers={b3=d1ee408c76f9a51a-b7e3c1d54df751d4-1, nativeHeaders={b3=[d1ee408c76f9a51a-b7e3c1d54df751d4-1]}, target-protocol=streamBridge}, timestamp=Wed Jun 22 20:43:11 UTC 2022, messageId=fa41a046-a0ae-0a41-2696-ccd50a8c9928, contentType=application/json, contentLength=0, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [eventPublisher-out-0], routingKey = [eventPublisher-out-0]
+2782427 [http-nio-8080-exec-6] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=5, date=Wed Jun 22 00:00:00 UTC 2022', calories='0', mealCategory='LUNCH', fats='0.0', carbs='0.0', proteins='0.0', user='User{id=2, email='ac@domain.com'}', foodEntries='[]'}
+2782996 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+2783002 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Wed Jun 22 00:00:00 UTC 2022, ac@domain.com).
+2859618 [SpringApplicationShutdownHook] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Shutting down Rabbit listener container
+2859707 [pool-1-thread-6] DEBUG o.s.a.r.l.BlockingQueueConsumer - Received cancelOk for tag amq.ctag-Wo4j3pIZVeS0kJBUGtGcNQ (eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA); Consumer@496203da: tags=[[amq.ctag-Wo4j3pIZVeS0kJBUGtGcNQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@70798698 Shared Rabbit Connection: SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896], acknowledgeMode=AUTO local queue size=0
+2859710 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2860348 [eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA-1] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Cancelling Consumer@496203da: tags=[[amq.ctag-Wo4j3pIZVeS0kJBUGtGcNQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@70798698 Shared Rabbit Connection: SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896], acknowledgeMode=AUTO local queue size=0
+2860351 [eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@70798698 Shared Rabbit Connection: SimpleConnection@12a9889e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 53896]
+2860352 [eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA-1] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2860376 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2860382 [SpringApplicationShutdownHook] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - stopped bean 'inbound.eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA'
+2860518 [SpringApplicationShutdownHook] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'Meal.eventConsumer-in-0.anonymous.P4wXgMbyQSCOgfe32SZBSA.errors' has 1 subscriber(s).
+2860540 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2860540 [SpringApplicationShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 0 subscriber(s).
+2860544 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2860617 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2860672 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2860685 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2860690 [SpringApplicationShutdownHook] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2860711 [SpringApplicationShutdownHook] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2)

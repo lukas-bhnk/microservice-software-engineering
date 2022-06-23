@@ -99,12 +99,13 @@ public class MealControllerTests {
 
     @Test
     public void getAJoke() throws Exception{
-        given(this.mealService.getJoke("Ich möchte einen Witz hören")).willReturn("Das ist ein Joke");
+        Joke joke = new Joke();
+        given(this.mealService.getJoke("Ich möchte einen Witz hören")).willReturn(joke);
         this.mvc.perform(get("/rest/meal/tellAJoke/{category}", "Ich möchte einen Witz hören")
                 .header("Authorization",this.AUTH_HEADER))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string("Das ist ein Joke"));
+                .andExpect(content().json("{\"error\":false,\"category\":null,\"type\":null,\"joke\":null,\"flags\":null,\"id\":0,\"safe\":false,\"lang\":null}"));
 
     }
 

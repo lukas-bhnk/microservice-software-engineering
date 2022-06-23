@@ -1,5 +1,6 @@
 package com.nutrition.sweng.Service;
 
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.nutrition.sweng.Event.EventPublisher;
 import com.nutrition.sweng.Event.MealAddedEvent;
 import com.nutrition.sweng.Event.MealChangedEvent;
@@ -9,6 +10,7 @@ import com.nutrition.sweng.Exceptions.ResourceNotFoundException;
 import com.nutrition.sweng.Model.*;
 import com.nutrition.sweng.Repository.*;
 import feign.RetryableException;
+import org.h2.util.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +31,7 @@ public class MealService {
     private JokeServiceClient jokeServiceClient;
     private UserRepository userRepository;
     private EventPublisher eventPublisher;
-    public static final String NO_JOKE = "No Joke Available.";
+    public static final Joke NO_JOKE = new Joke();
     private final Logger LOG =  LoggerFactory.getLogger(getClass());
 
     @Autowired
@@ -41,6 +43,7 @@ public class MealService {
         this.foodEntryRepository = foodEntryRepository;
         this.userRepository = userRepository;
         this.eventPublisher = eventPublisher;
+        NO_JOKE.setJoke("No joke available");
     }
 
     /**
@@ -338,8 +341,8 @@ public class MealService {
         return meal;
     }
 
-    public String getJoke(String category){
-        String joke = this.queryJoke(category);
+    public Joke getJoke(String category){
+        Joke joke = this.queryJoke(category);
         return joke;
     }
 
@@ -352,15 +355,14 @@ public class MealService {
     @Retryable(include = RetryableException.class,
             maxAttempts = 3, //first attempt and 2 retries
             backoff=@Backoff(delay=100, maxDelay=500))
-    public String queryJoke(String category) {
+    public Joke queryJoke(String category) {
         LOG.info("Execute query Joke({}).", category);
         Joke joke = this.jokeServiceClient.getJoke(category);
-        return joke.getJoke();
-
+        return joke;
     }
 
     @Recover
-    public String fallBackJoke(RetryableException e) {
+    public Joke fallBackJoke(RetryableException e) {
         LOG.error("Problem occured when calling joke service. Use fallback! ", e);
         return NO_JOKE;
     }

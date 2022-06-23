@@ -1,0 +1,3 @@
+652  [main] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sat May 15 00:00:00 CEST 2021, Hello World).
+707  [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+728  [main] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sat May 15 00:00:00 CEST 2021, Hello World).

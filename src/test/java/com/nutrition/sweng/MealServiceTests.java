@@ -137,10 +137,12 @@ public class MealServiceTests {
 
     @Test
     public void shouldNotFindDailyMeals() throws Exception {
-        given(this.userRepository.findByEmail(TEST_EMAIL)).willReturn(Optional.of(this.user));
-        List<Meal> meals = this.subject.getDailyMeals(TEST_DATE, TEST_EMAIL);
-        assertThrows(RetryableException.class, () -> {
+        assertThrows(ResourceNotFoundException.class, () -> {
             this.subject.getDailyMeals(TEST_DATE, "Hello World");
+        });
+        given(this.userRepository.findByEmail(TEST_EMAIL)).willReturn(Optional.of(this.user));
+        assertThrows(ResourceNotFoundException.class, () -> {
+            this.subject.getDailyMeals(TEST_DATE, TEST_EMAIL);
         });
     }
 
@@ -237,8 +239,8 @@ public class MealServiceTests {
         Joke joke = new Joke();
         joke.setJoke("Hallo Herr Prof. Dr. Thöne");
         given(this.jokeServiceClient.getJoke("Softwaree")).willReturn(joke);
-        String jokeString = this.subject.getJoke("Softwaree");
-        assertThat(jokeString, is("Hallo Herr Prof. Dr. Thöne"));
+        Joke joke2 = this.subject.getJoke("Softwaree");
+        assertThat(joke2.getJoke(), is("Hallo Herr Prof. Dr. Thöne"));
     }
 
     @Test
