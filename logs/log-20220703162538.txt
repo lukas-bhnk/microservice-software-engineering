@@ -1,0 +1,121 @@
+68923 [main] INFO  c.n.sweng.ResilienceRetryTest - Starting ResilienceRetryTest using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 55676 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+68923 [main] INFO  c.n.sweng.ResilienceRetryTest - The following 1 profile is active: "test"
+69772 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+69812 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 7 JPA repository interfaces.
+70018 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+70019 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+70030 [main] INFO  o.s.c.context.scope.GenericScope - BeanFactory id=6e2209e3-2703-38b5-a744-1bd72350004b
+70247 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+70268 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+70552 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+70561 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+70563 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+70563 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+70808 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+70809 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+71228 [eventConsumer-in-0.anonymous.1-rVjn3TRhyQjCjuehVmQw-4] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: rabbitmq.team12.svc.cluster.local
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: rabbitmq.team12.svc.cluster.local
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+71229 [eventConsumer-in-0.anonymous.1-rVjn3TRhyQjCjuehVmQw-4] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@328846a1: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+71229 [eventConsumer-in-0.anonymous.1-rVjn3TRhyQjCjuehVmQw-4] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+71230 [eventConsumer-in-0.anonymous.1-rVjn3TRhyQjCjuehVmQw-5] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@5fbe2fcc: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+71230 [eventConsumer-in-0.anonymous.1-rVjn3TRhyQjCjuehVmQw-5] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+71297 [eventConsumer-in-0.anonymous.1-rVjn3TRhyQjCjuehVmQw-5] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+72236 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+74287 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventConsumer-in-0' has 1 subscriber(s).
+74817 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@436b2670, org.springframework.security.web.context.SecurityContextPersistenceFilter@64c6af9a, org.springframework.security.web.header.HeaderWriterFilter@401e20c7, org.springframework.security.web.authentication.logout.LogoutFilter@26793a76, com.nutrition.sweng.security.JwtFilter@11c46488, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@404a3504, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a3a760f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14e01af, org.springframework.security.web.session.SessionManagementFilter@7b32dbe6, org.springframework.security.web.access.ExceptionTranslationFilter@278200b4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3de88a6b]
+75641 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 21 endpoint(s) beneath base path '/actuator'
+75892 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+75892 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 1 subscriber(s).
+75892 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+75894 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Creating binder: cloud_rabbit
+75942 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Caching the binder: cloud_rabbit
+75943 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: cloud_rabbit
+75994 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+75995 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventPublisher-out-0' has 1 subscriber(s).
+75996 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: cloud_rabbit
+76047 [main] INFO  o.s.c.s.b.r.p.RabbitExchangeQueueProvisioner - declaring queue for inbound: eventConsumer-in-0.anonymous.Wlj5SyuEQvydzQFaDeqicw, bound to: eventConsumer-in-0
+76047 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+76048 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+76048 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+76048 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Changing consumers from 1 to 1
+76049 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.Wlj5SyuEQvydzQFaDeqicw.errors' has 1 subscriber(s).
+76049 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.Wlj5SyuEQvydzQFaDeqicw.errors' has 2 subscriber(s).
+76050 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Starting Rabbit listener container.
+76050 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+76050 [main] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Broker not available; cannot force queue declarations during start: java.net.UnknownHostException: rabbitmq.team12.svc.cluster.local
+76051 [eventConsumer-in-0.anonymous.Wlj5SyuEQvydzQFaDeqicw-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@6faf4005: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+76051 [eventConsumer-in-0.anonymous.Wlj5SyuEQvydzQFaDeqicw-1] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+76052 [main] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - started bean 'inbound.eventConsumer-in-0.anonymous.Wlj5SyuEQvydzQFaDeqicw'
+76052 [eventConsumer-in-0.anonymous.Wlj5SyuEQvydzQFaDeqicw-1] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+76131 [main] INFO  c.n.sweng.ResilienceRetryTest - Started ResilienceRetryTest in 7.618 seconds (JVM running for 80.074)
+76198 [main] INFO  c.n.sweng.Service.MealService - Execute query Joke(Hallo Herr Prof. Dr. Thöne).
+76422 [main] INFO  c.n.sweng.Service.MealService - Execute query Joke(Hallo Herr Prof. Dr. Thöne).
+76467 [eventConsumer-in-0.anonymous.1-rVjn3TRhyQjCjuehVmQw-5] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Consumer raised exception, processing can restart if the connection factory supports it
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: No such host is known (rabbitmq.team12.svc.cluster.local)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:331)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:135)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:97)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:596)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1375)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.UnknownHostException: No such host is known (rabbitmq.team12.svc.cluster.local)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1519)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1367)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1301)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83)
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1219)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 10 common frames omitted
+76467 [eventConsumer-in-0.anonymous.1-rVjn3TRhyQjCjuehVmQw-5] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Restarting Consumer@5fbe2fcc: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+76467 [eventConsumer-in-0.anonymous.1-rVjn3TRhyQjCjuehVmQw-5] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: null
+76468 [eventConsumer-in-0.anonymous.1-rVjn3TRhyQjCjuehVmQw-6] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@128cbd35: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+76468 [eventConsumer-in-0.anonymous.1-rVjn3TRhyQjCjuehVmQw-6] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq.team12.svc.cluster.local:5672]
+76469 [eventConsumer-in-0.anonymous.1-rVjn3TRhyQjCjuehVmQw-6] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Recovering consumer in 5000 ms.
+76619 [main] INFO  c.n.sweng.Service.MealService - Execute query Joke(Hallo Herr Prof. Dr. Thöne).
+76621 [main] ERROR c.n.sweng.Service.MealService - Problem occured when calling joke service. Use fallback! 
+feign.RetryableException: null
+76640 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.nutrition.sweng.ResilienceTimeoutTest], using SpringBootContextLoader
+76641 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.nutrition.sweng.ResilienceTimeoutTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+76642 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nutrition.sweng.ResilienceTimeoutTest]: ResilienceTimeoutTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+76643 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nutrition.sweng.NutritionAppSwengApplication for test class com.nutrition.sweng.ResilienceTimeoutTest
+76647 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+76648 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6ef2330f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1bab7bdf, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@fe44424, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@9ce92e3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@765bb29e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@36ee5a09, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1b06fd94, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@66222d9d, org.springframework.test.context.event.EventPublishingTestExecutionListener@4dc6ac85, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@9bc8926, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@257a3fd8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5243b02f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2a999c66, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4781d5aa, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@33f1b67d]

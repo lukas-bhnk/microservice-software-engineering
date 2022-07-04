@@ -348,7 +348,7 @@ public class MealService {
 
     /**
      * This method is used to query a joke by a specific category.
-     * Uses the pricingServiceClient to send an external request.
+     * Uses the jokeServiceClient to send an external request.
      * @param category
      * @return joke for this category
      */

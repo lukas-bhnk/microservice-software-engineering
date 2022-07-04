@@ -23,6 +23,7 @@ public class NutritionalValuesService {
     @Transactional(readOnly=true)
     public NutritionalValues getNutritionalValues(long id){
         Optional<NutritionalValues> nutritionalValuesOptional = nutritionalValuesRepository.findById(id);
+        LOG.info("Execute getNutritionalValues with id {}", id);
         if(nutritionalValuesOptional.isPresent()){
             NutritionalValues nutritionalValues = nutritionalValuesOptional.get();
             return nutritionalValues;

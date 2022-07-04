@@ -8,7 +8,7 @@
 #          destination: sweng.events.registeredEvent
 #          binder: cloud_rabbit
 #        eventPublisher-out-1:
-#          destination: amq.topic
+#          destination: sweng.events.mealEvent
 #          binder: cloud_rabbit
 #
 #      binders:

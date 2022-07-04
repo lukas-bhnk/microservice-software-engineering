@@ -19,7 +19,7 @@ public class UserRegisteredEvent {
         this.email = email;
     }
 
-    public UserRegisteredEvent(User registeredUser, String inviteCode) {
+    public UserRegisteredEvent(User registeredUser) {
         this.userId = registeredUser.getId();
         this.email = registeredUser.getEmail();
     }

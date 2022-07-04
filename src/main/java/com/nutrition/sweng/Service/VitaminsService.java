@@ -23,6 +23,7 @@ public class VitaminsService {
 
     @Transactional(readOnly=true)
     public Vitamins getVitamins(long id){
+        LOG.info("Execute getVitamins with id {}", id);
         Optional<Vitamins> vitaminsOptional = vitaminsRepository.findById(id);
         if(vitaminsOptional.isPresent()){
             Vitamins vitamins = vitaminsOptional.get();

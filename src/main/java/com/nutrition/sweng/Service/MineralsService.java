@@ -23,6 +23,7 @@ public class MineralsService {
 
     @Transactional(readOnly=true)
     public Minerals getMinerals(long id){
+        LOG.info("Execute getMinerals with id {}", id);
         Optional<Minerals> mineralsOptional = mineralsRepository.findById(id);
         if(mineralsOptional.isPresent()){
             Minerals minerals = mineralsOptional.get();

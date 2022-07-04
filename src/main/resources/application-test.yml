@@ -4,10 +4,10 @@ spring:
     stream:
       source: eventPublisher
       bindings:
-        eventConsumer-in-3:
+        eventConsumer-in-0:
           destination: test.sweng.events.registeredEvent
           binder: cloud_rabbit
-        eventPublisher-out-4:
+        eventPublisher-out-1:
           destination: test.sweng.events.MealChangedEvent
           binder: cloud_rabbit
 

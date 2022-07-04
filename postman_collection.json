@@ -1,27 +1,866 @@
 {
 	"info": {
-		"_postman_id": "4340aa4d-ccb2-4022-b5e7-5bfffa78353c",
-		"name": "postman_collection",
+		"_postman_id": "b7368c5c-6c45-4522-82a3-9f7894cef3bf",
+		"name": "Test_Nutri_App_Data",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "DummyTest",
+			"name": "Register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jwt = pm.response.text();\r",
+							"pm.collectionVariables.set(\"token\", jwt);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Harry Hacker\",\n\t\"email\":\"harry@fhms.de\",\n\t\"password\":\"harry1\",\n\t\"newList\": \"true\",\n\t\"inviteCode\": \"1236\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Food_Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data matches\", function () {\r",
+							"   var jsonData = pm.response.json();\r",
+							"   pm.expect(jsonData).have.property('id', 2);\r",
+							"   pm.expect(jsonData).have.property('name', 'Cola');\r",
+							"   pm.expect(jsonData).have.property('unitSize', 'pro 100 ml');\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
 				"url": {
-					"raw": "www.fh-muenster.de",
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/food/2",
+					"protocol": "http",
 					"host": [
-						"www",
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
 						"fh-muenster",
 						"de"
+					],
+					"path": [
+						"rest",
+						"food",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Food_Not_Found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/food/20",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"food",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Meal_GET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data matches\", function () {\r",
+							"   var jsonData = pm.response.json();\r",
+							"   pm.expect(jsonData).have.property('id', 2);\r",
+							"   pm.expect(jsonData).have.property('date', '2020-03-20');\r",
+							"   pm.expect(jsonData).have.property('fats', 20);\r",
+							"   pm.expect(jsonData).have.property('proteins', 43);\r",
+							"   pm.expect(jsonData).have.property('carbs', 33);\r",
+							"   pm.expect(jsonData).have.property('calories', 11);\r",
+							"   pm.expect(jsonData).have.property('mealCategory', 'SNACK');  \r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/meal/2",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"meal",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Vitamins_Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data matches\", function () {\r",
+							"   var jsonData = pm.response.json();\r",
+							"   pm.expect(jsonData).have.property('id', 2);\r",
+							"   pm.expect(jsonData).have.property('c', 5);\r",
+							"   pm.expect(jsonData).have.property('fol', 34);\r",
+							"   pm.expect(jsonData).have.property('a', 112);\r",
+							"   pm.expect(jsonData).have.property('b1', 25);\r",
+							"   pm.expect(jsonData).have.property('b2', 1);\r",
+							"   pm.expect(jsonData).have.property('b6', 13);\r",
+							"   pm.expect(jsonData).have.property('b12', 12);\r",
+							"   pm.expect(jsonData).have.property('d', 25);\r",
+							"   pm.expect(jsonData).have.property('e', 6);\r",
+							"   pm.expect(jsonData).have.property('k', 22);\r",
+							"   pm.expect(jsonData).have.property('betacarotin', 13);\r",
+							"   pm.expect(jsonData).have.property('niacin', 42);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/vitamins/2",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"vitamins",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Vitamins_Not_Found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/meal/20",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"meal",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Mealcreate_POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data matches\", function () {\r",
+							"   var jsonData = pm.response.json();\r",
+							"   pm.expect(jsonData).have.property('id', 2);\r",
+							"   pm.expect(jsonData).have.property('date', '2020-03-20');\r",
+							"   pm.expect(jsonData).have.property('fats', 20);\r",
+							"   pm.expect(jsonData).have.property('proteins', 43);\r",
+							"   pm.expect(jsonData).have.property('carbs', 33);\r",
+							"   pm.expect(jsonData).have.property('calories', 11);\r",
+							"   pm.expect(jsonData).have.property('mealCategory', 'SNACK');  \r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/meal/2",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"meal",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_FindFoodByName_GET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data matches\", function () {\r",
+							"   var jsonData = pm.response.json();\r",
+							"   pm.expect(jsonData[0]).have.property('id', 1);\r",
+							"   pm.expect(jsonData[0]).have.property('name', 'Apfel');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/food/name=Apf",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"food",
+						"name=Apf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_addFoodToMeal_Post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data matches\", function () {\r",
+							"   var jsonData = pm.response.json();\r",
+							"   pm.expect(jsonData).have.property('id', 4);\r",
+							"   var foodEntries = jsonData.foodEntries;\r",
+							"   pm.expect(foodEntries[0].food).have.property('id', 2);\r",
+							"   pm.expect(foodEntries[0].food).have.property('name', 'Cola');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/meal/4/2/120",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"meal",
+						"4",
+						"2",
+						"120"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Meal_Not_Found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/meal/20",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"meal",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Minerals_Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data matches\", function () {\r",
+							"   var jsonData = pm.response.json();\r",
+							"   pm.expect(jsonData).have.property('id', 2);\r",
+							"   pm.expect(jsonData).have.property('chloride', 1);\r",
+							"   pm.expect(jsonData).have.property('magnesium', 9);\r",
+							"   pm.expect(jsonData).have.property('phosphorus', 15);\r",
+							"   pm.expect(jsonData).have.property('iron', 1);\r",
+							"   pm.expect(jsonData).have.property('potassium', 29); \r",
+							"   pm.expect(jsonData).have.property('selenium', 310); \r",
+							"   pm.expect(jsonData).have.property('sodium', 212); \r",
+							"   pm.expect(jsonData).have.property('zinc', 33);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/minerals/2",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"minerals",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Minerals_Not_Found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/minerals/20",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"minerals",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_NutritionalValues_Not_Found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/nutritionalValues/20",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"nutritionalValues",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_NutritionalValues_Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data matches\", function () {\r",
+							"   var jsonData = pm.response.json();\r",
+							"   pm.expect(jsonData).have.property('id', 2);\r",
+							"   pm.expect(jsonData).have.property('carbs', 20);\r",
+							"   pm.expect(jsonData).have.property('proteins', 23);\r",
+							"   pm.expect(jsonData).have.property('calories', 39);\r",
+							"   pm.expect(jsonData).have.property('fats', 40); \r",
+							"   pm.expect(jsonData).have.property('fatsSaturated', 12); \r",
+							"   pm.expect(jsonData).have.property('alcohol', 9); \r",
+							"   pm.expect(jsonData).have.property('salt', 1);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/nutritionalValues/2",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"nutritionalValues",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Food_excel_post_notAuthorized",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status and Body test\", function () {\r",
+							"    pm.response.to.have.status(403);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/lukas/IdeaProjects/nutritionapp/Schweizer-Nahrwertdatenbank-test.xlsx"
+						}
 					]
 				},
-				"description": "Replace this test by your own test requests"
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/food",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"food"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Food_excel_post_Excel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status and Body test\", function () {\r",
+							"    //Admin token mit einer sehr langen laufzeit, da kein Admin registriert werden kann\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.expect(pm.response.text()).to.include(\"Successfully processed the posted file\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhY0Bkb21haW4uY29tIiwiYXV0aCI6IkFETUlOIiwiaWF0IjoxNjU0NjE4NDQxLCJleHAiOjIwMTQ2MTg0NDF9.QHQdbYKGmHmP0bCwwSvbg3LMNy7m8CXPvDJ3W59YyQthogb5df4uXNYfzIocb4hH6y17G6Mr3qPHlAO1q-1zgEDXO6LucRMZg97BaOX-5Mhetod00winnNTVAXmyEVV8Lgh3Mi5PPwZUgqp3F0T8rxfnuc1fOZTzciZBt1pOZvDpEeYSnlDX9tuEM9sXpZg9CAyb0L1Q4A9nkfxi1FSJOtvoCLTXtfJ307eoM-2L-bDyLTgtH7H1TkkBPJ-4iHWmGyOzq1vhoZnwM9oM3kJkH14-lFeBPHBN4VLF8L0eJj2-u59d97Z2QNszgV6KKeOFrA-DumGSuDO8DgY5vh8dKw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/lukas/IdeaProjects/nutritionapp/Schweizer-Nahrwertdatenbank-test.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://test-sweng-sweng-team12-nutritionapp.wi-k8s.fh-muenster.de/rest/food",
+					"protocol": "http",
+					"host": [
+						"test-sweng-sweng-team12-nutritionapp",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
+					],
+					"path": [
+						"rest",
+						"food"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
 			},
 			"response": []
 		}
 	],
-	"protocolProfileBehavior": {}
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
 }

@@ -112,7 +112,7 @@ public class FoodEntry {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         FoodEntry foodEntry = (FoodEntry) o;
-        return id == foodEntry.id && quantity == foodEntry.quantity && calories == foodEntry.calories && Double.compare(foodEntry.fats, fats) == 0 && Double.compare(foodEntry.carbs, carbs) == 0 && Double.compare(foodEntry.proteins, proteins) == 0 && version == foodEntry.version && Objects.equals(meal, foodEntry.meal) && Objects.equals(food, foodEntry.food);
+        return id == foodEntry.id && quantity == foodEntry.quantity && calories == foodEntry.calories && Double.compare(foodEntry.fats, fats) == 0 && Double.compare(foodEntry.carbs, carbs) == 0 && Double.compare(foodEntry.proteins, proteins) == 0 && version == foodEntry.version;
     }
 
     @Override

@@ -88,9 +88,13 @@ public class EventGetterAndSetterTests {
         UserRegisteredEvent user = new UserRegisteredEvent();
         user.setUserId(longNumber);
         user.setEmail(string);
+        User user2 = new User(string);
+        UserRegisteredEvent userRegisteredEvent = new UserRegisteredEvent(user2);
+        userRegisteredEvent.setUserId(longNumber);
         assertTrue(user.equals(user));
         assertTrue(user.toString().equals(user.toString()));
         assertTrue(user.hashCode() == user.hashCode());
+        assertTrue(user.equals(userRegisteredEvent));
         assertThat(user.getUserId(), is(longNumber));
         assertThat(user.getEmail(), is(string));
     }

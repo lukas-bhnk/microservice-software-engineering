@@ -1,0 +1,68 @@
+52079 [main] INFO  c.n.sweng.MealControllerTests - Starting MealControllerTests using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 55676 (started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+52080 [main] INFO  c.n.sweng.MealControllerTests - The following 1 profile is active: "test"
+53121 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d7d24b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@218bdce7, org.springframework.security.web.header.HeaderWriterFilter@7bdebde7, org.springframework.security.web.authentication.logout.LogoutFilter@40d076c0, com.nutrition.sweng.security.JwtFilter@162ebe97, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@590187be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@573e28fc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a446f36, org.springframework.security.web.session.SessionManagementFilter@79622efe, org.springframework.security.web.access.ExceptionTranslationFilter@38580545, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@48d996a1]
+53189 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+53189 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+53190 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+53217 [main] INFO  c.n.sweng.MealControllerTests - Started MealControllerTests in 1.599 seconds (JVM running for 57.159)
+53248 [main] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+53278 [main] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+53300 [main] INFO  c.n.sweng.Controller.MealController - Received PATCH-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+53317 [main] INFO  c.n.sweng.Controller.MealController - Received DELETE-Request /rest/meal/{mealId}/{foodId}).
+53347 [main] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+53394 [main] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{day}/{month}/{year}).
+53432 [main] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Ich möchte einen Witz hören
+53550 [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, lalelu).
+53551 [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+53555 [main] INFO  c.n.sweng.Service.MealService - Execute updateQuantityOfAFoodEntry(MealId: 1, FoodId: 1, Quantity: 124).
+53556 [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+53557 [main] INFO  c.n.sweng.Service.MealService - Execute updateQuantityOfAFoodEntry(MealId: 1, FoodId: 1, Quantity: 124).
+53564 [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, test@email.com).
+53564 [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+53566 [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, test@email.com).
+53567 [main] ERROR c.n.sweng.Service.MealService - Getting Meal failed. Meal doesnt exist
+53575 [main] INFO  c.n.sweng.Service.MealService - Execute updateQuantityOfAFoodEntry(MealId: 1, FoodId: 1, Quantity: 124).
+53584 [main] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sat May 15 00:00:00 UTC 2021, Hello World).
+53585 [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+53587 [main] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sat May 15 00:00:00 UTC 2021, test@email.com).
+53588 [main] ERROR c.n.sweng.Service.MealService - Requested Meals(Sat May 15 00:00:00 UTC 2021, test@email.com)are not in the DB
+53594 [main] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sat May 15 00:00:00 UTC 2021, test@email.com).
+53600 [main] INFO  c.n.sweng.Service.MealService - Execute query Joke(Softwaree).
+53605 [main] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, test@email.com).
+53606 [main] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+53612 [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 124).
+53613 [main] ERROR c.n.sweng.Service.MealService - User is not in DB
+53615 [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 124).
+53616 [main] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Meal 1 not exists in DB
+53618 [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 124).
+53619 [main] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Food 1 not exists in DB
+53621 [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 124).
+53623 [main] ERROR c.n.sweng.Service.MealService - Updating quantity of Meal failed. Food 1 does not exist in Meal
+53624 [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 124).
+53625 [main] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Food Banane already exists in Meal
+53634 [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 120).
+53637 [main] INFO  c.n.sweng.Service.MealService - Adding Foodentry to meal successful. New food added with name: Banane
+53647 [main] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Sat May 15 00:00:00 UTC 2021 and Category: BREAKFAST
+53654 [main] INFO  c.n.sweng.Service.MealService - Execute deleteFood(MealId: 1, FoodId: 1, Email: test@email.com).
+53656 [main] INFO  c.n.sweng.Service.MealService - Deleting food from meal successful. Food deleted with name: Banane
+53664 [main] INFO  c.n.sweng.Service.MealService - User is not in DB, created a new User
+53666 [main] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Sat May 15 00:00:00 UTC 2021 and Category: BREAKFAST
+53673 [main] INFO  c.n.sweng.Service.MealService - Execute updateQuantityOfAFoodEntry(MealId: 1, FoodId: 1, Quantity: 130).
+53675 [main] ERROR c.n.sweng.Service.MealService - Could not published Event.
+53676 [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 1, Quantity: 200).
+53678 [main] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Food Banane already exists in Meal
+53679 [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 2, Quantity: 200).
+53681 [main] ERROR c.n.sweng.Service.MealService - Adding food to Meal failed. Food 2 not exists in DB
+53683 [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 2, Quantity: 200).
+53685 [main] ERROR c.n.sweng.Service.MealService - Updating quantity of Meal failed. Food 2 does not exist in Meal
+53688 [main] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 2, Quantity: 200).
+53691 [main] INFO  c.n.sweng.Service.MealService - Adding Foodentry to meal successful. New food added with name: Banane
+53692 [main] ERROR c.n.sweng.Service.MealService - Could not published Event.
+53694 [main] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Sat May 15 00:00:00 UTC 2021 and Category: BREAKFAST
+53695 [main] ERROR c.n.sweng.Service.MealService - Could not published Event.
+53700 [main] INFO  o.s.b.t.a.w.s.WebMvcTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.nutrition.sweng.MineralsControllerTests], using SpringBootContextLoader
+53702 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.nutrition.sweng.MineralsControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+53702 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nutrition.sweng.MineralsControllerTests]: MineralsControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+53708 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nutrition.sweng.NutritionAppSwengApplication for test class com.nutrition.sweng.MineralsControllerTests
+53710 [main] INFO  o.s.b.t.a.w.s.WebMvcTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+53711 [main] INFO  o.s.b.t.a.w.s.WebMvcTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@71c5d5bc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@44713e77, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3004cd53, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7c3e2271, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2309707f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e4670ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@783e5621, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@759ecefd, org.springframework.test.context.event.EventPublishingTestExecutionListener@1d7cc2b9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@406008f1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4ae5c182, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@498f1705, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@321d7d87, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@72faccb5, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@16f7fab9]

@@ -35,6 +35,7 @@ public class FoodService {
 
     @Transactional(readOnly=true)
     public Food getFood(long id){
+        LOG.info("Execute getFood with id {}", id);
         Optional<Food> foodOptional = foodRepository.findById(id);
         if(foodOptional.isPresent()){
             Food food = foodOptional.get();
@@ -60,6 +61,7 @@ public class FoodService {
 
     @Transactional
     public void saveAllFoodValues(Food food, Minerals minerals, Vitamins vitamins, NutritionalValues nutritionalValues){
+        LOG.info("Execute saveAllFoodValues");
         food.setNutritionalValues(nutritionalValues);
         food.setMinerals(minerals);
         food.setVitamins(vitamins);

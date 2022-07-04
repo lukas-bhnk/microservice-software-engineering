@@ -1,0 +1,1539 @@
+1141 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+1141 [main] INFO  c.n.s.NutritionAppSwengApplication - Starting NutritionAppSwengApplication using Java 17.0.2 on DESKTOP-OJSJJ0O with PID 49692 (C:\Users\lukas\IdeaProjects\nutritionapp\target\classes started by lukas in C:\Users\lukas\IdeaProjects\nutritionapp)
+1144 [main] INFO  c.n.s.NutritionAppSwengApplication - No active profile set, falling back to 1 default profile: "default"
+3361 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+3486 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 111 ms. Found 7 JPA repository interfaces.
+3986 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+4002 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+4111 [main] INFO  o.s.c.context.scope.GenericScope - BeanFactory id=e45df4fb-c997-3205-8284-3e4d00b5800b
+4611 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4627 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4627 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4643 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4705 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+5223 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+5223 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+5223 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+5223 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.62]
+5410 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+5410 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4191 ms
+7652 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+7731 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.8.Final
+7893 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+8018 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+8174 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+8205 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+9408 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+9424 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10549 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12143 [main] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'Meal.eventConsumer-in-0' has 1 subscriber(s).
+12909 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e772d11, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ba88ab5, org.springframework.security.web.header.HeaderWriterFilter@79dcd7f1, org.springframework.security.web.authentication.logout.LogoutFilter@60e83cb9, com.nutrition.sweng.security.JwtFilter@76ad0058, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@294a150c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@81ac569, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@732f7660, org.springframework.security.web.session.SessionManagementFilter@5c4c4e96, org.springframework.security.web.access.ExceptionTranslationFilter@74691a1f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a885aa1]
+13482 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 21 endpoint(s) beneath base path '/actuator'
+13920 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel errorChannel
+13966 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventConsumer-in-0
+13998 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel nullChannel
+14029 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageHandler _org.springframework.integration.errorLogger
+14060 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+14060 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 1 subscriber(s).
+14060 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+14076 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Creating binder: rabbit
+14170 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Caching the binder: rabbit
+14170 [main] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: rabbit
+14341 [main] INFO  o.s.c.s.b.r.p.RabbitExchangeQueueProvisioner - declaring queue for inbound: eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ, bound to: eventConsumer-in-0
+14341 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+14545 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#3516b881:0/SimpleConnection@5d81bc79 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52807]
+14560 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+14560 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Nothing to declare
+14560 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+14560 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Nothing to declare
+14591 [main] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+14607 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1721/0x00000008015eeab8 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@411db18d Shared Rabbit Connection: SimpleConnection@5d81bc79 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52807]
+14607 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventConsumer-in-0'
+14623 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1733/0x0000000801602108 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@411db18d Shared Rabbit Connection: SimpleConnection@5d81bc79 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52807]
+14623 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Queue 'eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ'
+14685 [main] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1734/0x0000000801603920 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@411db18d Shared Rabbit Connection: SimpleConnection@5d81bc79 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52807]
+14685 [main] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Binding destination [eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ (QUEUE)] to exchange [eventConsumer-in-0] with routing key [#]
+14701 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Changing consumers from 1 to 1
+14716 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ.errors' has 1 subscriber(s).
+14716 [main] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ.errors' has 2 subscriber(s).
+14716 [main] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Starting Rabbit listener container.
+14732 [eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Starting consumer Consumer@47dc0cc5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+14763 [eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Started on queue 'eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ' with tag amq.ctag-79UpYTZxyOHZUbjXTMlo2Q: Consumer@47dc0cc5: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@411db18d Shared Rabbit Connection: SimpleConnection@5d81bc79 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52807], acknowledgeMode=AUTO local queue size=0
+14773 [pool-1-thread-3] DEBUG o.s.a.r.l.BlockingQueueConsumer - ConsumeOK: Consumer@47dc0cc5: tags=[[amq.ctag-79UpYTZxyOHZUbjXTMlo2Q]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@411db18d Shared Rabbit Connection: SimpleConnection@5d81bc79 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52807], acknowledgeMode=AUTO local queue size=0
+14773 [main] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - started bean 'inbound.eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ'
+14773 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14804 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+15054 [main] INFO  o.s.i.m.IntegrationMBeanExporter - Registering MessageChannel eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ.errors
+15163 [main] INFO  c.n.s.NutritionAppSwengApplication - Started NutritionAppSwengApplication in 14.778 seconds (JVM running for 29.384)
+120639 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+120643 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+120655 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+122715 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+122803 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+123051 [http-nio-8080-exec-1] ERROR c.n.sweng.Service.MealService - User is not in DB
+123170 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+123189 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+133445 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+133450 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+136966 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+136970 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+154795 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{day}/{month}/{year}).
+154807 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - User is not in DB, created a new User
+155089 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Creating meal successful. New food created with Date: Sun Jul 03 00:00:00 UTC 2022 and Category: BREAKFAST
+155190 [http-nio-8080-exec-6] INFO  o.s.c.s.binder.DefaultBinderFactory - Retrieving cached binder: rabbit
+155403 [http-nio-8080-exec-6] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,2)
+155403 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1721/0x00000008015eeab8 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2), conn: Proxy@411db18d Shared Rabbit Connection: SimpleConnection@5d81bc79 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52807]
+155404 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventPublisher-out-0'
+155415 [http-nio-8080-exec-6] INFO  o.s.c.s.m.DirectWithAttributesChannel - Channel 'unknown.channel.name' has 1 subscriber(s).
+155465 [http-nio-8080-exec-6] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+155497 [http-nio-8080-exec-6] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory.publisher#401bb5ae:0/SimpleConnection@582dcd82 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52977]
+155498 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+155501 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Nothing to declare
+155501 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+155502 [http-nio-8080-exec-6] INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ) durable:false, auto-delete:true, exclusive:true. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+155502 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda$1927/0x000000080172b5a0 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2), conn: Proxy@411db18d Shared Rabbit Connection: SimpleConnection@5d81bc79 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52807]
+155502 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventConsumer-in-0'
+155503 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'eventPublisher-out-0'
+155504 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Queue 'eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ'
+155510 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Binding destination [eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ (QUEUE)] to exchange [eventConsumer-in-0] with routing key [#]
+155514 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Declarations finished
+155516 [http-nio-8080-exec-6] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+155516 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda$1926/0x000000080172b380 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@3806110d Shared Rabbit Connection: SimpleConnection@582dcd82 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52977]
+155517 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@b2794f1(byte[184])' MessageProperties [headers={b3=eac7fe4f7d8296ad-078d41c84b375d29-1, nativeHeaders={b3=[eac7fe4f7d8296ad-078d41c84b375d29-1]}, target-protocol=streamBridge}, timestamp=Sun Jul 03 15:51:44 UTC 2022, messageId=3bbba218-a905-15dc-1655-b3597564f86e, contentType=application/json, contentLength=0, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [eventPublisher-out-0], routingKey = [eventPublisher-out-0]
+155543 [http-nio-8080-exec-6] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=1, date=Sun Jul 03 00:00:00 UTC 2022', calories='0', mealCategory='BREAKFAST', fats='0.0', carbs='0.0', proteins='0.0', user='User{id=1, email='ac@domain.com'}', foodEntries='[]'}
+155999 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+156005 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+166296 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+166300 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+166308 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+177428 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+177442 [http-nio-8080-exec-8] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+179777 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+179783 [http-nio-8080-exec-9] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+313380 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+313439 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+313519 [http-nio-8080-exec-3] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+313525 [http-nio-8080-exec-2] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+314600 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+314605 [http-nio-8080-exec-4] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+371829 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+372017 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+380409 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+380415 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+383971 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+383975 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+393574 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+393584 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+400853 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+400858 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+403445 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+403448 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+405967 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+405976 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+416643 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+416648 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+419901 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+419908 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+447056 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+447061 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+449966 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+449973 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+452254 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+452257 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+455119 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+455124 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+503084 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+503088 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+503140 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+505151 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+505159 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+506261 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+506267 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+506275 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+517726 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+517733 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+520417 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+520424 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+520429 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+524889 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+524896 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+527547 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+527551 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+527554 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+529732 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+529743 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+534124 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+534128 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+534131 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+536276 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+536281 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+547758 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+547762 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+547765 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+548990 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+548996 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+848089 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+876137 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.FoodController - Received POST-Request /rest/food/
+878667 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878696 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878706 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878715 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878723 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878734 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878742 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878751 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878761 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878769 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878779 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878786 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878795 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878801 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878807 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878817 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878825 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878835 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878846 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878853 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878864 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878873 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878884 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878894 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878902 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878911 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878918 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878926 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878934 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878941 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878948 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878955 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878964 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878969 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878974 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878982 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878987 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878994 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+878999 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879004 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879012 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879017 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879022 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879029 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879036 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879045 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879100 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879107 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879124 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879134 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879141 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879152 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879161 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879169 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879180 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879189 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879198 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879204 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879213 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879220 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879230 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879236 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879247 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879266 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879282 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879291 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879299 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879307 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879315 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879322 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879330 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879339 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879596 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879603 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879609 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879622 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879631 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879651 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879658 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879665 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879672 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879681 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879687 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879694 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879699 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879706 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879715 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879722 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879729 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879735 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879741 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879747 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879753 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879759 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879765 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879773 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879784 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879793 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879801 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879809 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879818 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879828 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879836 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879842 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879851 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879858 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879867 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879874 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879881 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879888 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879896 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879903 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879909 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879916 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879923 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879931 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879938 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879946 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879963 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879969 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879976 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879983 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879989 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+879998 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880005 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880014 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880023 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880033 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880056 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880065 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880072 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880081 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880087 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880096 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880102 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880109 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880118 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880127 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880134 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880140 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880148 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880154 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880162 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880170 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880178 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880186 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880193 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880203 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880211 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880218 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880226 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880234 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880242 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880252 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880259 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880268 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880277 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880286 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880297 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880306 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880315 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880322 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880331 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880338 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880346 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880355 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880365 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880373 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880383 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880392 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880402 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880413 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880423 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880435 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880448 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880463 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880474 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880486 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880499 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880512 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880524 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880536 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880549 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880563 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880574 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880585 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880597 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880608 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880623 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880637 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880650 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880667 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880681 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880695 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880720 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880735 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880749 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880763 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880776 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880788 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880800 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880812 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880824 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880836 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880848 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880861 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880875 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880885 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880896 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880911 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880923 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880935 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880946 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880959 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880974 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+880990 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881004 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881016 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881030 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881042 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881056 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881071 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881085 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881097 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881109 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881120 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881133 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881144 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881155 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881171 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881183 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881196 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881209 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881222 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881235 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881250 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881265 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881277 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881290 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881304 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881316 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881330 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881343 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881354 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881369 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881380 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881391 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881404 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881417 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881428 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881439 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881452 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881463 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881474 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881489 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881506 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881520 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881536 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881547 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881558 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881574 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881585 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881596 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881608 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881618 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881632 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881647 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881663 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881673 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881684 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881694 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881704 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881715 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881730 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881740 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881753 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881768 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881781 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881793 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881807 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881822 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881836 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881849 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881863 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881884 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881898 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881913 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881925 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881939 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881950 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881963 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881977 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+881994 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882013 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882026 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882041 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882056 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882072 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882087 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882103 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882119 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882133 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882149 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882169 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882184 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882201 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882216 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882229 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882241 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882257 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882274 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882287 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882303 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882319 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882333 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882352 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882367 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882381 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882399 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882416 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882433 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882451 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882468 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882486 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882503 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882519 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882536 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882553 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882570 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882584 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882598 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882612 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882627 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882639 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882657 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882668 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882684 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882699 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882714 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882728 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882742 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882755 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882769 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882784 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882804 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882821 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882837 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882851 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882870 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882888 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882903 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882920 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882934 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882946 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882959 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882971 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+882989 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883007 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883021 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883035 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883048 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883062 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883079 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883097 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883113 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883129 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883141 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883154 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883172 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883203 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883229 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883263 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883294 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883314 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883331 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883351 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883379 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883397 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883414 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883430 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883443 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883458 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883476 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883493 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883513 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883529 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883542 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883556 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883574 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883589 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883607 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883621 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883639 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883654 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883672 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883687 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883705 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883720 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883739 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883755 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883772 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883786 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883806 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883821 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883838 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883858 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883877 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883892 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883908 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883926 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883946 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883963 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883982 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+883999 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884017 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884034 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884050 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884068 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884085 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884099 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884115 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884132 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884146 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884163 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884178 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884195 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884212 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884227 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884246 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884264 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884279 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884301 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884317 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884337 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884357 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884374 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884389 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884405 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884421 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884436 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884452 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884469 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884487 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884503 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884520 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884538 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884556 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884580 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884599 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884619 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884639 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884658 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884679 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884695 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884713 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884729 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884748 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884769 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884787 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884806 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884828 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884847 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884866 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884882 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884900 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884917 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884934 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884955 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+884978 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885000 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885022 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885041 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885064 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885084 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885105 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885125 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885143 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885161 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885177 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885204 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885229 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885251 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885276 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885297 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885314 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885331 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885348 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885364 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885386 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885405 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885428 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885458 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885479 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885496 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885520 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885538 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885555 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885573 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885592 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885613 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885633 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885652 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885672 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885692 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885718 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885739 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885758 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885783 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885807 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885829 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885853 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885885 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885907 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885932 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885956 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+885981 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886005 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886026 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886046 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886065 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886087 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886108 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886128 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886150 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886172 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886191 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886216 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886236 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886255 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886273 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886297 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886318 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886340 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886365 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886385 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886410 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886432 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886451 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886470 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886490 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886510 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886536 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886559 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886582 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886604 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886630 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886656 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886681 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886705 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886724 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886750 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886770 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886797 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886819 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886840 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886862 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886884 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886906 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886932 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886955 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+886976 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887002 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887027 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887050 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887071 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887092 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887117 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887142 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887170 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887204 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887234 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887254 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887274 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887295 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887317 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887342 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887364 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887386 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887416 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887437 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887462 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887489 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887517 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887542 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887566 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887631 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887672 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887699 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887725 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887751 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887775 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887802 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887829 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887854 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887878 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887904 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887934 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887961 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+887985 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888008 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888035 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888058 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888086 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888109 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888138 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888168 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888199 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888233 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888269 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888295 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888319 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888347 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888374 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888399 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888421 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888449 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888475 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888500 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888523 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888544 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888565 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888588 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888615 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888637 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888658 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888680 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888706 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888735 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888759 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888789 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888816 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888845 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888868 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888889 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888912 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888937 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888958 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+888985 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889006 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889029 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889050 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889076 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889103 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889130 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889162 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889186 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889208 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889235 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889262 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889288 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889312 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889337 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889362 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889386 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889413 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889439 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889470 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889492 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889519 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889542 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889568 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889595 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889621 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889646 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889672 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889702 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889731 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889755 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889783 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889814 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889842 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889869 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889891 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889919 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889941 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889966 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+889989 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890015 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890042 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890069 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890094 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890117 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890145 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890168 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890193 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890222 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890250 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890280 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890316 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890341 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890368 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890397 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890421 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890451 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890475 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890499 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890523 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890550 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890579 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890607 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890643 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890671 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890702 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890729 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890752 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890782 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890811 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890839 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890869 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890894 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890921 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890947 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+890976 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891004 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891031 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891058 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891088 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891114 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891139 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891171 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891196 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891220 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891249 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891282 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891308 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891348 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891381 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891415 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891445 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891480 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891506 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891539 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891567 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891593 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891623 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891647 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891676 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891706 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891735 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891768 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891807 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891847 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891875 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891903 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891935 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891960 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+891987 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892018 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892043 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892073 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892102 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892134 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892160 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892201 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892230 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892258 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892292 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892320 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892348 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892380 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892409 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892444 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892481 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892515 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892548 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892604 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892638 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892676 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892747 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892790 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892824 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892862 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892893 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892924 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892959 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+892994 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893032 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893066 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893101 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893137 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893169 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893202 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893231 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893267 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893297 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893327 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893353 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893382 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893414 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893443 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893471 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893497 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893523 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893549 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893582 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893610 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893643 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893674 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893702 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893732 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893758 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893793 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893823 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893862 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893899 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893929 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893966 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+893994 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894027 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894058 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894092 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894123 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894163 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894197 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894239 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894277 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894309 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894344 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894378 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894408 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894435 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894464 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894494 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894532 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894563 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894594 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894630 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894667 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894701 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894733 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894764 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894801 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894835 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894871 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894904 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894934 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+894968 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895008 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895037 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895072 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895104 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895135 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895175 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895207 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895243 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895298 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895347 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895388 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895432 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895470 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895509 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895544 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895600 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895646 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895687 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895722 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895758 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895796 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895835 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895882 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895917 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895953 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+895985 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896023 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896059 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896100 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896139 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896182 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896228 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896274 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896317 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896369 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896405 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896451 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896504 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896556 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896596 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896639 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896675 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896705 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896747 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896791 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896829 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896865 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896903 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896938 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+896972 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897005 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897037 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897071 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897115 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897148 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897184 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897223 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897258 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897299 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897340 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897379 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897416 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897451 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897490 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897529 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897569 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897602 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897639 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897675 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897716 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897757 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897797 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897833 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897882 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897924 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+897969 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898014 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898068 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898149 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898213 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898276 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898336 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898401 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898449 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898491 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898532 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898581 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898630 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898679 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898729 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898778 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898822 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898874 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898912 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898949 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+898990 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899030 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899069 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899110 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899157 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899206 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899255 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899313 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899355 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899402 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899440 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899478 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899513 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899545 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899577 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899617 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899655 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899689 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899725 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899756 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899797 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899838 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899873 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899933 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+899980 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900055 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900096 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900134 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900181 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900234 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900304 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900347 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900389 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900423 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900466 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900505 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900545 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900581 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900613 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900649 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900700 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900743 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900779 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900820 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900868 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900905 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900940 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+900983 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901025 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901062 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901102 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901136 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901172 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901206 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901246 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901286 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901319 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901362 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901405 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901450 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901495 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901536 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901582 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901624 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901666 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901705 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901741 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901782 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901818 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901852 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901894 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901932 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+901971 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902004 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902039 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902081 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902126 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902169 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902209 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902252 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902291 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902332 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902370 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902407 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902449 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902483 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902516 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902551 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902585 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902619 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902653 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902690 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902731 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902770 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902816 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902852 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902889 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902928 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+902963 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903014 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903058 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903101 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903140 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903179 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903215 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903251 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903293 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903337 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903376 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903415 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903450 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903490 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903531 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903577 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903616 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903654 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903688 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903724 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903759 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903799 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903840 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903875 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903914 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903955 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+903990 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904027 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904071 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904120 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904157 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904201 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904241 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904280 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904319 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904361 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904414 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904453 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904498 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904547 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904586 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904630 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.FoodService - Successfully saved all food values
+904671 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.FoodController - Successfully processed the posted file with 1072 rows
+909957 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+909961 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+909971 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+918179 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+918193 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+918205 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+918209 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+926764 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+926767 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 10, Quantity: 120).
+926795 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Adding Foodentry to meal successful. New food added with name: Apfel, gedünstet, abgetropft (ohne Zugabe von Zucker)
+926807 [http-nio-8080-exec-8] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda$1926/0x000000080172b380 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@3806110d Shared Rabbit Connection: SimpleConnection@582dcd82 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52977]
+926807 [http-nio-8080-exec-8] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@559d462e(byte[368])' MessageProperties [headers={b3=8638d9fe3e84af47-fcdd7518e385e7ea-1, nativeHeaders={b3=[8638d9fe3e84af47-fcdd7518e385e7ea-1]}, target-protocol=streamBridge}, timestamp=Sun Jul 03 16:04:35 UTC 2022, messageId=996fc836-991b-4111-1ea7-63a646f8e2e0, contentType=application/json, contentLength=0, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [eventPublisher-out-0], routingKey = [eventPublisher-out-0]
+926827 [http-nio-8080-exec-8] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=1, date=2022-07-03', calories='71', mealCategory='BREAKFAST', fats='0.48', carbs='14.76', proteins='0.48', user='User{id=1, email='ac@domain.com'}', foodEntries='[com.nutrition.sweng.Model.FoodEntry@454e65f8]'}
+927249 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+927251 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+927253 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+933996 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+934000 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+943182 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+943185 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+943186 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+947632 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received DELETE-Request /rest/meal/{mealId}/{foodId}).
+947636 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute deleteFood(MealId: 1, FoodId: 10, Email: ac@domain.com).
+947658 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Deleting food from meal successful. Food deleted with name: Apfel, gedünstet, abgetropft (ohne Zugabe von Zucker)
+947659 [http-nio-8080-exec-3] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda$1926/0x000000080172b380 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@3806110d Shared Rabbit Connection: SimpleConnection@582dcd82 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52977]
+947660 [http-nio-8080-exec-3] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@29ccd015(byte[165])' MessageProperties [headers={b3=9730c57e8e3dbfb0-697bccd6dbdf7809-1, nativeHeaders={b3=[9730c57e8e3dbfb0-697bccd6dbdf7809-1]}, target-protocol=streamBridge}, timestamp=Sun Jul 03 16:04:56 UTC 2022, messageId=8ffe70c1-a7a2-97bc-2492-8f75db256f88, contentType=application/json, contentLength=0, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [eventPublisher-out-0], routingKey = [eventPublisher-out-0]
+947660 [http-nio-8080-exec-3] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=1, date=2022-07-03', calories='0', mealCategory='BREAKFAST', fats='0.0', carbs='0.0', proteins='0.0', user='User{id=1, email='ac@domain.com'}', foodEntries='[]'}
+949313 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+949316 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+951337 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+951342 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+951344 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+959138 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+959138 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+959152 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+959154 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+963720 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+963737 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+977168 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+977172 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 15, Quantity: 340).
+977189 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Adding Foodentry to meal successful. New food added with name: Apfelmus, gezuckert (Konserve)
+977200 [http-nio-8080-exec-9] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda$1926/0x000000080172b380 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@3806110d Shared Rabbit Connection: SimpleConnection@582dcd82 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52977]
+977200 [http-nio-8080-exec-9] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@15077d8e(byte[344])' MessageProperties [headers={b3=bcd8d145972fbef2-dadd65d0d2ac46fc-1, nativeHeaders={b3=[bcd8d145972fbef2-dadd65d0d2ac46fc-1]}, target-protocol=streamBridge}, timestamp=Sun Jul 03 16:05:25 UTC 2022, messageId=656584ee-7c22-ce2d-b1c8-428e1b215e2d, contentType=application/json, contentLength=0, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [eventPublisher-out-0], routingKey = [eventPublisher-out-0]
+977201 [http-nio-8080-exec-9] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=1, date=2022-07-03', calories='303', mealCategory='BREAKFAST', fats='1.02', carbs='69.7', proteins='1.02', user='User{id=1, email='ac@domain.com'}', foodEntries='[com.nutrition.sweng.Model.FoodEntry@45bfa90b]'}
+977608 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+977611 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+977614 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+981838 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+981843 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+992512 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+992517 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Wed Jul 06 00:00:00 UTC 2022, ac@domain.com).
+992519 [http-nio-8080-exec-3] ERROR c.n.sweng.Service.MealService - Requested Meals(Wed Jul 06 00:00:00 UTC 2022, ac@domain.com)are not in the DB
+996372 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+996375 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+997573 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+997576 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1026763 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1026766 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1026768 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1050244 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1050247 [http-nio-8080-exec-5] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+1050267 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1050271 [http-nio-8080-exec-8] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+1057194 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1057195 [http-nio-8080-exec-9] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+1057200 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1057201 [http-nio-8080-exec-10] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+1072071 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1072077 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1072116 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.FoodService - Successfully found food with name kuchen
+1072117 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.FoodService - Successfully found food with name kuchen
+1078636 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1078636 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1078637 [http-nio-8080-exec-4] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+1078637 [http-nio-8080-exec-2] ERROR c.n.sweng.Service.FoodService - No food for this name was found
+1089082 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1089084 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1089086 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Avoca
+1089087 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Avoca
+1163235 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1163255 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1163446 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1163450 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1163600 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1163604 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1163607 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1164125 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1164130 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1164135 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1164263 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1164269 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1164274 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1164520 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1164529 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1164753 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1164761 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1164967 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1164975 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1164979 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1165156 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1165163 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1165358 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1165364 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1165366 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1165505 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1165509 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1165559 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1165562 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1165678 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1165685 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1165739 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1165743 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1165745 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1165827 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1165832 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1166052 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1166056 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1166058 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1166184 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1166187 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1166190 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1166254 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1166258 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1166260 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1166353 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1166358 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1166360 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1166497 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1166502 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1166629 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1166636 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1166637 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1166706 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1166710 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1166712 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1179054 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1179058 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1179227 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1179231 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1179296 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1179299 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1179302 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1179572 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1179576 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1179578 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1179630 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1179636 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1179639 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1179710 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1179714 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1179796 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1179800 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1179871 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1179876 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1179878 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1179963 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1179968 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1180063 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1180070 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1180073 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1180290 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1180295 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1180396 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1180402 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1180579 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1180585 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1180690 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1180698 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1180700 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1180868 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1180877 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1181206 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1181210 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1181214 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1181370 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1181374 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1181377 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1181456 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1181461 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1181464 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1181555 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1181560 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1181563 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1181678 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1181685 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1181769 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1181883 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1181885 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1181923 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1181929 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1181932 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1210083 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1210089 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1278606 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1278610 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1278613 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1285197 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1285205 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1285212 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+1285214 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+1376422 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1376430 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1376434 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1462635 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1462640 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1462642 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1484065 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1484069 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1484072 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1501014 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1501039 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1575742 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1575765 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1580392 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1580396 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Mon Jul 04 00:00:00 UTC 2022, ac@domain.com).
+1580413 [http-nio-8080-exec-8] ERROR c.n.sweng.Service.MealService - Requested Meals(Mon Jul 04 00:00:00 UTC 2022, ac@domain.com)are not in the DB
+1586402 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1586411 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Mon Jul 04 00:00:00 UTC 2022, ac@domain.com).
+1586460 [http-nio-8080-exec-9] ERROR c.n.sweng.Service.MealService - Requested Meals(Mon Jul 04 00:00:00 UTC 2022, ac@domain.com)are not in the DB
+1639926 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1639931 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1647903 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1647906 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Mon Jul 04 00:00:00 UTC 2022, ac@domain.com).
+1647909 [http-nio-8080-exec-1] ERROR c.n.sweng.Service.MealService - Requested Meals(Mon Jul 04 00:00:00 UTC 2022, ac@domain.com)are not in the DB
+1656397 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1656402 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Tue Jul 05 00:00:00 UTC 2022, ac@domain.com).
+1656405 [http-nio-8080-exec-2] ERROR c.n.sweng.Service.MealService - Requested Meals(Tue Jul 05 00:00:00 UTC 2022, ac@domain.com)are not in the DB
+1665003 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1665007 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1731703 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+1731714 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+1738986 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/tellAJoke/Programming
+1738989 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute query Joke(Programming).
+1749657 [http-nio-8080-exec-8] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1749661 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1749665 [http-nio-8080-exec-8] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1762958 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1762989 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+1781184 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+1781188 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 13, Quantity: 230).
+1781231 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Adding Foodentry to meal successful. New food added with name: Apfelkuchen, hausgemacht, gebacken (mit Blätterteig)
+1781264 [http-nio-8080-exec-10] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda$1926/0x000000080172b380 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@3806110d Shared Rabbit Connection: SimpleConnection@582dcd82 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52977]
+1781266 [http-nio-8080-exec-10] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@6ef266fe(byte[572])' MessageProperties [headers={b3=9e600a4ed6e15145-00d7a720e3d75e30-1, nativeHeaders={b3=[9e600a4ed6e15145-00d7a720e3d75e30-1]}, target-protocol=streamBridge}, timestamp=Sun Jul 03 16:18:50 UTC 2022, messageId=63e55a53-bf16-7fe4-4de1-3cbfee31e1ad, contentType=application/json, contentLength=0, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [eventPublisher-out-0], routingKey = [eventPublisher-out-0]
+1781272 [http-nio-8080-exec-10] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=1, date=2022-07-03', calories='635', mealCategory='BREAKFAST', fats='16.2', carbs='110.87', proteins='6.77', user='User{id=1, email='ac@domain.com'}', foodEntries='[com.nutrition.sweng.Model.FoodEntry@a2aed7ec, com.nutrition.sweng.Model.FoodEntry@45bfa90b]'}
+1782367 [http-nio-8080-exec-3] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1782371 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1782373 [http-nio-8080-exec-3] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1801521 [http-nio-8080-exec-1] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1801526 [http-nio-8080-exec-2] INFO  c.n.sweng.Controller.FoodController - Received GET-Request /rest/food/name={name}).
+1801535 [http-nio-8080-exec-1] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+1801536 [http-nio-8080-exec-2] INFO  c.n.sweng.Service.FoodService - Successfully found food with name Apfel
+1816736 [http-nio-8080-exec-4] INFO  c.n.sweng.Controller.MealController - Received POST-Request /rest/meal/{mealId}/{foodId}/{quantity}).
+1816744 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Execute addFood(MealId: 1, FoodId: 19, Quantity: 120).
+1816761 [http-nio-8080-exec-4] INFO  c.n.sweng.Service.MealService - Adding Foodentry to meal successful. New food added with name: Apfelwein, 6,2 vol%
+1816762 [http-nio-8080-exec-4] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda$1926/0x000000080172b380 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@3806110d Shared Rabbit Connection: SimpleConnection@582dcd82 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52977]
+1816763 [http-nio-8080-exec-4] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@14d7e081(byte[731])' MessageProperties [headers={b3=e6be6e016a28ced4-bfaa63b1706967de-1, nativeHeaders={b3=[e6be6e016a28ced4-bfaa63b1706967de-1]}, target-protocol=streamBridge}, timestamp=Sun Jul 03 16:19:25 UTC 2022, messageId=d1032f56-1aef-b349-7f56-b3da3db4337c, contentType=application/json, contentLength=0, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [eventPublisher-out-0], routingKey = [eventPublisher-out-0]
+1816763 [http-nio-8080-exec-4] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=1, date=2022-07-03', calories='712', mealCategory='BREAKFAST', fats='16.2', carbs='119.63000000000001', proteins='6.77', user='User{id=1, email='ac@domain.com'}', foodEntries='[com.nutrition.sweng.Model.FoodEntry@a2aed7ec, com.nutrition.sweng.Model.FoodEntry@45bfa90b, com.nutrition.sweng.Model.FoodEntry@aa8bea13]'}
+1817655 [http-nio-8080-exec-7] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1817657 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1817678 [http-nio-8080-exec-7] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1856205 [http-nio-8080-exec-6] INFO  c.n.sweng.Controller.MealController - Received DELETE-Request /rest/meal/{mealId}/{foodId}).
+1856209 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Execute deleteFood(MealId: 1, FoodId: 19, Email: ac@domain.com).
+1856222 [http-nio-8080-exec-6] INFO  c.n.sweng.Service.MealService - Deleting food from meal successful. Food deleted with name: Apfelwein, 6,2 vol%
+1856223 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda$1926/0x000000080172b380 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@3806110d Shared Rabbit Connection: SimpleConnection@582dcd82 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52977]
+1856223 [http-nio-8080-exec-6] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@67c3cd7c(byte[572])' MessageProperties [headers={b3=300682738d3ef4be-ac89af47da2b1ba2-1, nativeHeaders={b3=[300682738d3ef4be-ac89af47da2b1ba2-1]}, target-protocol=streamBridge}, timestamp=Sun Jul 03 16:20:04 UTC 2022, messageId=f7898f40-330f-6ff6-d086-13bbef1735f1, contentType=application/json, contentLength=0, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [eventPublisher-out-0], routingKey = [eventPublisher-out-0]
+1856223 [http-nio-8080-exec-6] INFO  c.n.sweng.Event.EventPublisherImpl - Event published: Meal{id=1, date=2022-07-03', calories='635', mealCategory='BREAKFAST', fats='16.2', carbs='110.87', proteins='6.77', user='User{id=1, email='ac@domain.com'}', foodEntries='[com.nutrition.sweng.Model.FoodEntry@a2aed7ec, com.nutrition.sweng.Model.FoodEntry@45bfa90b]'}
+1861237 [http-nio-8080-exec-5] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1861240 [http-nio-8080-exec-5] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+1867639 [http-nio-8080-exec-9] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/1
+1867652 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Execute getMeal(1, ac@domain.com).
+1867655 [http-nio-8080-exec-9] INFO  c.n.sweng.Service.MealService - Getting Meal successful with ID 1
+1878952 [http-nio-8080-exec-10] INFO  c.n.sweng.Controller.MealController - Received GET-Request /rest/meal/{day}/{month}/{year}).
+1878956 [http-nio-8080-exec-10] INFO  c.n.sweng.Service.MealService - Execute getDailyMeals(Sun Jul 03 00:00:00 UTC 2022, ac@domain.com).
+2059180 [SpringApplicationShutdownHook] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Shutting down Rabbit listener container
+2059440 [pool-1-thread-6] DEBUG o.s.a.r.l.BlockingQueueConsumer - Received cancelOk for tag amq.ctag-79UpYTZxyOHZUbjXTMlo2Q (eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ); Consumer@47dc0cc5: tags=[[amq.ctag-79UpYTZxyOHZUbjXTMlo2Q]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@411db18d Shared Rabbit Connection: SimpleConnection@5d81bc79 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52807], acknowledgeMode=AUTO local queue size=0
+2059442 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2060049 [eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ-1] DEBUG o.s.a.r.l.SimpleMessageListenerContainer - Cancelling Consumer@47dc0cc5: tags=[[amq.ctag-79UpYTZxyOHZUbjXTMlo2Q]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@411db18d Shared Rabbit Connection: SimpleConnection@5d81bc79 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52807], acknowledgeMode=AUTO local queue size=0
+2060049 [eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ-1] DEBUG o.s.a.r.l.BlockingQueueConsumer - Closing Rabbit Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@411db18d Shared Rabbit Connection: SimpleConnection@5d81bc79 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52807]
+2060051 [eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ-1] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2060099 [SpringApplicationShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2060107 [SpringApplicationShutdownHook] INFO  o.s.i.a.i.AmqpInboundChannelAdapter - stopped bean 'inbound.eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ'
+2060247 [SpringApplicationShutdownHook] INFO  o.s.c.s.binder.BinderErrorChannel - Channel 'Meal.eventConsumer-in-0.anonymous.PRToHo1QQZyP9uydu9mUuQ.errors' has 1 subscriber(s).
+2060269 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2060269 [SpringApplicationShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Meal.errorChannel' has 0 subscriber(s).
+2060272 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2060339 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2060392 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2060410 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2060414 [SpringApplicationShutdownHook] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2060443 [SpringApplicationShutdownHook] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2)
