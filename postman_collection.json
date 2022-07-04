@@ -12,41 +12,44 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"var jwt = pm.response.text();\r",
-							"pm.collectionVariables.set(\"token\", jwt);"
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"var jwt = pm.response.text();",
+							"pm.collectionVariables.set(\"token\", jwt);",
+							""
 						],
 						"type": "text/javascript"
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "noauth"
-				},
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"type": "text",
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\":\"Harry Hacker\",\n\t\"email\":\"harry@fhms.de\",\n\t\"password\":\"harry1\",\n\t\"newList\": \"true\",\n\t\"inviteCode\": \"1236\"\n}"
+					"raw": "{\n    \"name\": \"test_software\",\n    \"username\": \"test_software\",\n\t\"email\":\"software-test@fhms.de\",\n\t\"password\":\"Software1234\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/rest/users/register",
+					"raw": "http://test-sweng-sweng-team12-registrationmicroservice.wi-k8s.fh-muenster.de/api/v1/registration",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"test-sweng-sweng-team12-registrationmicroservice",
+						"wi-k8s",
+						"fh-muenster",
+						"de"
 					],
-					"port": "8080",
 					"path": [
-						"rest",
-						"users",
-						"register"
+						"api",
+						"v1",
+						"registration"
 					]
 				}
 			},
