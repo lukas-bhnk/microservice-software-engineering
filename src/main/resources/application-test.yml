@@ -5,10 +5,10 @@ spring:
       source: eventPublisher
       bindings:
         eventConsumer-in-0:
-          destination: test.sweng.events.registeredEvent
+          destination: sweng.events.test-registeredEvent
           binder: cloud_rabbit
         eventPublisher-out-1:
-          destination: test.sweng.events.MealChangedEvent
+          destination: test.sweng.events.test-MealEvent
           binder: cloud_rabbit
 
       binders:
